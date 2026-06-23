@@ -72,16 +72,12 @@ export async function createCheckoutSession(items: GroupedBasketItem[], metadata
       "IDR",
     ]);
 
-    // Apply optional markup configured via env var to handle currency weakness
-    const markupPercent = Number(process.env.PRICE_MARKUP_PERCENT ?? process.env.NEXT_PUBLIC_PRICE_MARKUP_PERCENT ?? 0);
-    if (markupPercent && !isNaN(markupPercent) && markupPercent !== 0) {
-      console.log(`Applying price markup of ${markupPercent}% at checkout`);
-    }
+    // Use the original product price as stored in Sanity (no markup applied)
 
     // Build line items and compute total in the currency's smallest unit
     const line_items = items.map((item) => {
       const rawPrice = Number(item.product.price ?? 0);
-      const effectivePrice = markupPercent ? rawPrice * (1 + markupPercent / 100) : rawPrice;
+      const effectivePrice = rawPrice;
 
       const isZeroDecimal = zeroDecimalCurrencies.has(currency.toUpperCase());
       const unit_amount = isZeroDecimal ? Math.round(effectivePrice) : Math.round(effectivePrice * 100);
