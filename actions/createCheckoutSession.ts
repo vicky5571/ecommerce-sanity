@@ -104,6 +104,13 @@ export async function createCheckoutSession(items: GroupedBasketItem[], metadata
 
     const totalAmountSmallestUnit = line_items.reduce((sum, li) => sum + (li.price_data.unit_amount || 0) * (li.quantity || 0), 0);
 
+    // Log line items and totals for debugging (will show what we send to Stripe)
+    try {
+      console.log("checkout line_items:", JSON.stringify(line_items.map((li) => ({ unit_amount: li.price_data.unit_amount, quantity: li.quantity, currency: li.price_data.currency }))), "totalSmallestUnit:", totalAmountSmallestUnit);
+    } catch (e) {
+      console.log("checkout line_items (error serializing)", e);
+    }
+
     // Minimum thresholds (smallest unit). IDR ~ 9000 corresponds to ~$0.50 at common rates.
     const minimums: Record<string, number> = {
       USD: 50, // cents
