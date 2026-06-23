@@ -63,6 +63,29 @@ async function createOrderInSanity(session: Stripe.Checkout.Session) {
     quantity: item.quantity || 0,
   }));
 
+  // Handle zero-decimal currencies (like IDR) where Stripe amount is already in major units
+  const zeroDecimalCurrencies = new Set([
+    "BIF",
+    "CLP",
+    "DJF",
+    "GNF",
+    "JPY",
+    "KMF",
+    "KRW",
+    "MGA",
+    "PYG",
+    "RWF",
+    "UGX",
+    "VND",
+    "VUV",
+    "XAF",
+    "XOF",
+    "XPF",
+    "IDR",
+  ]);
+
+  const divisor = zeroDecimalCurrencies.has((currency ?? "").toUpperCase()) ? 1 : 100;
+
   const order = await backendClient.create({
     _type: "order",
     orderNumber,
@@ -73,9 +96,9 @@ async function createOrderInSanity(session: Stripe.Checkout.Session) {
     clerkUserId: clerkUserId,
     email: customerEmail,
     currency,
-    amountDiscount: total_details?.amount_discount ? total_details.amount_discount / 100 : 0,
+    amountDiscount: total_details?.amount_discount ? total_details.amount_discount / divisor : 0,
     products: sanityProducts,
-    totalPrice: amount_total ? amount_total / 100 : 0,
+    totalPrice: amount_total ? amount_total / divisor : 0,
     status: "paid",
     orderDate: new Date().toISOString(),
   });
