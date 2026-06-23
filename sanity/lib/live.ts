@@ -17,15 +17,27 @@ import { client } from "./client";
 
 // Set your viewer token
 const token = process.env.SANITY_API_READ_TOKEN;
-if (!token) {
-  throw new Error("Missing SANITY_API_READ_TOKEN");
+
+let sanityFetch: any;
+let SanityLive: any;
+
+if (token) {
+  const defined = defineLive({
+    client,
+    serverToken: token,
+    browserToken: token,
+    fetchOptions: { revalidate: 0 },
+  });
+
+  sanityFetch = defined.sanityFetch;
+  SanityLive = defined.SanityLive;
+} else {
+  // Export safe fallbacks so builds don't fail when the read token isn't set.
+  sanityFetch = async () => {
+    throw new Error("SANITY_API_READ_TOKEN is not set");
+  };
+  // SanityLive is a React component; export a simple placeholder.
+  SanityLive = () => null;
 }
 
-export const { sanityFetch, SanityLive } = defineLive({
-  client,
-  serverToken: token,
-  browserToken: token,
-  fetchOptions: {
-    revalidate: 0,
-  },
-});
+export { sanityFetch, SanityLive };

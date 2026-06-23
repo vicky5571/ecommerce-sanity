@@ -41,11 +41,12 @@ function BasketPage() {
     setIsLoading(true);
 
     try {
+      const primaryEmail = user?.emailAddresses?.[0];
       const metadata: Metadata = {
         orderNumber: crypto.randomUUID(),
         customerName: user?.fullName ?? "Unknown",
-        customerEmail: user?.emailAddresses[0].emailAddress ?? "Unknown",
-        clerkUserId: user!.id,
+        customerEmail: primaryEmail ? ((primaryEmail as any).emailAddress ?? (primaryEmail as any).email ?? "Unknown") : "Unknown",
+        clerkUserId: user?.id ?? "Unknown",
       };
 
       const checkoutUrl = await createCheckoutSession(groupedItems, metadata);

@@ -25,6 +25,23 @@ declare module "@clerk/nextjs" {
   export const ClerkLoaded: React.ComponentType<any>;
   export const SignInButton: React.ComponentType<any>;
   export const UserButton: React.ComponentType<any>;
-  export function useUser(): { id?: string };
+  export function useUser(): {
+    id?: string;
+    user?: {
+      id?: string;
+      firstName?: string;
+      lastName?: string;
+      emailAddresses?: Array<{ email?: string }>;
+      [key: string]: any;
+    } | null;
+  };
+
+  export function useAuth(): {
+    isSignedIn: boolean;
+    sessionId?: string;
+    userId?: string;
+    getToken?: (opts?: { template?: string }) => Promise<string | null>;
+    signOut?: () => Promise<void>;
+  };
   export default {} as any;
 }

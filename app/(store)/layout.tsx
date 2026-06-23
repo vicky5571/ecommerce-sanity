@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
-import Header from "@/components/Header";
+import HeaderClerk from "@/components/HeaderClerk";
+import HeaderFallback from "@/components/HeaderFallback";
 import { SanityLive } from "@/sanity/lib/live";
 import { VisualEditing } from "next-sanity";
 import { draftMode } from "next/headers";
@@ -27,23 +28,28 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
-    <ClerkProvider dynamic>
-      <html lang="en">
-        <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-          {(await draftMode()).isEnabled && (
-            <>
-              <DisableDraftMode />
-              <VisualEditing />
-            </>
-          )}
-          <main>
-            <Header />
-            {children}
-          </main>
-          <SanityLive />
-        </body>
-      </html>
-    </ClerkProvider>
+  const clerkPublishableKey = process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY;
+
+  const content = (
+    <html lang="en">
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        {(await draftMode()).isEnabled && (
+          <>
+            <DisableDraftMode />
+            <VisualEditing />
+          </>
+        )}
+        <main>
+          {clerkPublishableKey ? <HeaderClerk /> : <HeaderFallback />}
+          {children}
+        </main>
+        <SanityLive />
+      </body>
+    </html>
   );
+
+  // Provide a safe fallback publishable key so client hooks don't throw during build.
+  const publishableKey = clerkPublishableKey ?? "local_fallback_publishable_key";
+
+  return <ClerkProvider publishableKey={publishableKey} dynamic>{content}</ClerkProvider>;
 }

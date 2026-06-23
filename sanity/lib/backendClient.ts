@@ -1,10 +1,26 @@
 import { createClient } from "next-sanity";
 import { apiVersion, dataset, projectId } from "../env";
 
-export const backendClient = createClient({
-  projectId,
-  dataset,
-  apiVersion,
-  useCdn: true, // Set to false if statically generating pages, using ISR or tag-based revalidation
-  token: process.env.SANITY_API_TOKEN,
-});
+let backendClient: any;
+if (projectId && dataset) {
+  backendClient = createClient({
+    projectId,
+    dataset,
+    apiVersion,
+    useCdn: true,
+    token: process.env.SANITY_API_TOKEN,
+  });
+} else {
+  backendClient = {
+    config: () => ({ projectId, dataset, apiVersion }),
+    withConfig: () => backendClient,
+    create: async () => {
+      throw new Error("Sanity projectId/dataset not set");
+    },
+    fetch: async () => {
+      throw new Error("Sanity projectId/dataset not set");
+    },
+  };
+}
+
+export { backendClient };
