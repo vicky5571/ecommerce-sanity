@@ -1,0 +1,30 @@
+declare module "@clerk/nextjs/server" {
+  import type { NextFetchEvent, NextRequest } from "next/server";
+  import type { NextResponse } from "next/server";
+
+  export type MiddlewareHandler = (
+    req: NextRequest,
+    ev: NextFetchEvent
+  ) => Promise<NextResponse> | NextResponse;
+
+  // Minimal shim for clerkMiddleware used in middleware.ts
+  export function clerkMiddleware(): MiddlewareHandler;
+
+  // Other server helpers (used in app routes)
+  export function auth(): { userId?: string };
+
+  export default clerkMiddleware;
+}
+
+declare module "@clerk/nextjs" {
+  // Lightweight client typing to avoid editor errors
+  import * as React from "react";
+
+  export const ClerkProvider: React.ComponentType<any>;
+  export const SignedIn: React.ComponentType<any>;
+  export const ClerkLoaded: React.ComponentType<any>;
+  export const SignInButton: React.ComponentType<any>;
+  export const UserButton: React.ComponentType<any>;
+  export function useUser(): { id?: string };
+  export default {} as any;
+}
