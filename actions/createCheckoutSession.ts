@@ -18,6 +18,12 @@ export type GroupedBasketItem = {
 
 export async function createCheckoutSession(items: GroupedBasketItem[], metadata: Metadata) {
   try {
+    console.log("createCheckoutSession called", { itemsCount: items.length, metadata });
+
+    if (!process.env.STRIPE_SECRET_KEY) {
+      console.error("STRIPE_SECRET_KEY is not configured");
+      throw new Error("STRIPE_SECRET_KEY is not set");
+    }
     // check if any grouped items don't have a price
     const itemsWithoutPrice = items.filter((item) => !item.product.price);
     if (itemsWithoutPrice.length > 0) {
@@ -29,6 +35,7 @@ export async function createCheckoutSession(items: GroupedBasketItem[], metadata
       email: metadata.customerEmail,
       limit: 1,
     });
+    console.log("stripe.customers.list returned", { count: customers?.data?.length });
 
     let customerId: string | undefined;
     if (customers.data.length > 0) {
@@ -42,7 +49,9 @@ export async function createCheckoutSession(items: GroupedBasketItem[], metadata
 
     // console.log(successUrl);
 
-    const session = await stripe.checkout.sessions.create({
+    let session;
+    try {
+      session = await stripe.checkout.sessions.create({
       customer: customerId,
       customer_creation: customerId ? undefined : "always",
       customer_email: !customerId ? metadata.customerEmail : undefined,
@@ -66,7 +75,13 @@ export async function createCheckoutSession(items: GroupedBasketItem[], metadata
         },
         quantity: item.quantity,
       })),
-    });
+      });
+    } catch (stripeErr: any) {
+      console.error("Stripe session creation failed", stripeErr && stripeErr.raw ? stripeErr.raw : stripeErr);
+      throw stripeErr;
+    }
+
+    console.log("Stripe session created", { id: session.id, url: session.url });
 
     return session.url;
   } catch (error) {

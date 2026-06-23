@@ -56,6 +56,14 @@ function BasketPage() {
       }
     } catch (error) {
       console.error("Error creating checkout session", error);
+      try {
+        const msg = error instanceof Error ? error.message : JSON.stringify(error);
+        // Show a visible alert so failures are obvious in the browser
+        // eslint-disable-next-line no-alert
+        alert("Checkout error: " + msg);
+      } catch (e) {
+        // ignore alert failures
+      }
     } finally {
       setIsLoading(false);
     }
