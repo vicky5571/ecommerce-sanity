@@ -49,7 +49,7 @@ export async function createCheckoutSession(items: GroupedBasketItem[], metadata
 
     // console.log(successUrl);
 
-    const currency = "idr";
+    const currency = "IDR";
 
     // Currencies without minor units (amounts are specified in the major unit)
     const zeroDecimalCurrencies = new Set([
@@ -83,13 +83,12 @@ export async function createCheckoutSession(items: GroupedBasketItem[], metadata
       const rawPrice = Number(item.product.price ?? 0);
       const effectivePrice = markupPercent ? rawPrice * (1 + markupPercent / 100) : rawPrice;
 
-      const unit_amount = zeroDecimalCurrencies.has(currency.toUpperCase())
-        ? Math.round(effectivePrice)
-        : Math.round(effectivePrice * 100);
+      const isZeroDecimal = zeroDecimalCurrencies.has(currency.toUpperCase());
+      const unit_amount = isZeroDecimal ? Math.round(effectivePrice) : Math.round(effectivePrice * 100);
 
       return {
         price_data: {
-          currency,
+          currency: currency.toLowerCase(),
           unit_amount,
           product_data: {
             name: item.product.name || "Unnamed Product",
@@ -99,6 +98,8 @@ export async function createCheckoutSession(items: GroupedBasketItem[], metadata
           },
         },
         quantity: item.quantity,
+        // attach debugging metadata so logs can show original values
+        _debug: { rawPrice, effectivePrice, isZeroDecimal },
       };
     });
 
@@ -106,7 +107,19 @@ export async function createCheckoutSession(items: GroupedBasketItem[], metadata
 
     // Log line items and totals for debugging (will show what we send to Stripe)
     try {
-      console.log("checkout line_items:", JSON.stringify(line_items.map((li) => ({ unit_amount: li.price_data.unit_amount, quantity: li.quantity, currency: li.price_data.currency }))), "totalSmallestUnit:", totalAmountSmallestUnit);
+      console.log(
+        "checkout line_items:",
+        JSON.stringify(
+          line_items.map((li) => ({
+            unit_amount: li.price_data.unit_amount,
+            quantity: li.quantity,
+            currency: li.price_data.currency,
+            debug: (li as any)._debug,
+          }))
+        ),
+        "totalSmallestUnit:",
+        totalAmountSmallestUnit
+      );
     } catch (e) {
       console.log("checkout line_items (error serializing)", e);
     }
