@@ -49,32 +49,84 @@ export async function createCheckoutSession(items: GroupedBasketItem[], metadata
 
     // console.log(successUrl);
 
-    let session;
-    try {
-      session = await stripe.checkout.sessions.create({
-      customer: customerId,
-      customer_creation: customerId ? undefined : "always",
-      customer_email: !customerId ? metadata.customerEmail : undefined,
-      metadata,
-      mode: "payment",
-      allow_promotion_codes: true,
-      success_url: successUrl,
-      cancel_url: cancelUrl,
-      line_items: items.map((item) => ({
+    const currency = "idr";
+
+    // Currencies without minor units (amounts are specified in the major unit)
+    const zeroDecimalCurrencies = new Set([
+      "BIF",
+      "CLP",
+      "DJF",
+      "GNF",
+      "JPY",
+      "KMF",
+      "KRW",
+      "MGA",
+      "PYG",
+      "RWF",
+      "UGX",
+      "VND",
+      "VUV",
+      "XAF",
+      "XOF",
+      "XPF",
+      "IDR",
+    ]);
+
+    // Apply optional markup configured via env var to handle currency weakness
+    const markupPercent = Number(process.env.PRICE_MARKUP_PERCENT ?? process.env.NEXT_PUBLIC_PRICE_MARKUP_PERCENT ?? 0);
+    if (markupPercent && !isNaN(markupPercent) && markupPercent !== 0) {
+      console.log(`Applying price markup of ${markupPercent}% at checkout`);
+    }
+
+    // Build line items and compute total in the currency's smallest unit
+    const line_items = items.map((item) => {
+      const rawPrice = Number(item.product.price ?? 0);
+      const effectivePrice = markupPercent ? rawPrice * (1 + markupPercent / 100) : rawPrice;
+
+      const unit_amount = zeroDecimalCurrencies.has(currency.toUpperCase())
+        ? Math.round(effectivePrice)
+        : Math.round(effectivePrice * 100);
+
+      return {
         price_data: {
-          currency: "idr",
-          unit_amount: Math.round(item.product.price! * 100),
+          currency,
+          unit_amount,
           product_data: {
             name: item.product.name || "Unnamed Product",
             description: `Product ID: ${item.product._id}`,
-            metadata: {
-              id: item.product._id,
-            },
+            metadata: { id: item.product._id },
             images: item.product.image ? [imageUrl(item.product.image).url()] : undefined,
           },
         },
         quantity: item.quantity,
-      })),
+      };
+    });
+
+    const totalAmountSmallestUnit = line_items.reduce((sum, li) => sum + (li.price_data.unit_amount || 0) * (li.quantity || 0), 0);
+
+    // Minimum thresholds (smallest unit). IDR ~ 9000 corresponds to ~$0.50 at common rates.
+    const minimums: Record<string, number> = {
+      USD: 50, // cents
+      IDR: 9000,
+    };
+
+    const min = minimums[currency.toUpperCase()];
+    if (min && totalAmountSmallestUnit < min) {
+      throw new Error(`Order total is too small for ${currency.toUpperCase()}. Minimum order is ${min} ${currency.toUpperCase()} (approx $0.50).`);
+    }
+
+    let session;
+    try {
+      session = await stripe.checkout.sessions.create({
+        customer: customerId,
+        customer_creation: customerId ? undefined : "always",
+        customer_email: !customerId ? metadata.customerEmail : undefined,
+        metadata,
+        mode: "payment",
+        allow_promotion_codes: true,
+        success_url: successUrl,
+        cancel_url: cancelUrl,
+        line_items,
       });
     } catch (stripeErr: any) {
       console.error("Stripe session creation failed", stripeErr && stripeErr.raw ? stripeErr.raw : stripeErr);
