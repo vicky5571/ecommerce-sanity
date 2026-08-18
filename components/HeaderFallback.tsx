@@ -1,33 +1,32 @@
 "use client";
 
 import Link from "next/link";
-import Form from "next/form";
-import { TrolleyIcon } from "@sanity/icons";
+import { ShoppingCart } from "lucide-react";
 import useBasketStore from "@/store/store";
+import SearchBar from "./SearchBar";
 
 function HeaderFallback() {
   const itemCount = useBasketStore((state) => state.items.reduce((total, item) => total + item.quantity, 0));
 
   return (
-    <header className="flex flex-wrap justify-between items-center px-4 py-2">
-      <div className="flex-1 w-full flex-wrap justify-between items-center">
-        <Link href="/" className="text-2xl font-bold text-blue-500 hover:opacity-50 cursor-pointer mx-auto sm:mx-0">
+    <header className="sticky top-0 z-50 border-b border-gray-200 bg-white">
+      <div className="mx-auto flex max-w-7xl flex-wrap items-center gap-x-4 gap-y-2 px-4 py-3">
+        <Link href="/" className="shrink-0 text-xl font-extrabold tracking-tight text-blue-500 transition-opacity hover:opacity-70 sm:text-2xl">
           StealtForce
         </Link>
-      </div>
 
-      <Form action="/search" className="w-full sm-w-auto sm:flex-1 sm:mx-4 mt-2 sm:mt-0">
-        <input type="text" name="query" placeholder="Search for products" className="bg-gray-100 text-gray-800 px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 border w-full max-w-4xl" />
-      </Form>
+        <SearchBar className="order-last w-full md:order-none md:w-auto md:min-w-0 md:flex-1" />
 
-      <div className="flex items-center space-x-4 mt-4 sm:mt-0 flex-1 sm:flex-none">
-        <Link href="/basket" className="flex-1 relative flex justify-center sm:justify-start sm:flex-none items-center space-x-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-          <TrolleyIcon className="w-6 h-6" />
-          <span className="absolute -top-2 -right-2 bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">{itemCount}</span>
-          <span>My Basket</span>
-        </Link>
+        <div className="ml-auto flex items-center gap-2 sm:gap-3">
+          <Link href="/basket" aria-label="My Basket" className="relative rounded-lg p-2 text-gray-600 transition-colors hover:bg-gray-100 hover:text-blue-500">
+            <ShoppingCart className="h-6 w-6" />
+            {itemCount > 0 && (
+              <span className="absolute -right-0.5 -top-0.5 flex h-5 min-w-[1.25rem] items-center justify-center rounded-full bg-red-500 px-1 text-xs font-bold text-white">{itemCount}</span>
+            )}
+          </Link>
 
-        <div className="text-sm text-gray-600">Sign-in disabled in this build</div>
+          <span className="hidden text-sm text-gray-500 sm:block">Sign-in disabled in this build</span>
+        </div>
       </div>
     </header>
   );

@@ -4,6 +4,7 @@ import "../globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 import HeaderClerk from "@/components/HeaderClerk";
 import HeaderFallback from "@/components/HeaderFallback";
+import BottomBar from "@/components/BottomBar";
 import { SanityLive } from "@/sanity/lib/live";
 import { VisualEditing } from "next-sanity";
 import { draftMode } from "next/headers";
@@ -42,6 +43,7 @@ export default async function RootLayout({
         <main>
           {clerkPublishableKey ? <HeaderClerk /> : <HeaderFallback />}
           {children}
+          <BottomBar />
         </main>
         <SanityLive />
       </body>

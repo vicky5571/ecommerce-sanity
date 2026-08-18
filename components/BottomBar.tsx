@@ -1,0 +1,55 @@
+"use client";
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { Home, LayoutGrid, Package, ShoppingCart } from "lucide-react";
+import useBasketStore from "@/store/store";
+
+const tabs = [
+  { href: "/", label: "Home", icon: Home, match: (p: string) => p === "/" },
+  { href: "/categories", label: "Categories", icon: LayoutGrid, match: (p: string) => p.startsWith("/categories") },
+  { href: "/basket", label: "Basket", icon: ShoppingCart, match: (p: string) => p.startsWith("/basket"), badge: true },
+  { href: "/orders", label: "Orders", icon: Package, match: (p: string) => p.startsWith("/orders") },
+];
+
+function BottomBar() {
+  const pathname = usePathname();
+  const itemCount = useBasketStore((state) => state.items.reduce((total, item) => total + item.quantity, 0));
+
+  // The basket page has its own fixed bottom checkout bar
+  if (pathname.startsWith("/basket")) return null;
+
+  return (
+    <>
+      {/* Spacer so page content is not covered by the fixed bar */}
+      <div className="h-16 md:hidden" aria-hidden />
+
+      <nav className="fixed inset-x-0 bottom-0 z-40 border-t border-gray-200 bg-white pb-[env(safe-area-inset-bottom)] md:hidden">
+        <div className="grid h-16 grid-cols-4">
+          {tabs.map(({ href, label, icon: Icon, match, badge }) => {
+            const active = match(pathname);
+            return (
+              <Link
+                key={href}
+                href={href}
+                className={`relative flex flex-col items-center justify-center gap-1 text-[11px] font-medium transition-colors ${active ? "text-blue-500" : "text-gray-500 hover:text-gray-800"}`}
+              >
+                <span className="relative">
+                  <Icon className="h-6 w-6" />
+                  {badge && itemCount > 0 && (
+                    <span className="absolute -right-2.5 -top-1.5 flex h-4 min-w-4 items-center justify-center rounded-full bg-red-500 px-1 text-[10px] font-bold text-white">
+                      {itemCount}
+                    </span>
+                  )}
+                </span>
+                {label}
+              </Link>
+            );
+          })}
+        </div>
+      </nav>
+    </>
+  );
+}
+
+export default BottomBar;

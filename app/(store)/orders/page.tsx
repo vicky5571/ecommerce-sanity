@@ -17,7 +17,7 @@ async function Orders() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-50 p-4">
       <div className="bg-white p-4 sm:p-8 rounded-xl shadow-lg w-full max-w-4xl">
-        <h1 className="text-4xl font-bold text-gray-900 tracking-tight mb-8">My Orders</h1>
+        <h1 className="text-2xl sm:text-4xl font-bold text-gray-900 tracking-tight mb-6 sm:mb-8">My Orders</h1>
 
         {orders.length === 0 ? (
           <div className="text-center text-gray-600">
@@ -75,7 +75,7 @@ async function Orders() {
                           </div>
                         </div>
 
-                        <p className="font-medium text-right">{product.product?.price && product.quantity ? formatCurrency(product.product.price * product.quantity, order.currency) : "N/A"}</p>
+                        <p className="font-medium sm:text-right">{product.product?.price && product.quantity ? formatCurrency(product.product.price * product.quantity, order.currency) : "N/A"}</p>
                       </div>
                     ))}
                   </div>
