@@ -165,7 +165,7 @@ export default function Footer() {
       </div>
 
       {/* Bottom Copyright Strip */}
-      <div className="bg-stone-50 border-t border-stone-200/80 py-4">
+      <div className="bg-stone-50 border-t border-stone-200/80 pt-4 pb-20 md:pb-4">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-2 text-[11px] text-stone-500">
           <p>© 2026 StealtForce. Hak Cipta Dilindungi.</p>
           <div className="flex items-center gap-4">

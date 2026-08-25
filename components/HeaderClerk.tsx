@@ -22,7 +22,7 @@ function HeaderClerk() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-stone-200/90 bg-white/95 backdrop-blur-md supports-[backdrop-filter]:bg-white/85 shadow-xs">
-      <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 sm:gap-6 px-4 py-2.5 sm:py-3">
+      <div className="mx-auto flex max-w-7xl flex-wrap sm:flex-nowrap items-center justify-between gap-x-4 gap-y-2 px-4 py-2.5 sm:py-3">
         
         {/* Brand Logo */}
         <Link href="/" className="shrink-0 flex items-center group">
@@ -31,8 +31,8 @@ function HeaderClerk() {
           </span>
         </Link>
 
-        {/* Central Search Bar */}
-        <div className="flex-1 max-w-2xl">
+        {/* Central Search Bar (Full width on mobile, centered flex-1 on desktop) */}
+        <div className="order-last sm:order-none w-full sm:w-auto sm:flex-1 sm:max-w-xl md:max-w-2xl">
           <SearchBar />
         </div>
 
