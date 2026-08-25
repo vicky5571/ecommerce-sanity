@@ -48,9 +48,9 @@
     "semantic_hash": "cb61b9e5383ffdc0a7a49cb85ce9b454"
   },
   "app/(store)/page.tsx": {
-    "mtime": 1787660396.2105227,
-    "seen": 1787660572.8126562,
-    "ast_hash": "429f8e8127d8f79bf0c8bc6b939c6720",
+    "mtime": 1787661356.196527,
+    "seen": 1787661364.549115,
+    "ast_hash": "b4ac5e3df43a6c8d809f7d63e796a830",
     "semantic_hash": ""
   },
   "app/(store)/product/[slug]/page.tsx": {
@@ -144,15 +144,15 @@
     "semantic_hash": "f2fb05092e0826a1a0194287b4932ac2"
   },
   "components/HeaderClerk.tsx": {
-    "mtime": 1787660512.271242,
-    "seen": 1787660572.8126788,
-    "ast_hash": "cfde881aba621684ac8357b9f443562e",
+    "mtime": 1787661161.5698543,
+    "seen": 1787661183.85091,
+    "ast_hash": "c80359959140e0b0697c861d36f386ae",
     "semantic_hash": ""
   },
   "components/HeaderFallback.tsx": {
-    "mtime": 1787660516.0321941,
-    "seen": 1787660572.81268,
-    "ast_hash": "5f21e95d8a70acce466a4f9c6fe23eb6",
+    "mtime": 1787661165.2108214,
+    "seen": 1787661183.850912,
+    "ast_hash": "af1f706a4ec8dec4671529caa44f84e0",
     "semantic_hash": ""
   },
   "components/Loader.tsx": {
@@ -174,15 +174,15 @@
     "semantic_hash": ""
   },
   "components/ProductsView.tsx": {
-    "mtime": 1787659686.8904967,
-    "seen": 1787659816.629219,
-    "ast_hash": "7f5df85c5addcad9ae747624bb07a362",
+    "mtime": 1787661336.940347,
+    "seen": 1787661364.549149,
+    "ast_hash": "b9bc4437e6cde6fee1d3c951e91a4ea8",
     "semantic_hash": ""
   },
   "components/SearchBar.tsx": {
-    "mtime": 1787660535.8129852,
-    "seen": 1787660572.812686,
-    "ast_hash": "86e4cfe2dad27421e25512f9263048fb",
+    "mtime": 1787661072.096013,
+    "seen": 1787661108.5115788,
+    "ast_hash": "7831d627f9dc46bcad5eb48b5ea2a352",
     "semantic_hash": ""
   },
   "components/ui/button.tsx": {
@@ -513,6 +513,24 @@
     "mtime": 1787660644.1175804,
     "seen": 1787660659.700649,
     "ast_hash": "13b7b853e71c58b5593fd3a9a33f0c2c",
+    "semantic_hash": ""
+  },
+  "components/CategoryPills.tsx": {
+    "mtime": 1787661296.8517323,
+    "seen": 1787661364.5491352,
+    "ast_hash": "1d14fb8197fcfbea70d9e975f86c6bf6",
+    "semantic_hash": ""
+  },
+  "components/HeroBanner.tsx": {
+    "mtime": 1787661312.2069266,
+    "seen": 1787661364.549144,
+    "ast_hash": "8a04107203e03eb63063b218a3aa01c0",
+    "semantic_hash": ""
+  },
+  "components/TrustBar.tsx": {
+    "mtime": 1787661319.2096672,
+    "seen": 1787661364.549152,
+    "ast_hash": "eb61865161f492e9922caeb5bf7f024e",
     "semantic_hash": ""
   }
 }
