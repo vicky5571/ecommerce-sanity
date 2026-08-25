@@ -144,15 +144,15 @@
     "semantic_hash": "f2fb05092e0826a1a0194287b4932ac2"
   },
   "components/HeaderClerk.tsx": {
-    "mtime": 1787660512.271242,
-    "seen": 1787660572.8126788,
-    "ast_hash": "cfde881aba621684ac8357b9f443562e",
+    "mtime": 1787661161.5698543,
+    "seen": 1787661183.85091,
+    "ast_hash": "c80359959140e0b0697c861d36f386ae",
     "semantic_hash": ""
   },
   "components/HeaderFallback.tsx": {
-    "mtime": 1787660516.0321941,
-    "seen": 1787660572.81268,
-    "ast_hash": "5f21e95d8a70acce466a4f9c6fe23eb6",
+    "mtime": 1787661165.2108214,
+    "seen": 1787661183.850912,
+    "ast_hash": "af1f706a4ec8dec4671529caa44f84e0",
     "semantic_hash": ""
   },
   "components/Loader.tsx": {
@@ -180,9 +180,9 @@
     "semantic_hash": ""
   },
   "components/SearchBar.tsx": {
-    "mtime": 1787660535.8129852,
-    "seen": 1787660572.812686,
-    "ast_hash": "86e4cfe2dad27421e25512f9263048fb",
+    "mtime": 1787661072.096013,
+    "seen": 1787661108.5115788,
+    "ast_hash": "7831d627f9dc46bcad5eb48b5ea2a352",
     "semantic_hash": ""
   },
   "components/ui/button.tsx": {

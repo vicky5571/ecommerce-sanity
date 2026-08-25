@@ -168,9 +168,9 @@
     "semantic_hash": "5e583f91e8acf248e602407dc585716b"
   },
   "components/ProductThumb.tsx": {
-    "mtime": 1787660545.738872,
-    "seen": 1787660572.812684,
-    "ast_hash": "81ba61b38fc1ca983b86955b0534a8bf",
+    "mtime": 1787660998.721475,
+    "seen": 1787661005.238512,
+    "ast_hash": "36d1f626c70ebfa6905e77edbaffea57",
     "semantic_hash": ""
   },
   "components/ProductsView.tsx": {
