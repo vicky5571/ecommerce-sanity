@@ -4,6 +4,7 @@ import "../globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 import HeaderClerk from "@/components/HeaderClerk";
 import HeaderFallback from "@/components/HeaderFallback";
+import Footer from "@/components/Footer";
 import BottomBar from "@/components/BottomBar";
 import { SanityLive } from "@/sanity/lib/live";
 import { VisualEditing } from "next-sanity";
@@ -40,9 +41,12 @@ export default async function RootLayout({
             <VisualEditing />
           </>
         )}
-        <main>
-          {clerkPublishableKey ? <HeaderClerk /> : <HeaderFallback />}
-          {children}
+        <main className="min-h-screen flex flex-col justify-between">
+          <div>
+            {clerkPublishableKey ? <HeaderClerk /> : <HeaderFallback />}
+            {children}
+          </div>
+          <Footer />
           <BottomBar />
         </main>
         <SanityLive />
