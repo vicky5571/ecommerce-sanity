@@ -9,7 +9,7 @@
   "7": "(store)/page.tsx",
   "8": "components.json",
   "9": "index.ts",
-  "10": "Loader.tsx",
+  "10": "orders/page.tsx",
   "11": "rules/graphify.md",
   "12": "workflows/graphify.md",
   "13": "README.md",
@@ -22,5 +22,7 @@
   "20": "disable/route.ts",
   "21": "next.config.ts",
   "22": "sanity.cli.ts",
-  "23": "tailwind.config.ts"
+  "23": "tailwind.config.ts",
+  "24": "search/page.tsx",
+  "25": "Loader.tsx"
 }

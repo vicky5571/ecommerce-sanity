@@ -496,16 +496,16 @@
       "source_location": "L15"
     },
     {
-      "id": "app_store_loading_loading",
-      "label": "Loading()",
+      "id": "app_store_orders_page_orders",
+      "label": "Orders()",
       "_callable": true,
       "_origin": "ast",
       "community": 1,
       "community_name": "useBasketStore",
       "file_type": "code",
-      "norm_label": "loading()",
-      "source_file": "app/(store)/loading.tsx",
-      "source_location": "L3"
+      "norm_label": "orders()",
+      "source_file": "app/(store)/orders/page.tsx",
+      "source_location": "L10"
     },
     {
       "id": "app_store_product_slug_page_productpage",
@@ -518,18 +518,6 @@
       "norm_label": "productpage()",
       "source_file": "app/(store)/product/[slug]/page.tsx",
       "source_location": "L14"
-    },
-    {
-      "id": "app_store_search_loading_loading",
-      "label": "Loading()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "useBasketStore",
-      "file_type": "code",
-      "norm_label": "loading()",
-      "source_file": "app/(store)/search/loading.tsx",
-      "source_location": "L3"
     },
     {
       "id": "app_store_webhook_route_createorderinsanity",
@@ -580,18 +568,6 @@
       "source_location": "L9"
     },
     {
-      "id": "components_loader_loader",
-      "label": "Loader()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "useBasketStore",
-      "file_type": "code",
-      "norm_label": "loader()",
-      "source_file": "components/Loader.tsx",
-      "source_location": "L1"
-    },
-    {
       "id": "components_productbuybox_productbuybox",
       "label": "ProductBuyBox()",
       "_callable": true,
@@ -640,6 +616,18 @@
       "source_location": "L7"
     },
     {
+      "id": "sanity_lib_orders_getmyorders_getmyorders",
+      "label": "getMyOrders()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "useBasketStore",
+      "file_type": "code",
+      "norm_label": "getmyorders()",
+      "source_file": "sanity/lib/orders/getMyOrders.ts",
+      "source_location": "L4"
+    },
+    {
       "id": "sanity_lib_products_getproductbyslug_getproductbyslug",
       "label": "getProductBySlug()",
       "_callable": true,
@@ -652,40 +640,16 @@
       "source_location": "L4"
     },
     {
-      "id": "app_store_orders_page_orders",
-      "label": "Orders()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 10,
-      "community_name": "orders/page.tsx",
-      "file_type": "code",
-      "norm_label": "orders()",
-      "source_file": "app/(store)/orders/page.tsx",
-      "source_location": "L8"
-    },
-    {
       "id": "lib_formatcurrency_formatcurrency",
       "label": "formatCurrency()",
       "_callable": true,
       "_origin": "ast",
       "community": 10,
-      "community_name": "orders/page.tsx",
+      "community_name": "formatCurrency.ts",
       "file_type": "code",
       "norm_label": "formatcurrency()",
       "source_file": "lib/formatCurrency.ts",
       "source_location": "L1"
-    },
-    {
-      "id": "sanity_lib_orders_getmyorders_getmyorders",
-      "label": "getMyOrders()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 10,
-      "community_name": "orders/page.tsx",
-      "file_type": "code",
-      "norm_label": "getmyorders()",
-      "source_file": "sanity/lib/orders/getMyOrders.ts",
-      "source_location": "L4"
     },
     {
       "id": "app_studio_layout_rootlayout",
@@ -820,40 +784,40 @@
       "source_location": "L6"
     },
     {
-      "id": "app_store_search_page_searchpage",
-      "label": "SearchPage()",
+      "id": "app_store_loading_loading",
+      "label": "Loading()",
       "_callable": true,
       "_origin": "ast",
-      "community": 24,
-      "community_name": "search/page.tsx",
+      "community": 25,
+      "community_name": "Loader.tsx",
       "file_type": "code",
-      "norm_label": "searchpage()",
-      "source_file": "app/(store)/search/page.tsx",
-      "source_location": "L4"
+      "norm_label": "loading()",
+      "source_file": "app/(store)/loading.tsx",
+      "source_location": "L3"
     },
     {
-      "id": "components_productgrid_productgrid",
-      "label": "ProductGrid()",
+      "id": "app_store_search_loading_loading",
+      "label": "Loading()",
       "_callable": true,
       "_origin": "ast",
-      "community": 24,
-      "community_name": "search/page.tsx",
+      "community": 25,
+      "community_name": "Loader.tsx",
       "file_type": "code",
-      "norm_label": "productgrid()",
-      "source_file": "components/ProductGrid.tsx",
-      "source_location": "L4"
+      "norm_label": "loading()",
+      "source_file": "app/(store)/search/loading.tsx",
+      "source_location": "L3"
     },
     {
-      "id": "sanity_lib_products_searchproductsbyname_searchproductsbyname",
-      "label": "searchProductsByName()",
+      "id": "components_loader_loader",
+      "label": "Loader()",
       "_callable": true,
       "_origin": "ast",
-      "community": 24,
-      "community_name": "search/page.tsx",
+      "community": 25,
+      "community_name": "Loader.tsx",
       "file_type": "code",
-      "norm_label": "searchproductsbyname()",
-      "source_file": "sanity/lib/products/searchProductsByName.ts",
-      "source_location": "L4"
+      "norm_label": "loader()",
+      "source_file": "components/Loader.tsx",
+      "source_location": "L1"
     },
     {
       "id": "app_store_layout_rootlayout",
@@ -940,6 +904,18 @@
       "source_location": "L7"
     },
     {
+      "id": "app_store_search_page_searchpage",
+      "label": "SearchPage()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "sanity.types.ts",
+      "file_type": "code",
+      "norm_label": "searchpage()",
+      "source_file": "app/(store)/search/page.tsx",
+      "source_location": "L4"
+    },
+    {
       "id": "components_categorypills_categorypills",
       "label": "CategoryPills()",
       "_callable": true,
@@ -952,6 +928,18 @@
       "source_location": "L7"
     },
     {
+      "id": "components_productgrid_productgrid",
+      "label": "ProductGrid()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "sanity.types.ts",
+      "file_type": "code",
+      "norm_label": "productgrid()",
+      "source_file": "components/ProductGrid.tsx",
+      "source_location": "L4"
+    },
+    {
       "id": "components_ui_category_selector_categoryselectorcomponent",
       "label": "CategorySelectorComponent()",
       "_callable": true,
@@ -962,6 +950,18 @@
       "norm_label": "categoryselectorcomponent()",
       "source_file": "components/ui/category-selector.tsx",
       "source_location": "L18"
+    },
+    {
+      "id": "sanity_lib_products_searchproductsbyname_searchproductsbyname",
+      "label": "searchProductsByName()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "sanity.types.ts",
+      "file_type": "code",
+      "norm_label": "searchproductsbyname()",
+      "source_file": "sanity/lib/products/searchProductsByName.ts",
+      "source_location": "L4"
     },
     {
       "id": "app_store_categories_page_categoriespage",
@@ -1683,14 +1683,14 @@
       "source_location": "L1"
     },
     {
-      "id": "app_store_loading",
-      "label": "(store)/loading.tsx",
+      "id": "app_store_orders_page",
+      "label": "orders/page.tsx",
       "_origin": "ast",
       "community": 1,
       "community_name": "useBasketStore",
       "file_type": "code",
-      "norm_label": "(store)/loading.tsx",
-      "source_file": "app/(store)/loading.tsx",
+      "norm_label": "orders/page.tsx",
+      "source_file": "app/(store)/orders/page.tsx",
       "source_location": "L1"
     },
     {
@@ -1727,17 +1727,6 @@
       "source_location": "L12"
     },
     {
-      "id": "app_store_search_loading",
-      "label": "search/loading.tsx",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "useBasketStore",
-      "file_type": "code",
-      "norm_label": "search/loading.tsx",
-      "source_file": "app/(store)/search/loading.tsx",
-      "source_location": "L1"
-    },
-    {
       "id": "app_store_webhook_route",
       "label": "webhook/route.ts",
       "_origin": "ast",
@@ -1768,17 +1757,6 @@
       "file_type": "code",
       "norm_label": "header.tsx",
       "source_file": "components/Header.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "components_loader",
-      "label": "Loader.tsx",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "useBasketStore",
-      "file_type": "code",
-      "norm_label": "loader.tsx",
-      "source_file": "components/Loader.tsx",
       "source_location": "L1"
     },
     {
@@ -1859,6 +1837,17 @@
       "source_location": "L1"
     },
     {
+      "id": "sanity_lib_orders_getmyorders",
+      "label": "getMyOrders.ts",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "useBasketStore",
+      "file_type": "code",
+      "norm_label": "getmyorders.ts",
+      "source_file": "sanity/lib/orders/getMyOrders.ts",
+      "source_location": "L1"
+    },
+    {
       "id": "sanity_lib_products_getproductbyslug",
       "label": "getProductBySlug.ts",
       "_origin": "ast",
@@ -1892,36 +1881,14 @@
       "source_location": "L21"
     },
     {
-      "id": "app_store_orders_page",
-      "label": "orders/page.tsx",
-      "_origin": "ast",
-      "community": 10,
-      "community_name": "orders/page.tsx",
-      "file_type": "code",
-      "norm_label": "orders/page.tsx",
-      "source_file": "app/(store)/orders/page.tsx",
-      "source_location": "L1"
-    },
-    {
       "id": "lib_formatcurrency",
       "label": "formatCurrency.ts",
       "_origin": "ast",
       "community": 10,
-      "community_name": "orders/page.tsx",
+      "community_name": "formatCurrency.ts",
       "file_type": "code",
       "norm_label": "formatcurrency.ts",
       "source_file": "lib/formatCurrency.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "sanity_lib_orders_getmyorders",
-      "label": "getMyOrders.ts",
-      "_origin": "ast",
-      "community": 10,
-      "community_name": "orders/page.tsx",
-      "file_type": "code",
-      "norm_label": "getmyorders.ts",
-      "source_file": "sanity/lib/orders/getMyOrders.ts",
       "source_location": "L1"
     },
     {
@@ -2557,25 +2524,36 @@
       "source_location": "L1"
     },
     {
-      "id": "app_store_search_page",
-      "label": "search/page.tsx",
+      "id": "app_store_loading",
+      "label": "(store)/loading.tsx",
       "_origin": "ast",
-      "community": 24,
-      "community_name": "search/page.tsx",
+      "community": 25,
+      "community_name": "Loader.tsx",
       "file_type": "code",
-      "norm_label": "search/page.tsx",
-      "source_file": "app/(store)/search/page.tsx",
+      "norm_label": "(store)/loading.tsx",
+      "source_file": "app/(store)/loading.tsx",
       "source_location": "L1"
     },
     {
-      "id": "sanity_lib_products_searchproductsbyname",
-      "label": "searchProductsByName.ts",
+      "id": "app_store_search_loading",
+      "label": "search/loading.tsx",
       "_origin": "ast",
-      "community": 24,
-      "community_name": "search/page.tsx",
+      "community": 25,
+      "community_name": "Loader.tsx",
       "file_type": "code",
-      "norm_label": "searchproductsbyname.ts",
-      "source_file": "sanity/lib/products/searchProductsByName.ts",
+      "norm_label": "search/loading.tsx",
+      "source_file": "app/(store)/search/loading.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "components_loader",
+      "label": "Loader.tsx",
+      "_origin": "ast",
+      "community": 25,
+      "community_name": "Loader.tsx",
+      "file_type": "code",
+      "norm_label": "loader.tsx",
+      "source_file": "components/Loader.tsx",
       "source_location": "L1"
     },
     {
@@ -3360,6 +3338,17 @@
       "source_location": "L1"
     },
     {
+      "id": "app_store_search_page",
+      "label": "search/page.tsx",
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "sanity.types.ts",
+      "file_type": "code",
+      "norm_label": "search/page.tsx",
+      "source_file": "app/(store)/search/page.tsx",
+      "source_location": "L1"
+    },
+    {
       "id": "components_categorypills",
       "label": "CategoryPills.tsx",
       "_origin": "ast",
@@ -3379,6 +3368,17 @@
       "file_type": "code",
       "norm_label": "productsview.tsx",
       "source_file": "components/ProductsView.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "sanity_lib_products_searchproductsbyname",
+      "label": "searchProductsByName.ts",
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "sanity.types.ts",
+      "file_type": "code",
+      "norm_label": "searchproductsbyname.ts",
+      "source_file": "sanity/lib/products/searchProductsByName.ts",
       "source_location": "L1"
     },
     {
@@ -4185,30 +4185,6 @@
     },
     {
       "source": "app_store_orders_page_orders",
-      "target": "sanity_lib_orders_getmyorders_getmyorders",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "app/(store)/orders/page.tsx",
-      "source_location": "L15",
-      "weight": 1.0
-    },
-    {
-      "source": "app_store_orders_page_orders",
-      "target": "lib_formatcurrency_formatcurrency",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "app/(store)/orders/page.tsx",
-      "source_location": "L49",
-      "weight": 1.0
-    },
-    {
-      "source": "app_store_orders_page_orders",
       "target": "lib_imageurl_imageurl",
       "relation": "calls",
       "_origin": "ast",
@@ -4216,7 +4192,31 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/(store)/orders/page.tsx",
-      "source_location": "L69",
+      "source_location": "L117",
+      "weight": 1.0
+    },
+    {
+      "source": "app_store_orders_page_orders",
+      "target": "lib_formatidr_formatidr",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "app/(store)/orders/page.tsx",
+      "source_location": "L130",
+      "weight": 1.0
+    },
+    {
+      "source": "app_store_orders_page_orders",
+      "target": "sanity_lib_orders_getmyorders_getmyorders",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "app/(store)/orders/page.tsx",
+      "source_location": "L17",
       "weight": 1.0
     },
     {
@@ -5109,7 +5109,7 @@
     },
     {
       "source": "app_store_orders_page",
-      "target": "lib_formatcurrency_formatcurrency",
+      "target": "lib_formatidr_formatidr",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5140,7 +5140,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "app/(store)/orders/page.tsx",
-      "source_location": "L6",
+      "source_location": "L7",
       "weight": 1.0
     },
     {
@@ -6813,7 +6813,7 @@
     },
     {
       "source": "app_store_orders_page",
-      "target": "lib_formatcurrency",
+      "target": "lib_formatidr",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -6844,7 +6844,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "app/(store)/orders/page.tsx",
-      "source_location": "L6",
+      "source_location": "L7",
       "weight": 1.0
     },
     {
@@ -8024,7 +8024,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/(store)/orders/page.tsx",
-      "source_location": "L8",
+      "source_location": "L10",
       "weight": 1.0
     },
     {
@@ -10382,5 +10382,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "076379a7e9e12ef5b8cff7c0efab4d9c943a2e09"
+  "built_at_commit": "88e709b6720208090f5adfcf88970b38f9bcff96"
 }
