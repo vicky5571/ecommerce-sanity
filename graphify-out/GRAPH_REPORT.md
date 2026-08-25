@@ -1,7 +1,7 @@
 # Graph Report - ecommerce-sanity-master  (2026-08-25)
 
 ## Corpus Check
-- 80 files · ~16,907 words
+- 80 files · ~16,850 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
@@ -10,7 +10,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `66e0e38f`
+- Built from commit: `e9fbffca`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 

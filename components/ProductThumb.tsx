@@ -9,9 +9,9 @@ function ProductThumb({ product }: { product: Product }) {
   return (
     <Link
       href={`/product/${product.slug?.current}`}
-      className={`group flex w-full h-full flex-col bg-white rounded-lg border border-gray-200 shadow-sm transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5 overflow-hidden ${isOutOfStock ? "opacity-60" : ""}`}
+      className={`group flex w-full h-full flex-col bg-white rounded-xl border border-stone-200/90 shadow-sm transition-all duration-200 hover:shadow-md hover:border-[#03AC0E] hover:-translate-y-0.5 overflow-hidden ${isOutOfStock ? "opacity-60" : ""}`}
     >
-      <div className="relative aspect-square w-full overflow-hidden bg-white">
+      <div className="relative aspect-square w-full overflow-hidden bg-stone-50/50 p-3">
         {product.image && (
           <Image
             className="object-contain transition-transform duration-300 group-hover:scale-105"
@@ -23,16 +23,16 @@ function ProductThumb({ product }: { product: Product }) {
         )}
 
         {isOutOfStock && (
-          <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
-            <span className="text-white font-bold text-sm sm:text-base">Out of Stock</span>
+          <div className="absolute inset-0 flex items-center justify-center bg-stone-950/60 backdrop-blur-[2px]">
+            <span className="text-white font-semibold text-xs sm:text-sm tracking-wide uppercase px-2.5 py-1 rounded bg-stone-900/80 border border-white/20">Out of Stock</span>
           </div>
         )}
       </div>
 
-      <div className="flex flex-col flex-1 px-2.5 pb-2.5 pt-2 sm:px-3 sm:pb-3">
-        <h2 className="text-xs sm:text-sm font-normal text-gray-800 leading-snug line-clamp-2 min-h-[2.5em]">{product.name}</h2>
+      <div className="flex flex-col flex-1 p-3 sm:p-3.5 justify-between border-t border-stone-100">
+        <h2 className="text-xs sm:text-sm font-medium text-stone-800 leading-snug line-clamp-2 min-h-[2.5em] tracking-tight group-hover:text-[#03AC0E] transition-colors">{product.name}</h2>
 
-        <p className="mt-1 sm:mt-1.5 text-sm sm:text-base font-bold text-gray-900">{formatIDR(product.price ?? 0)}</p>
+        <p className="mt-2 text-sm sm:text-base font-mono font-extrabold text-stone-950 tracking-tight">{formatIDR(product.price ?? 0)}</p>
       </div>
     </Link>
   );

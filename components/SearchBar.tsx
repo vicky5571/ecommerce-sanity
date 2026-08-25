@@ -11,10 +11,10 @@ function SearchBar({ className = "" }: { className?: string }) {
         <input
           type="text"
           name="query"
-          placeholder="Search for products"
-          className="w-full rounded-lg border border-gray-300 bg-gray-50 py-2 pl-9 pr-20 text-sm text-gray-800 placeholder:text-gray-400 focus:border-blue-500 focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-500/30 sm:pr-24"
+          placeholder="Search for products..."
+          className="w-full rounded-lg border border-stone-200 bg-stone-50/70 py-2 pl-9 pr-20 text-sm text-stone-900 placeholder:text-stone-400 focus:border-[#03AC0E] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#03AC0E]/20 sm:pr-24 transition-all"
         />
-        <button type="submit" className="absolute right-1 top-1/2 -translate-y-1/2 rounded-md bg-blue-500 px-3 py-1.5 text-sm font-semibold text-white transition-colors hover:bg-blue-600 sm:px-4">
+        <button type="submit" className="absolute right-1 top-1/2 -translate-y-1/2 rounded-md bg-[#03AC0E] px-3 py-1.5 text-xs sm:text-sm font-semibold text-white transition-colors hover:bg-[#028A0B] sm:px-4 shadow-sm">
           Search
         </button>
       </div>

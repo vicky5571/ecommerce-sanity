@@ -1,16 +1,16 @@
 # Graph Report - ecommerce-sanity-master  (2026-08-25)
 
 ## Corpus Check
-- 79 files · ~16,182 words
+- 80 files · ~16,984 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 341 nodes · 514 edges · 24 communities (20 shown, 4 thin omitted)
+- 348 nodes · 521 edges · 24 communities (20 shown, 4 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 1 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `66e0e38f`
+- Built from commit: `e9fbffca`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -20,15 +20,15 @@
 - cn
 - devDependencies
 - compilerOptions
-- useBasketStore
+- (store)/layout.tsx
 - sanity.types.ts
 - (store)/page.tsx
 - components.json
-- sanity.config.ts
 - index.ts
+- orders/page.tsx
 - rules/graphify.md
 - workflows/graphify.md
-- search/page.tsx
+- README.md
 - studio/layout.tsx
 - eslint.config.mjs
 - middleware.ts
@@ -47,19 +47,19 @@
 7. `formatIDR()` - 7 edges
 8. `getAllCategories()` - 7 edges
 9. `include` - 7 edges
-10. `Button` - 6 edges
+10. `tailwind` - 6 edges
 
 ## Surprising Connections (you probably didn't know these)
+- `SuccessPage()` --calls--> `useBasketStore`  [EXTRACTED]
+  app/(store)/success/page.tsx → store/store.ts
+- `BasketPage()` --calls--> `useBasketStore`  [EXTRACTED]
+  app/(store)/basket/page.tsx → store/store.ts
+- `CategoriesPage()` --calls--> `getAllCategories()`  [EXTRACTED]
+  app/(store)/categories/page.tsx → sanity/lib/products/getAllCategories.ts
+- `Orders()` --calls--> `imageUrl()`  [EXTRACTED]
+  app/(store)/orders/page.tsx → lib/imageUrl.ts
 - `AddToBasketButtonProps` --references--> `Product`  [EXTRACTED]
   components/AddToBasket.tsx → sanity.types.ts
-- `ProductsViewProps` --references--> `Product`  [EXTRACTED]
-  components/ProductsView.tsx → sanity.types.ts
-- `BasketState` --references--> `Product`  [EXTRACTED]
-  store/store.ts → sanity.types.ts
-- `CategorySelectorProps` --references--> `Category`  [EXTRACTED]
-  components/ui/category-selector.tsx → sanity.types.ts
-- `CategorySelectorProps` --references--> `Category`  [EXTRACTED]
-  components/ui/category-selectorORIGINAL.tsx → sanity.types.ts
 
 ## Import Cycles
 - None detected.
@@ -72,11 +72,11 @@ Nodes (47): class-variance-authority, @clerk/nextjs, clsx, cmdk, framer-motion, 
 
 ### Community 1 - "basket/page.tsx"
 Cohesion: 0.11
-Nodes (18): createCheckoutSession(), GroupedBasketItem, Metadata, BasketPage(), Orders(), dynamic, ProductPage(), revalidate (+10 more)
+Nodes (18): createCheckoutSession(), GroupedBasketItem, Metadata, BasketPage(), dynamic, ProductPage(), revalidate, SearchPage() (+10 more)
 
 ### Community 2 - "cn"
-Cohesion: 0.15
-Nodes (25): ProductsViewProps, Button, ButtonProps, buttonVariants, CategorySelectorComponent(), CategorySelectorProps, CategorySelectorComponent(), CategorySelectorProps (+17 more)
+Cohesion: 0.14
+Nodes (26): SuccessPage(), ProductsViewProps, Button, ButtonProps, buttonVariants, CategorySelectorComponent(), CategorySelectorProps, CategorySelectorComponent() (+18 more)
 
 ### Community 3 - "devDependencies"
 Cohesion: 0.06
@@ -86,13 +86,13 @@ Nodes (30): eslint, eslint-config-next, @eslint/eslintrc, devDependencies, eslin
 Cohesion: 0.07
 Nodes (28): **/*.d.ts, dom, dom.iterable, esnext, .next/dev/types/**/*.ts, next-env.d.ts, .next/types/**/*.ts, node_modules (+20 more)
 
-### Community 5 - "useBasketStore"
-Cohesion: 0.17
-Nodes (12): geistMono, geistSans, metadata, SuccessPage(), BottomBar(), tabs, DisableDraftMode(), Header() (+4 more)
+### Community 5 - "(store)/layout.tsx"
+Cohesion: 0.13
+Nodes (17): geistMono, geistSans, metadata, AddToBasketButton(), AddToBasketButtonProps, BottomBar(), tabs, DisableDraftMode() (+9 more)
 
 ### Community 6 - "sanity.types.ts"
-Cohesion: 0.07
-Nodes (29): AddToBasketButton(), AddToBasketButtonProps, ACTIVE_SALE_BY_COUPON_QUERYResult, ALL_CATEGORIES_QUERYResult, ALL_PRODUCTS_QUERYResult, AllSanitySchemaTypes, BlockContent, Geopoint (+21 more)
+Cohesion: 0.08
+Nodes (24): ACTIVE_SALE_BY_COUPON_QUERYResult, ALL_CATEGORIES_QUERYResult, ALL_PRODUCTS_QUERYResult, AllSanitySchemaTypes, BlockContent, Geopoint, MY_ORDERS_QUERYResult, Order (+16 more)
 
 ### Community 7 - "(store)/page.tsx"
 Cohesion: 0.15
@@ -102,17 +102,17 @@ Nodes (15): CategoriesPage(), dynamic, revalidate, CategoryPage(), dynamic, Home
 Cohesion: 0.11
 Nodes (17): aliases, components, hooks, lib, ui, utils, iconLibrary, rsc (+9 more)
 
-### Community 9 - "sanity.config.ts"
-Cohesion: 0.21
-Nodes (6): dynamic, apiVersion, dataset, projectId, builder, structure()
+### Community 9 - "index.ts"
+Cohesion: 0.11
+Nodes (12): dynamic, apiVersion, dataset, projectId, builder, blockContentType, categoryType, schema (+4 more)
 
-### Community 10 - "index.ts"
-Cohesion: 0.24
-Nodes (6): blockContentType, categoryType, schema, orderType, productType, salesType
-
-### Community 13 - "search/page.tsx"
+### Community 10 - "orders/page.tsx"
 Cohesion: 0.60
-Nodes (3): SearchPage(), ProductGrid(), searchProductsByName()
+Nodes (3): Orders(), formatCurrency(), getMyOrders()
+
+### Community 13 - "README.md"
+Cohesion: 0.50
+Nodes (3): Deploy on Vercel, Getting Started, Learn More
 
 ### Community 14 - "studio/layout.tsx"
 Cohesion: 0.40
@@ -135,7 +135,7 @@ Cohesion: 0.50
 Nodes (3): build, env, NPM_FLAGS
 
 ## Knowledge Gaps
-- **135 isolated node(s):** `graphify`, `Workflow: graphify`, `GroupedBasketItem`, `MiddlewareHandler`, `ButtonProps` (+130 more)
+- **138 isolated node(s):** `GroupedBasketItem`, `dynamic`, `revalidate`, `geistSans`, `geistMono` (+133 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **4 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -143,15 +143,15 @@ Nodes (3): build, env, NPM_FLAGS
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `dependencies` connect `dependencies` to `devDependencies`?**
-  _High betweenness centrality (0.042) - this node is a cross-community bridge._
-- **What connects `graphify`, `Workflow: graphify`, `GroupedBasketItem` to the rest of the system?**
-  _135 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _High betweenness centrality (0.041) - this node is a cross-community bridge._
+- **What connects `GroupedBasketItem`, `dynamic`, `revalidate` to the rest of the system?**
+  _138 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `dependencies` be split into smaller, more focused modules?**
   _Cohesion score 0.0425531914893617 - nodes in this community are weakly interconnected._
 - **Should `basket/page.tsx` be split into smaller, more focused modules?**
-  _Cohesion score 0.1111111111111111 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.11092436974789915 - nodes in this community are weakly interconnected._
 - **Should `cn` be split into smaller, more focused modules?**
-  _Cohesion score 0.1495798319327731 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.14285714285714285 - nodes in this community are weakly interconnected._
 - **Should `devDependencies` be split into smaller, more focused modules?**
   _Cohesion score 0.06451612903225806 - nodes in this community are weakly interconnected._
 - **Should `compilerOptions` be split into smaller, more focused modules?**

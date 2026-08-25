@@ -32,12 +32,12 @@ function BottomBar() {
               <Link
                 key={href}
                 href={href}
-                className={`relative flex flex-col items-center justify-center gap-1 text-[11px] font-medium transition-colors ${active ? "text-blue-500" : "text-gray-500 hover:text-gray-800"}`}
+                className={`relative flex flex-col items-center justify-center gap-1 text-[11px] font-medium transition-colors ${active ? "text-[#03AC0E] font-bold" : "text-stone-500 hover:text-stone-800"}`}
               >
                 <span className="relative">
-                  <Icon className="h-6 w-6" />
+                  <Icon className="h-5 w-5" />
                   {badge && itemCount > 0 && (
-                    <span className="absolute -right-2.5 -top-1.5 flex h-4 min-w-4 items-center justify-center rounded-full bg-red-500 px-1 text-[10px] font-bold text-white">
+                    <span className="absolute -right-2.5 -top-1.5 flex h-4 min-w-4 items-center justify-center rounded-full bg-[#03AC0E] px-1 text-[10px] font-mono font-bold text-white shadow-sm">
                       {itemCount}
                     </span>
                   )}

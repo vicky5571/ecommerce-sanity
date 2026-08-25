@@ -101,19 +101,19 @@ function BasketPage() {
               <span>Items:</span>
               <span>{groupedItems.reduce((total, item) => total + item.quantity, 0)}</span>
             </p>
-            <p className="flex justify-between text-xl sm:text-2xl font-bold border-t pt-2">
+            <p className="flex justify-between text-xl sm:text-2xl font-bold border-t border-stone-200 pt-2 font-mono">
               <span>Total:</span>
               <span>{formatIDR(useBasketStore.getState().getTotalPrice())}</span>
             </p>
           </div>
 
           {isSignedIn ? (
-            <button onClick={handleCheckout} disabled={isLoading} className="mt-4 w-full bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 disabled:bg-gray-400">
-              {isLoading ? "Processing..." : "Checkout"}
+            <button onClick={handleCheckout} disabled={isLoading} className="mt-4 w-full bg-[#03AC0E] text-white px-4 py-3 rounded-lg font-bold hover:bg-[#028A0B] shadow-sm transition-colors disabled:bg-stone-400">
+              {isLoading ? "Processing..." : "Proceed to Checkout"}
             </button>
           ) : (
             <SignInButton mode="modal">
-              <button className="mt-4 w-full bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Sign in to Checkout</button>
+              <button className="mt-4 w-full bg-[#03AC0E] text-white px-4 py-3 rounded-lg font-bold hover:bg-[#028A0B] shadow-sm transition-colors">Sign in to Checkout</button>
             </SignInButton>
           )}
         </div>

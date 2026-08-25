@@ -889,7 +889,7 @@
       "file_type": "code",
       "norm_label": "footer()",
       "source_file": "components/Footer.tsx",
-      "source_location": "L7"
+      "source_location": "L4"
     },
     {
       "id": "components_header_header",
@@ -8080,7 +8080,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "components/Footer.tsx",
-      "source_location": "L7",
+      "source_location": "L4",
       "weight": 1.0
     },
     {
@@ -9998,5 +9998,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "66e0e38f0d3ae06c98a63a9478e6958e306780c8"
+  "built_at_commit": "e9fbffca46943e895b9bbf4c2310f5f3fbd4d5c7"
 }
