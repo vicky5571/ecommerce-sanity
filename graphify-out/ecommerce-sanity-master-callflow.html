@@ -60,16 +60,16 @@ hr { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
 <div class="container">
 
 <h1>ecommerce-sanity-master — Complete Call Flow &amp; Architecture Documentation</h1>
-<p class="subtitle">Generated from graphify knowledge graph: 354 nodes, 535 edges, 23 communities. Commit: 21d02f1</p>
+<p class="subtitle">Generated from graphify knowledge graph: 356 nodes, 537 edges, 23 communities. Commit: c3e6916</p>
 
 <div class="nav">
     <a href="#overview">Architecture Overview</a>
     <a href="#build-graph">Graph Build</a>
     <a href="#cli-skills">CLI &amp; Skill Installers</a>
     <a href="#serve-api">Serving API</a>
+    <a href="#store-page-tsx">(store)/page.tsx</a>
     <a href="#usebasketstore">useBasketStore</a>
     <a href="#index-ts">index.ts</a>
-    <a href="#store-page-tsx">(store)/page.tsx</a>
     <a href="#studio-layout-tsx">studio/layout.tsx</a>
     <a href="#eslint-config-mjs">eslint.config.mjs</a>
     <a href="#readme-md">README.md</a>
@@ -90,16 +90,16 @@ hr { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
 flowchart LR
     BUILD_GRAPH_321CBB04("Graph Build<br/><small>129 nodes</small>")
     class BUILD_GRAPH_321CBB04 module;
-    CLI_SKILLS_9964CBB8("CLI &amp; Skill Installers<br/><small>28 nodes</small>")
+    CLI_SKILLS_9964CBB8("CLI &amp; Skill Installers<br/><small>29 nodes</small>")
     class CLI_SKILLS_9964CBB8 module;
     SERVE_API_35EC8E86("Serving API<br/><small>74 nodes</small>")
     class SERVE_API_35EC8E86 module;
-    USEBASKETSTORE_FCD7DEA6("useBasketStore<br/><small>31 nodes</small>")
+    STORE_PAGE_TSX_F1F82C5D("(store)/page.tsx<br/><small>31 nodes</small>")
+    class STORE_PAGE_TSX_F1F82C5D module;
+    USEBASKETSTORE_FCD7DEA6("useBasketStore<br/><small>29 nodes</small>")
     class USEBASKETSTORE_FCD7DEA6 module;
     INDEX_TS_C625E268("index.ts<br/><small>29 nodes</small>")
     class INDEX_TS_C625E268 module;
-    STORE_PAGE_TSX_F1F82C5D("(store)/page.tsx<br/><small>28 nodes</small>")
-    class STORE_PAGE_TSX_F1F82C5D module;
     STUDIO_LAYOUT_TSX_F7138BCE("studio/layout.tsx<br/><small>5 nodes</small>")
     class STUDIO_LAYOUT_TSX_F7138BCE module;
     ESLINT_CONFIG_MJS_F6B77F9F("eslint.config.mjs<br/><small>5 nodes</small>")
@@ -118,16 +118,16 @@ flowchart LR
     class WORKFLOWS_GRAPHIFY_MD_C6A40BAC module;
     OTHER_D0941E68("Other<br/><small>6 nodes</small>")
     class OTHER_D0941E68 module;
-    SERVE_API_35EC8E86 -->|imports x20| USEBASKETSTORE_FCD7DEA6
-    CLI_SKILLS_9964CBB8 -->|contains x7| SERVE_API_35EC8E86
+    SERVE_API_35EC8E86 -->|imports x16| USEBASKETSTORE_FCD7DEA6
+    CLI_SKILLS_9964CBB8 -->|imports x6| SERVE_API_35EC8E86
+    SERVE_API_35EC8E86 -->|imports x4| STORE_PAGE_TSX_F1F82C5D
     STORE_PAGE_TSX_F1F82C5D -->|imports x4| SERVE_API_35EC8E86
-    STORE_PAGE_TSX_F1F82C5D -->|imports x4| USEBASKETSTORE_FCD7DEA6
-    SERVE_API_35EC8E86 -->|calls x2| CLI_SKILLS_9964CBB8
+    USEBASKETSTORE_FCD7DEA6 -->|imports x3| SERVE_API_35EC8E86
     SERVE_API_35EC8E86 -->|imports x2| INDEX_TS_C625E268
     USEBASKETSTORE_FCD7DEA6 -->|imports x2| CLI_SKILLS_9964CBB8
-    USEBASKETSTORE_FCD7DEA6 -->|imports x2| SERVE_API_35EC8E86
-    USEBASKETSTORE_FCD7DEA6 -->|imports| INDEX_TS_C625E268
-    SERVE_API_35EC8E86 -->|contains| STORE_PAGE_TSX_F1F82C5D
+    SERVE_API_35EC8E86 -->|imports x2| CLI_SKILLS_9964CBB8
+    USEBASKETSTORE_FCD7DEA6 -->|imports| STORE_PAGE_TSX_F1F82C5D
+    STORE_PAGE_TSX_F1F82C5D -->|imports| INDEX_TS_C625E268
     classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
     classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
     classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
@@ -144,19 +144,19 @@ flowchart LR
     <h4>Architecture Layers</h4>
     <table style="width:100%;font-size:0.85rem;">
       <tr><th>Layer</th><th>Nodes</th><th>Communities</th></tr>
-      <tr><td>Graph Build</td><td>129</td><td><code>0, 3, 4, 8, 18</code></td></tr><tr><td>CLI &amp; Skill Installers</td><td>28</td><td><code>2</code></td></tr><tr><td>Serving API</td><td>74</td><td><code>6, 1</code></td></tr><tr><td>useBasketStore</td><td>31</td><td><code>5</code></td></tr><tr><td>index.ts</td><td>29</td><td><code>9</code></td></tr><tr><td>(store)/page.tsx</td><td>28</td><td><code>7</code></td></tr><tr><td>studio/layout.tsx</td><td>5</td><td><code>14</code></td></tr><tr><td>eslint.config.mjs</td><td>5</td><td><code>15</code></td></tr><tr><td>README.md</td><td>4</td><td><code>13</code></td></tr><tr><td>middleware.ts</td><td>4</td><td><code>16</code></td></tr><tr><td>clerk-nextjs.d.ts</td><td>4</td><td><code>17</code></td></tr><tr><td>postcss.config.mjs</td><td>3</td><td><code>19</code></td></tr><tr><td>rules/graphify.md</td><td>2</td><td><code>11</code></td></tr><tr><td>workflows/graphify.md</td><td>2</td><td><code>12</code></td></tr><tr><td>Other</td><td>6</td><td><code>20, 21, 22, 23</code></td></tr>
+      <tr><td>Graph Build</td><td>129</td><td><code>0, 3, 4, 8, 18</code></td></tr><tr><td>CLI &amp; Skill Installers</td><td>29</td><td><code>2</code></td></tr><tr><td>Serving API</td><td>74</td><td><code>6, 1</code></td></tr><tr><td>(store)/page.tsx</td><td>31</td><td><code>7</code></td></tr><tr><td>useBasketStore</td><td>29</td><td><code>5</code></td></tr><tr><td>index.ts</td><td>29</td><td><code>9</code></td></tr><tr><td>studio/layout.tsx</td><td>5</td><td><code>14</code></td></tr><tr><td>eslint.config.mjs</td><td>5</td><td><code>15</code></td></tr><tr><td>README.md</td><td>4</td><td><code>13</code></td></tr><tr><td>middleware.ts</td><td>4</td><td><code>16</code></td></tr><tr><td>clerk-nextjs.d.ts</td><td>4</td><td><code>17</code></td></tr><tr><td>postcss.config.mjs</td><td>3</td><td><code>19</code></td></tr><tr><td>rules/graphify.md</td><td>2</td><td><code>11</code></td></tr><tr><td>workflows/graphify.md</td><td>2</td><td><code>12</code></td></tr><tr><td>Other</td><td>6</td><td><code>20, 21, 22, 23</code></td></tr>
     </table>
   </div>
   <div class="card">
     <h4>Core Flow</h4>
-    <div class="arrow-chain">Graph Build -&gt; CLI &amp; Skill Installers -&gt; Serving API -&gt; useBasketStore -&gt; index.ts -&gt; (store)/page.tsx -&gt; studio/layout.tsx</div>
+    <div class="arrow-chain">Graph Build -&gt; CLI &amp; Skill Installers -&gt; Serving API -&gt; useBasketStore -&gt; (store)/page.tsx -&gt; index.ts -&gt; studio/layout.tsx</div>
   </div>
 </div>
 <div class="grid">
   <div class="card">
     <h4>Graph Report Highlights</h4>
     <ul>
-      <li>354 nodes · 535 edges · 23 communities (19 shown, 4 thin omitted)</li>
+      <li>356 nodes · 537 edges · 23 communities (19 shown, 4 thin omitted)</li>
       <li>Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 1 edges (avg confidence: 0.85)</li>
       <li>Token cost: 0 input · 0 output</li>
       <li>1. `cn()` - 24 edges</li>
@@ -503,38 +503,41 @@ flowchart LR
 
 <!-- ====== 3. CLI & Skill Installers ====== -->
 <h2 id="cli-skills">3. CLI &amp; Skill Installers</h2>
-<p>CLI &amp; Skill Installers groups implementation around components, commandtsx, dialogtsx, buttontsx, mostly in components/ui/command.tsx, components/ui/dialog.tsx, components/ui/button.tsx. This section covers 28 nodes and 74 internal edges; the diagram shows only representative relationships to stay readable.</p>
+<p>CLI &amp; Skill Installers groups implementation around components, commandtsx, dialogtsx, category, mostly in components/ui/command.tsx, components/ui/dialog.tsx, components/ui/button.tsx. This section covers 29 nodes and 76 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
 %%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
 flowchart LR
-    %% Section: CLI &amp; Skill Installers (28 nodes, 74 edges)
+    %% Section: CLI &amp; Skill Installers (29 nodes, 76 edges)
     subgraph cli_skills_components_ui_command_tsx_200d5c52["components/ui/command.tsx"]
         components_ui_command_277f5a65("command.tsx")
-        components_ui_command_commandseparator_46796053("CommandSeparator<br/><small>components/ui/command.tsx</small>")
         components_ui_command_commandshortcut_a0e00996("CommandShortcut()<br/><small>components/ui/command.tsx</small>")
         components_ui_command_command_91415446("Command<br/><small>components/ui/command.tsx</small>")
         components_ui_command_commandgroup_163a83ad("CommandGroup<br/><small>components/ui/command.tsx</small>")
         components_ui_command_commandinput_ebe03aef("CommandInput<br/><small>components/ui/command.tsx</small>")
         components_ui_command_commanditem_6f914197("CommandItem<br/><small>components/ui/command.tsx</small>")
         components_ui_command_commandlist_ae3170d2("CommandList<br/><small>components/ui/command.tsx</small>")
+        components_ui_command_commandseparator_46796053("CommandSeparator<br/><small>components/ui/command.tsx</small>")
     end
     subgraph cli_skills_components_ui_dialog_tsx_a94d6240["components/ui/dialog.tsx"]
         components_ui_dialog_bde49f48("dialog.tsx")
         components_ui_dialog_dialogfooter_3613b200("DialogFooter()<br/><small>components/ui/dialog.tsx</small>")
         components_ui_dialog_dialogheader_2013a3c5("DialogHeader()<br/><small>components/ui/dialog.tsx</small>")
-        components_ui_dialog_dialogcontent_6379ad51("DialogContent<br/><small>components/ui/dialog.tsx</small>")
     end
     subgraph cli_skills_components_ui_button_tsx_f3becc1f["components/ui/button.tsx"]
         components_ui_button_button_808a3383("Button<br/><small>components/ui/button.tsx</small>")
         components_ui_button_buttonvariants_796d6050("buttonVariants<br/><small>components/ui/button.tsx</small>")
     end
+    subgraph cli_skills_components_ui_category_selector_tsx_90a04b03["components/ui/category-selector.tsx"]
+        components_ui_category_selector_a64976f9("category-selector.tsx")
+        components_ui_category_selector_categoryselector_f580255d("CategorySelectorComponent()<br/><small>components/ui/category-selector.tsx</small>")
+    end
     subgraph cli_skills_components_ui_category_selectorORIGIN_f012bb8a["components/ui/category-selectorORIGINAL.tsx"]
         components_ui_category_selectororiginal_a2f4d7cb("category-selectorORIGINAL.tsx")
         components_ui_category_selectororiginal_category_e8cba2c3("CategorySelectorComponent()<br/><small>components/ui/category-selectorORIGINAL.tsx</small>")
     end
-    components_ui_category_selector_a64976f9("category-selector.tsx")
     lib_utils_cn_b8743bb6("cn()<br/><small>lib/utils.ts</small>")
+    components_ui_category_selector_categoryselector_f580255d -->|calls| lib_utils_cn_b8743bb6
     components_ui_category_selectororiginal_category_e8cba2c3 -->|calls| lib_utils_cn_b8743bb6
     components_ui_command_commandshortcut_a0e00996 -->|calls| lib_utils_cn_b8743bb6
     components_ui_dialog_dialogfooter_3613b200 -->|calls| lib_utils_cn_b8743bb6
@@ -547,7 +550,6 @@ flowchart LR
     components_ui_command_commanditem_6f914197 -->|calls| lib_utils_cn_b8743bb6
     components_ui_command_commandlist_ae3170d2 -->|calls| lib_utils_cn_b8743bb6
     components_ui_command_commandseparator_46796053 -->|calls| lib_utils_cn_b8743bb6
-    components_ui_dialog_dialogcontent_6379ad51 -->|calls| lib_utils_cn_b8743bb6
     components_ui_category_selector_a64976f9 -->|imports| lib_utils_cn_b8743bb6
     components_ui_category_selector_a64976f9 -->|imports| components_ui_button_button_808a3383
     components_ui_category_selector_a64976f9 -->|imports| components_ui_command_command_91415446
@@ -559,24 +561,24 @@ flowchart LR
     components_ui_category_selectororiginal_a2f4d7cb -->|imports| lib_utils_cn_b8743bb6
     components_ui_category_selectororiginal_a2f4d7cb -->|imports| components_ui_button_button_808a3383
     components_ui_category_selectororiginal_a2f4d7cb -->|imports| components_ui_command_command_91415446
-    %% Omitted for readability: 10 nodes, 9 edges
+    %% Omitted for readability: 11 nodes, 8 edges
     class components_ui_command_277f5a65 entry;
-    class components_ui_command_commandseparator_46796053 entry;
     class components_ui_command_commandshortcut_a0e00996 entry;
     class components_ui_command_command_91415446 entry;
     class components_ui_command_commandgroup_163a83ad entry;
     class components_ui_command_commandinput_ebe03aef entry;
     class components_ui_command_commanditem_6f914197 entry;
     class components_ui_command_commandlist_ae3170d2 entry;
+    class components_ui_command_commandseparator_46796053 entry;
     class components_ui_dialog_bde49f48 ui;
     class components_ui_dialog_dialogfooter_3613b200 ui;
     class components_ui_dialog_dialogheader_2013a3c5 ui;
-    class components_ui_dialog_dialogcontent_6379ad51 ui;
     class components_ui_button_button_808a3383 ui;
     class components_ui_button_buttonvariants_796d6050 ui;
+    class components_ui_category_selector_a64976f9 ui;
+    class components_ui_category_selector_categoryselector_f580255d ui;
     class components_ui_category_selectororiginal_a2f4d7cb ui;
     class components_ui_category_selectororiginal_category_e8cba2c3 ui;
-    class components_ui_category_selector_a64976f9 ui;
     class lib_utils_cn_b8743bb6 function;
     classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
     classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
@@ -609,6 +611,14 @@ flowchart LR
 </tr>
 <tr>
   <td>2</td>
+  <td><code>CategorySelectorComponent()</code><br><small style="color:var(--muted)">components/ui/category-selector.tsx</small></td>
+  <td><span class="tag tag-hook">UI</span></td>
+  <td><code>ProductsView.tsx</code><br><small style="color:var(--muted)">components/ProductsView.tsx</small></td>
+  <td><code>cn()</code><br><small style="color:var(--muted)">lib/utils.ts</small></td>
+  <td>CategorySelectorComponent() node in components/ui/category-selector.tsx.</td>
+</tr>
+<tr>
+  <td>3</td>
   <td><code>CategorySelectorComponent()</code><br><small style="color:var(--muted)">components/ui/category-selectorORIGINAL.tsx</small></td>
   <td><span class="tag tag-hook">UI</span></td>
   <td>External entry / no inbound edge</td>
@@ -616,7 +626,7 @@ flowchart LR
   <td>CategorySelectorComponent() node in components/ui/category-selectorORIGINAL.tsx.</td>
 </tr>
 <tr>
-  <td>3</td>
+  <td>4</td>
   <td><code>CommandDialog()</code><br><small style="color:var(--muted)">components/ui/command.tsx</small></td>
   <td><span class="tag tag-cmd">Entry</span></td>
   <td>External entry / no inbound edge</td>
@@ -624,7 +634,7 @@ flowchart LR
   <td>CommandDialog() node in components/ui/command.tsx.</td>
 </tr>
 <tr>
-  <td>4</td>
+  <td>5</td>
   <td><code>CommandShortcut()</code><br><small style="color:var(--muted)">components/ui/command.tsx</small></td>
   <td><span class="tag tag-cmd">Entry</span></td>
   <td>External entry / no inbound edge</td>
@@ -632,7 +642,7 @@ flowchart LR
   <td>CommandShortcut() node in components/ui/command.tsx.</td>
 </tr>
 <tr>
-  <td>5</td>
+  <td>6</td>
   <td><code>DialogFooter()</code><br><small style="color:var(--muted)">components/ui/dialog.tsx</small></td>
   <td><span class="tag tag-hook">UI</span></td>
   <td>External entry / no inbound edge</td>
@@ -640,7 +650,7 @@ flowchart LR
   <td>DialogFooter() node in components/ui/dialog.tsx.</td>
 </tr>
 <tr>
-  <td>6</td>
+  <td>7</td>
   <td><code>DialogHeader()</code><br><small style="color:var(--muted)">components/ui/dialog.tsx</small></td>
   <td><span class="tag tag-hook">UI</span></td>
   <td>External entry / no inbound edge</td>
@@ -648,7 +658,7 @@ flowchart LR
   <td>DialogHeader() node in components/ui/dialog.tsx.</td>
 </tr>
 <tr>
-  <td>7</td>
+  <td>8</td>
   <td><code>cn()</code><br><small style="color:var(--muted)">lib/utils.ts</small></td>
   <td><span class="tag tag-func">Function</span></td>
   <td><code>Button</code><br><small style="color:var(--muted)">components/ui/button.tsx</small><br><code>button.tsx</code><br><small style="color:var(--muted)">components/ui/button.tsx</small><br><code>category-selector.tsx</code><br><small style="color:var(--muted)">components/ui/category-selector.tsx</small><br>+20 more</td>
@@ -656,7 +666,7 @@ flowchart LR
   <td>cn() node in lib/utils.ts.</td>
 </tr>
 <tr>
-  <td>8</td>
+  <td>9</td>
   <td><code>button.tsx</code><br><small style="color:var(--muted)">components/ui/button.tsx</small></td>
   <td><span class="tag tag-hook">UI</span></td>
   <td><code>category-selector.tsx</code><br><small style="color:var(--muted)">components/ui/category-selector.tsx</small><br><code>category-selectorORIGINAL.tsx</code><br><small style="color:var(--muted)">components/ui/category-selectorORIGINAL.tsx</small><br><code>page.tsx</code><br><small style="color:var(--muted)">(store)/success/page.tsx</small></td>
@@ -664,7 +674,7 @@ flowchart LR
   <td>Module file in components/ui/button.tsx.</td>
 </tr>
 <tr>
-  <td>9</td>
+  <td>10</td>
   <td><code>Button</code><br><small style="color:var(--muted)">components/ui/button.tsx</small></td>
   <td><span class="tag tag-hook">UI</span></td>
   <td><code>category-selector.tsx</code><br><small style="color:var(--muted)">components/ui/category-selector.tsx</small><br><code>category-selectorORIGINAL.tsx</code><br><small style="color:var(--muted)">components/ui/category-selectorORIGINAL.tsx</small><br><code>page.tsx</code><br><small style="color:var(--muted)">(store)/success/page.tsx</small></td>
@@ -672,7 +682,7 @@ flowchart LR
   <td>Button node in components/ui/button.tsx.</td>
 </tr>
 <tr>
-  <td>10</td>
+  <td>11</td>
   <td><code>buttonVariants</code><br><small style="color:var(--muted)">components/ui/button.tsx</small></td>
   <td><span class="tag tag-hook">UI</span></td>
   <td><code>Button</code><br><small style="color:var(--muted)">components/ui/button.tsx</small></td>
@@ -680,7 +690,7 @@ flowchart LR
   <td>buttonVariants node in components/ui/button.tsx.</td>
 </tr>
 <tr>
-  <td>11</td>
+  <td>12</td>
   <td><code>category-selector.tsx</code><br><small style="color:var(--muted)">components/ui/category-selector.tsx</small></td>
   <td><span class="tag tag-hook">UI</span></td>
   <td><code>ProductsView.tsx</code><br><small style="color:var(--muted)">components/ProductsView.tsx</small></td>
@@ -688,7 +698,7 @@ flowchart LR
   <td>Module file in components/ui/category-selector.tsx.</td>
 </tr>
 <tr>
-  <td>12</td>
+  <td>13</td>
   <td><code>category-selectorORIGINAL.tsx</code><br><small style="color:var(--muted)">components/ui/category-selectorORIGINAL.tsx</small></td>
   <td><span class="tag tag-hook">UI</span></td>
   <td>External entry / no inbound edge</td>
@@ -696,7 +706,7 @@ flowchart LR
   <td>Module file in components/ui/category-selectorORIGINAL.tsx.</td>
 </tr>
 <tr>
-  <td>13</td>
+  <td>14</td>
   <td><code>command.tsx</code><br><small style="color:var(--muted)">components/ui/command.tsx</small></td>
   <td><span class="tag tag-cmd">Entry</span></td>
   <td><code>category-selector.tsx</code><br><small style="color:var(--muted)">components/ui/category-selector.tsx</small><br><code>category-selectorORIGINAL.tsx</code><br><small style="color:var(--muted)">components/ui/category-selectorORIGINAL.tsx</small></td>
@@ -704,7 +714,7 @@ flowchart LR
   <td>Module file in components/ui/command.tsx.</td>
 </tr>
 <tr>
-  <td>14</td>
+  <td>15</td>
   <td><code>Command</code><br><small style="color:var(--muted)">components/ui/command.tsx</small></td>
   <td><span class="tag tag-cmd">Entry</span></td>
   <td><code>category-selector.tsx</code><br><small style="color:var(--muted)">components/ui/category-selector.tsx</small><br><code>category-selectorORIGINAL.tsx</code><br><small style="color:var(--muted)">components/ui/category-selectorORIGINAL.tsx</small></td>
@@ -712,7 +722,7 @@ flowchart LR
   <td>Command node in components/ui/command.tsx.</td>
 </tr>
 <tr>
-  <td>15</td>
+  <td>16</td>
   <td><code>CommandEmpty</code><br><small style="color:var(--muted)">components/ui/command.tsx</small></td>
   <td><span class="tag tag-cmd">Entry</span></td>
   <td><code>category-selector.tsx</code><br><small style="color:var(--muted)">components/ui/category-selector.tsx</small><br><code>category-selectorORIGINAL.tsx</code><br><small style="color:var(--muted)">components/ui/category-selectorORIGINAL.tsx</small></td>
@@ -720,7 +730,7 @@ flowchart LR
   <td>CommandEmpty node in components/ui/command.tsx.</td>
 </tr>
 <tr>
-  <td>16</td>
+  <td>17</td>
   <td><code>CommandGroup</code><br><small style="color:var(--muted)">components/ui/command.tsx</small></td>
   <td><span class="tag tag-cmd">Entry</span></td>
   <td><code>category-selector.tsx</code><br><small style="color:var(--muted)">components/ui/category-selector.tsx</small><br><code>category-selectorORIGINAL.tsx</code><br><small style="color:var(--muted)">components/ui/category-selectorORIGINAL.tsx</small></td>
@@ -728,7 +738,7 @@ flowchart LR
   <td>CommandGroup node in components/ui/command.tsx.</td>
 </tr>
 <tr>
-  <td>17</td>
+  <td>18</td>
   <td><code>CommandInput</code><br><small style="color:var(--muted)">components/ui/command.tsx</small></td>
   <td><span class="tag tag-cmd">Entry</span></td>
   <td><code>category-selector.tsx</code><br><small style="color:var(--muted)">components/ui/category-selector.tsx</small><br><code>category-selectorORIGINAL.tsx</code><br><small style="color:var(--muted)">components/ui/category-selectorORIGINAL.tsx</small></td>
@@ -736,7 +746,7 @@ flowchart LR
   <td>CommandInput node in components/ui/command.tsx.</td>
 </tr>
 <tr>
-  <td>18</td>
+  <td>19</td>
   <td><code>CommandItem</code><br><small style="color:var(--muted)">components/ui/command.tsx</small></td>
   <td><span class="tag tag-cmd">Entry</span></td>
   <td><code>category-selector.tsx</code><br><small style="color:var(--muted)">components/ui/category-selector.tsx</small><br><code>category-selectorORIGINAL.tsx</code><br><small style="color:var(--muted)">components/ui/category-selectorORIGINAL.tsx</small></td>
@@ -744,7 +754,7 @@ flowchart LR
   <td>CommandItem node in components/ui/command.tsx.</td>
 </tr>
 <tr>
-  <td>19</td>
+  <td>20</td>
   <td><code>CommandList</code><br><small style="color:var(--muted)">components/ui/command.tsx</small></td>
   <td><span class="tag tag-cmd">Entry</span></td>
   <td><code>category-selector.tsx</code><br><small style="color:var(--muted)">components/ui/category-selector.tsx</small><br><code>category-selectorORIGINAL.tsx</code><br><small style="color:var(--muted)">components/ui/category-selectorORIGINAL.tsx</small></td>
@@ -752,7 +762,7 @@ flowchart LR
   <td>CommandList node in components/ui/command.tsx.</td>
 </tr>
 <tr>
-  <td>20</td>
+  <td>21</td>
   <td><code>CommandSeparator</code><br><small style="color:var(--muted)">components/ui/command.tsx</small></td>
   <td><span class="tag tag-cmd">Entry</span></td>
   <td>External entry / no inbound edge</td>
@@ -760,7 +770,7 @@ flowchart LR
   <td>CommandSeparator node in components/ui/command.tsx.</td>
 </tr>
 <tr>
-  <td>21</td>
+  <td>22</td>
   <td><code>dialog.tsx</code><br><small style="color:var(--muted)">components/ui/dialog.tsx</small></td>
   <td><span class="tag tag-hook">UI</span></td>
   <td><code>command.tsx</code><br><small style="color:var(--muted)">components/ui/command.tsx</small></td>
@@ -768,7 +778,7 @@ flowchart LR
   <td>Module file in components/ui/dialog.tsx.</td>
 </tr>
 <tr>
-  <td>22</td>
+  <td>23</td>
   <td><code>DialogContent</code><br><small style="color:var(--muted)">components/ui/dialog.tsx</small></td>
   <td><span class="tag tag-hook">UI</span></td>
   <td><code>command.tsx</code><br><small style="color:var(--muted)">components/ui/command.tsx</small></td>
@@ -776,7 +786,7 @@ flowchart LR
   <td>DialogContent node in components/ui/dialog.tsx.</td>
 </tr>
 <tr>
-  <td>23</td>
+  <td>24</td>
   <td><code>DialogDescription</code><br><small style="color:var(--muted)">components/ui/dialog.tsx</small></td>
   <td><span class="tag tag-hook">UI</span></td>
   <td>External entry / no inbound edge</td>
@@ -784,7 +794,7 @@ flowchart LR
   <td>DialogDescription node in components/ui/dialog.tsx.</td>
 </tr>
 <tr>
-  <td>24</td>
+  <td>25</td>
   <td><code>DialogOverlay</code><br><small style="color:var(--muted)">components/ui/dialog.tsx</small></td>
   <td><span class="tag tag-hook">UI</span></td>
   <td>External entry / no inbound edge</td>
@@ -792,7 +802,7 @@ flowchart LR
   <td>DialogOverlay node in components/ui/dialog.tsx.</td>
 </tr>
 <tr>
-  <td>25</td>
+  <td>26</td>
   <td><code>DialogTitle</code><br><small style="color:var(--muted)">components/ui/dialog.tsx</small></td>
   <td><span class="tag tag-hook">UI</span></td>
   <td>External entry / no inbound edge</td>
@@ -800,7 +810,7 @@ flowchart LR
   <td>DialogTitle node in components/ui/dialog.tsx.</td>
 </tr>
 <tr>
-  <td>26</td>
+  <td>27</td>
   <td><code>popover.tsx</code><br><small style="color:var(--muted)">components/ui/popover.tsx</small></td>
   <td><span class="tag tag-hook">UI</span></td>
   <td><code>category-selector.tsx</code><br><small style="color:var(--muted)">components/ui/category-selector.tsx</small><br><code>category-selectorORIGINAL.tsx</code><br><small style="color:var(--muted)">components/ui/category-selectorORIGINAL.tsx</small></td>
@@ -808,7 +818,7 @@ flowchart LR
   <td>Module file in components/ui/popover.tsx.</td>
 </tr>
 <tr>
-  <td>27</td>
+  <td>28</td>
   <td><code>PopoverContent</code><br><small style="color:var(--muted)">components/ui/popover.tsx</small></td>
   <td><span class="tag tag-hook">UI</span></td>
   <td><code>category-selector.tsx</code><br><small style="color:var(--muted)">components/ui/category-selector.tsx</small><br><code>category-selectorORIGINAL.tsx</code><br><small style="color:var(--muted)">components/ui/category-selectorORIGINAL.tsx</small></td>
@@ -816,7 +826,7 @@ flowchart LR
   <td>PopoverContent node in components/ui/popover.tsx.</td>
 </tr>
 <tr>
-  <td>28</td>
+  <td>29</td>
   <td><code>utils.ts</code><br><small style="color:var(--muted)">lib/utils.ts</small></td>
   <td><span class="tag tag-class">Module</span></td>
   <td><code>button.tsx</code><br><small style="color:var(--muted)">components/ui/button.tsx</small><br><code>category-selector.tsx</code><br><small style="color:var(--muted)">components/ui/category-selector.tsx</small><br><code>category-selectorORIGINAL.tsx</code><br><small style="color:var(--muted)">components/ui/category-selectorORIGINAL.tsx</small><br>+3 more</td>
@@ -833,27 +843,27 @@ flowchart LR
       <tr><td><code>components/ui/command.tsx</code></td><td>10 nodes</td></tr>
 <tr><td><code>components/ui/dialog.tsx</code></td><td>7 nodes</td></tr>
 <tr><td><code>components/ui/button.tsx</code></td><td>4 nodes</td></tr>
+<tr><td><code>components/ui/category-selector.tsx</code></td><td>2 nodes</td></tr>
 <tr><td><code>components/ui/category-selectorORIGINAL.tsx</code></td><td>2 nodes</td></tr>
 <tr><td><code>components/ui/popover.tsx</code></td><td>2 nodes</td></tr>
 <tr><td><code>lib/utils.ts</code></td><td>2 nodes</td></tr>
-<tr><td><code>components/ui/category-selector.tsx</code></td><td>1 nodes</td></tr>
     </table>
   </div>
   <div class="card">
     <h4>Design Notes</h4>
-    <p>This section comes from graphify community clustering. Relationship summary: imports x23, contains x21, calls x17, imports x13. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+    <p>This section comes from graphify community clustering. Relationship summary: imports x23, contains x22, calls x18, imports x13. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
   </div>
 </div>
 <hr>
 
 <!-- ====== 4. Serving API ====== -->
 <h2 id="serve-api">4. Serving API</h2>
-<p>Serving API groups implementation around sanitytypests, store, app, pagetsx, mostly in sanity.types.ts, actions/createCheckoutSession.ts, product/[slug]/page.tsx. This section covers 74 nodes and 119 internal edges; the diagram shows only representative relationships to stay readable.</p>
+<p>Serving API groups implementation around sanitytypests, store, app, pagetsx, mostly in sanity.types.ts, actions/createCheckoutSession.ts, product/[slug]/page.tsx. This section covers 74 nodes and 120 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
 %%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
 flowchart LR
-    %% Section: Serving API (74 nodes, 119 edges)
+    %% Section: Serving API (74 nodes, 120 edges)
     subgraph serve_api_store_basket_page_tsx_1f25b5f6["(store)/basket/page.tsx"]
         app_store_basket_page_d5181f81("page.tsx")
         app_store_basket_page_basketpage_8a34de73("BasketPage()<br/><small>(store)/basket/page.tsx</small>")
@@ -1205,26 +1215,389 @@ flowchart LR
   </div>
   <div class="card">
     <h4>Design Notes</h4>
-    <p>This section comes from graphify community clustering. Relationship summary: contains x50, imports x27, imports x25, calls x14. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+    <p>This section comes from graphify community clustering. Relationship summary: contains x50, imports x27, imports x26, calls x14. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
   </div>
 </div>
 <hr>
 
-<!-- ====== 5. useBasketStore ====== -->
-<h2 id="usebasketstore">5. useBasketStore</h2>
-<p>useBasketStore groups implementation around components, store, app, layouttsx, mostly in app/(store)/layout.tsx, store/store.ts, components/AddToBasket.tsx. This section covers 31 nodes and 56 internal edges; the diagram shows only representative relationships to stay readable.</p>
+<!-- ====== 5. (store)/page.tsx ====== -->
+<h2 id="store-page-tsx">5. (store)/page.tsx</h2>
+<p>(store)/page.tsx groups implementation around pagetsx, store, sanity, app, mostly in (store)/categories/page.tsx, categories/[slug]/page.tsx, app/(store)/page.tsx. This section covers 31 nodes and 52 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
 %%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
 flowchart LR
-    %% Section: useBasketStore (31 nodes, 56 edges)
+    %% Section: (store)/page.tsx (31 nodes, 52 edges)
+    subgraph store_page_tsx_store_categories_page_tsx_bde93f4a["(store)/categories/page.tsx"]
+        app_store_categories_page_81080e99("page.tsx")
+        app_store_categories_page_categoriespage_bd2e4bb9("CategoriesPage()<br/><small>(store)/categories/page.tsx</small>")
+    end
+    subgraph store_page_tsx_app_store_page_tsx_d59d2727["app/(store)/page.tsx"]
+        app_store_page_31c63648("page.tsx")
+        app_store_page_home_ce2c27a0("Home()<br/><small>app/(store)/page.tsx</small>")
+    end
+    subgraph store_page_tsx_categories_slug_page_tsx_036e3776["categories/[slug]/page.tsx"]
+        app_store_categories_slug_page_b0530cdc("page.tsx")
+        app_store_categories_slug_page_categorypage_ba2936a5("CategoryPage()<br/><small>categories/[slug]/page.tsx</small>")
+    end
+    subgraph store_page_tsx_components_BlackFridayBanner_tsx_00eb5549["components/BlackFridayBanner.tsx"]
+        components_blackfridaybanner_c93a1c77("BlackFridayBanner.tsx")
+        components_blackfridaybanner_blackfridaybanner_168d8825("BlackFridayBanner()<br/><small>components/BlackFridayBanner.tsx</small>")
+    end
+    subgraph store_page_tsx_lib_products_getAllCategories_ts_184f3419["lib/products/getAllCategories.ts"]
+        sanity_lib_products_getallcategories_getallcateg_e0b134ec("getAllCategories()<br/><small>lib/products/getAllCategories.ts</small>")
+        sanity_lib_products_getallcategories_b29300b3("getAllCategories.ts")
+    end
+    subgraph store_page_tsx_lib_products_getProductsByCategor_48caa6a6["lib/products/getProductsByCategory.tsx"]
+        sanity_lib_products_getproductsbycategory_getpro_fbd908b0("getProductsByCategory()<br/><small>lib/products/getProductsByCategory.tsx</small>")
+        sanity_lib_products_getproductsbycategory_bc4cf314("getProductsByCategory.tsx")
+    end
+    subgraph store_page_tsx_lib_sales_getActiveSaleByCouponCo_7703b9cb["lib/sales/getActiveSaleByCouponCode.ts"]
+        sanity_lib_sales_getactivesalebycouponcode_df3a9122("getActiveSaleByCouponCode.ts")
+        sanity_lib_sales_getactivesalebycouponcode_getac_524d76c6("getActiveSaleByCouponCode()<br/><small>lib/sales/getActiveSaleByCouponCode.ts</small>")
+    end
+    components_herobanner_herobanner_80d5824e("HeroBanner()<br/><small>components/HeroBanner.tsx</small>")
+    components_productsview_productsview_34af5f3d("ProductsView()<br/><small>components/ProductsView.tsx</small>")
+    components_trustbar_trustbar_faa833bb("TrustBar()<br/><small>components/TrustBar.tsx</small>")
+    sanity_lib_products_getallproducts_getallproduct_6d7d4429("getAllProducts()<br/><small>lib/products/getAllProducts.ts</small>")
+    app_store_categories_page_categoriespage_bd2e4bb9 -->|calls| sanity_lib_products_getallcategories_getallcateg_e0b134ec
+    app_store_categories_slug_page_categorypage_ba2936a5 -->|calls| sanity_lib_products_getproductsbycategory_getpro_fbd908b0
+    app_store_categories_slug_page_categorypage_ba2936a5 -->|calls| sanity_lib_products_getallcategories_getallcateg_e0b134ec
+    app_store_page_home_ce2c27a0 -->|calls| sanity_lib_products_getallproducts_getallproduct_6d7d4429
+    app_store_page_home_ce2c27a0 -->|calls| sanity_lib_products_getallcategories_getallcateg_e0b134ec
+    components_blackfridaybanner_blackfridaybanner_168d8825 -->|calls| sanity_lib_sales_getactivesalebycouponcode_getac_524d76c6
+    app_store_categories_page_81080e99 -->|imports| sanity_lib_products_getallcategories_getallcateg_e0b134ec
+    app_store_categories_page_81080e99 -->|imports| sanity_lib_products_getallcategories_b29300b3
+    app_store_categories_slug_page_b0530cdc -->|imports| components_productsview_productsview_34af5f3d
+    app_store_categories_slug_page_b0530cdc -->|imports| sanity_lib_products_getallcategories_getallcateg_e0b134ec
+    app_store_categories_slug_page_b0530cdc -->|imports| sanity_lib_products_getproductsbycategory_getpro_fbd908b0
+    app_store_categories_slug_page_b0530cdc -->|imports| sanity_lib_products_getallcategories_b29300b3
+    app_store_categories_slug_page_b0530cdc -->|imports| sanity_lib_products_getproductsbycategory_bc4cf314
+    app_store_page_31c63648 -->|imports| components_blackfridaybanner_blackfridaybanner_168d8825
+    app_store_page_31c63648 -->|imports| components_herobanner_herobanner_80d5824e
+    app_store_page_31c63648 -->|imports| components_trustbar_trustbar_faa833bb
+    app_store_page_31c63648 -->|imports| components_productsview_productsview_34af5f3d
+    app_store_page_31c63648 -->|imports| sanity_lib_products_getallcategories_getallcateg_e0b134ec
+    app_store_page_31c63648 -->|imports| sanity_lib_products_getallproducts_getallproduct_6d7d4429
+    app_store_page_31c63648 -->|imports| components_blackfridaybanner_c93a1c77
+    app_store_page_31c63648 -->|imports| sanity_lib_products_getallcategories_b29300b3
+    components_blackfridaybanner_c93a1c77 -->|imports| sanity_lib_sales_getactivesalebycouponcode_getac_524d76c6
+    components_blackfridaybanner_c93a1c77 -->|imports| sanity_lib_sales_getactivesalebycouponcode_df3a9122
+    %% Omitted for readability: 13 nodes, 0 edges
+    class app_store_categories_page_81080e99 ui;
+    class app_store_categories_page_categoriespage_bd2e4bb9 ui;
+    class app_store_page_31c63648 ui;
+    class app_store_page_home_ce2c27a0 ui;
+    class app_store_categories_slug_page_b0530cdc ui;
+    class app_store_categories_slug_page_categorypage_ba2936a5 ui;
+    class components_blackfridaybanner_c93a1c77 ui;
+    class components_blackfridaybanner_blackfridaybanner_168d8825 ui;
+    class sanity_lib_products_getallcategories_getallcateg_e0b134ec function;
+    class sanity_lib_products_getallcategories_b29300b3 module;
+    class sanity_lib_products_getproductsbycategory_getpro_fbd908b0 ui;
+    class sanity_lib_products_getproductsbycategory_bc4cf314 ui;
+    class sanity_lib_sales_getactivesalebycouponcode_df3a9122 module;
+    class sanity_lib_sales_getactivesalebycouponcode_getac_524d76c6 function;
+    class components_herobanner_herobanner_80d5824e ui;
+    class components_productsview_productsview_34af5f3d ui;
+    class components_trustbar_trustbar_faa833bb ui;
+    class sanity_lib_products_getallproducts_getallproduct_6d7d4429 function;
+    classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
+    classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
+    classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
+    classDef klass fill:#064e3b,stroke:#34d399,color:#d1fae5,stroke-width:1px;
+    classDef ui fill:#831843,stroke:#f472b6,color:#fce7f3,stroke-width:1px;
+    classDef module fill:#172554,stroke:#60a5fa,color:#dbeafe,stroke-width:1px;
+    classDef test fill:#3f3f46,stroke:#a1a1aa,color:#f4f4f5,stroke-width:1px;
+    classDef concept fill:#292524,stroke:#a8a29e,color:#fafaf9,stroke-dasharray:4 3;
+    classDef function fill:#0f172a,stroke:#38bdf8,color:#e0f2fe,stroke-width:1px;
+</div>
+
+<h3>Call Details</h3>
+<table class="call-table">
+<tr>
+  <th style="width:5%">#</th>
+  <th style="width:28%">Node</th>
+  <th style="width:10%">Type</th>
+  <th style="width:17%">Caller</th>
+  <th style="width:20%">Callees</th>
+  <th style="width:20%">Description</th>
+</tr>
+<tr>
+  <td>1</td>
+  <td><code>CouponCode</code><br><small style="color:var(--muted)">lib/sales/couponCodes.ts</small></td>
+  <td><span class="tag tag-class">Class</span></td>
+  <td><code>getActiveSaleByCouponCode.ts</code><br><small style="color:var(--muted)">lib/sales/getActiveSaleByCouponCode.ts</small></td>
+  <td>No direct outbound edge</td>
+  <td>CouponCode node in lib/sales/couponCodes.ts.</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td><code>CategoriesPage()</code><br><small style="color:var(--muted)">(store)/categories/page.tsx</small></td>
+  <td><span class="tag tag-hook">UI</span></td>
+  <td>External entry / no inbound edge</td>
+  <td><code>getAllCategories()</code><br><small style="color:var(--muted)">lib/products/getAllCategories.ts</small></td>
+  <td>Organizes documentation pages, navigation, or content lookup.</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td><code>CategoryPage()</code><br><small style="color:var(--muted)">categories/[slug]/page.tsx</small></td>
+  <td><span class="tag tag-hook">UI</span></td>
+  <td>External entry / no inbound edge</td>
+  <td><code>getAllCategories()</code><br><small style="color:var(--muted)">lib/products/getAllCategories.ts</small><br><code>getProductsByCategory()</code><br><small style="color:var(--muted)">lib/products/getProductsByCategory.tsx</small></td>
+  <td>Organizes documentation pages, navigation, or content lookup.</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td><code>Home()</code><br><small style="color:var(--muted)">app/(store)/page.tsx</small></td>
+  <td><span class="tag tag-hook">UI</span></td>
+  <td>External entry / no inbound edge</td>
+  <td><code>getAllCategories()</code><br><small style="color:var(--muted)">lib/products/getAllCategories.ts</small><br><code>getAllProducts()</code><br><small style="color:var(--muted)">lib/products/getAllProducts.ts</small></td>
+  <td>Home() node in app/(store)/page.tsx.</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td><code>BlackFridayBanner()</code><br><small style="color:var(--muted)">components/BlackFridayBanner.tsx</small></td>
+  <td><span class="tag tag-hook">UI</span></td>
+  <td><code>page.tsx</code><br><small style="color:var(--muted)">app/(store)/page.tsx</small></td>
+  <td><code>getActiveSaleByCouponCode()</code><br><small style="color:var(--muted)">lib/sales/getActiveSaleByCouponCode.ts</small></td>
+  <td>BlackFridayBanner() node in components/BlackFridayBanner.tsx.</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td><code>HeroBanner()</code><br><small style="color:var(--muted)">components/HeroBanner.tsx</small></td>
+  <td><span class="tag tag-hook">UI</span></td>
+  <td><code>page.tsx</code><br><small style="color:var(--muted)">app/(store)/page.tsx</small></td>
+  <td>No direct outbound edge</td>
+  <td>HeroBanner() node in components/HeroBanner.tsx.</td>
+</tr>
+<tr>
+  <td>7</td>
+  <td><code>ProductsView()</code><br><small style="color:var(--muted)">components/ProductsView.tsx</small></td>
+  <td><span class="tag tag-hook">UI</span></td>
+  <td><code>page.tsx</code><br><small style="color:var(--muted)">categories/[slug]/page.tsx</small><br><code>page.tsx</code><br><small style="color:var(--muted)">app/(store)/page.tsx</small></td>
+  <td>No direct outbound edge</td>
+  <td>ProductsView() node in components/ProductsView.tsx.</td>
+</tr>
+<tr>
+  <td>8</td>
+  <td><code>TrustBar()</code><br><small style="color:var(--muted)">components/TrustBar.tsx</small></td>
+  <td><span class="tag tag-hook">UI</span></td>
+  <td><code>page.tsx</code><br><small style="color:var(--muted)">app/(store)/page.tsx</small></td>
+  <td>No direct outbound edge</td>
+  <td>TrustBar() node in components/TrustBar.tsx.</td>
+</tr>
+<tr>
+  <td>9</td>
+  <td><code>getAllCategories()</code><br><small style="color:var(--muted)">lib/products/getAllCategories.ts</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>CategoriesPage()</code><br><small style="color:var(--muted)">(store)/categories/page.tsx</small><br><code>CategoryPage()</code><br><small style="color:var(--muted)">categories/[slug]/page.tsx</small><br><code>Home()</code><br><small style="color:var(--muted)">app/(store)/page.tsx</small><br>+3 more</td>
+  <td>No direct outbound edge</td>
+  <td>getAllCategories() node in lib/products/getAllCategories.ts.</td>
+</tr>
+<tr>
+  <td>10</td>
+  <td><code>getAllProducts()</code><br><small style="color:var(--muted)">lib/products/getAllProducts.ts</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>Home()</code><br><small style="color:var(--muted)">app/(store)/page.tsx</small><br><code>page.tsx</code><br><small style="color:var(--muted)">app/(store)/page.tsx</small></td>
+  <td>No direct outbound edge</td>
+  <td>getAllProducts() node in lib/products/getAllProducts.ts.</td>
+</tr>
+<tr>
+  <td>11</td>
+  <td><code>getProductsByCategory()</code><br><small style="color:var(--muted)">lib/products/getProductsByCategory.tsx</small></td>
+  <td><span class="tag tag-hook">UI</span></td>
+  <td><code>CategoryPage()</code><br><small style="color:var(--muted)">categories/[slug]/page.tsx</small><br><code>page.tsx</code><br><small style="color:var(--muted)">categories/[slug]/page.tsx</small></td>
+  <td>No direct outbound edge</td>
+  <td>getProductsByCategory() node in lib/products/getProductsByCategory.tsx.</td>
+</tr>
+<tr>
+  <td>12</td>
+  <td><code>getActiveSaleByCouponCode()</code><br><small style="color:var(--muted)">lib/sales/getActiveSaleByCouponCode.ts</small></td>
+  <td><span class="tag tag-func">Function</span></td>
+  <td><code>BlackFridayBanner()</code><br><small style="color:var(--muted)">components/BlackFridayBanner.tsx</small><br><code>BlackFridayBanner.tsx</code><br><small style="color:var(--muted)">components/BlackFridayBanner.tsx</small></td>
+  <td>No direct outbound edge</td>
+  <td>getActiveSaleByCouponCode() node in lib/sales/getActiveSaleByCouponCode.ts.</td>
+</tr>
+<tr>
+  <td>13</td>
+  <td><code>categories/page.tsx</code><br><small style="color:var(--muted)">(store)/categories/page.tsx</small></td>
+  <td><span class="tag tag-hook">UI</span></td>
+  <td>External entry / no inbound edge</td>
+  <td><code>Category</code><br><small style="color:var(--muted)">sanity.types.ts</small><br><code>getAllCategories()</code><br><small style="color:var(--muted)">lib/products/getAllCategories.ts</small><br><code>getAllCategories.ts</code><br><small style="color:var(--muted)">lib/products/getAllCategories.ts</small><br>+1 more</td>
+  <td>Module file in (store)/categories/page.tsx.</td>
+</tr>
+<tr>
+  <td>14</td>
+  <td><code>dynamic</code><br><small style="color:var(--muted)">(store)/categories/page.tsx</small></td>
+  <td><span class="tag tag-hook">UI</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>dynamic node in (store)/categories/page.tsx.</td>
+</tr>
+<tr>
+  <td>15</td>
+  <td><code>revalidate</code><br><small style="color:var(--muted)">(store)/categories/page.tsx</small></td>
+  <td><span class="tag tag-hook">UI</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>revalidate node in (store)/categories/page.tsx.</td>
+</tr>
+<tr>
+  <td>16</td>
+  <td><code>categories/[slug]/page.tsx</code><br><small style="color:var(--muted)">categories/[slug]/page.tsx</small></td>
+  <td><span class="tag tag-hook">UI</span></td>
+  <td>External entry / no inbound edge</td>
+  <td><code>getAllCategories()</code><br><small style="color:var(--muted)">lib/products/getAllCategories.ts</small><br><code>getAllCategories.ts</code><br><small style="color:var(--muted)">lib/products/getAllCategories.ts</small><br><code>getProductsByCategory()</code><br><small style="color:var(--muted)">lib/products/getProductsByCategory.tsx</small><br>+3 more</td>
+  <td>Module file in categories/[slug]/page.tsx.</td>
+</tr>
+<tr>
+  <td>17</td>
+  <td><code>dynamic</code><br><small style="color:var(--muted)">categories/[slug]/page.tsx</small></td>
+  <td><span class="tag tag-hook">UI</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>dynamic node in categories/[slug]/page.tsx.</td>
+</tr>
+<tr>
+  <td>18</td>
+  <td><code>revalidate</code><br><small style="color:var(--muted)">categories/[slug]/page.tsx</small></td>
+  <td><span class="tag tag-hook">UI</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>revalidate node in categories/[slug]/page.tsx.</td>
+</tr>
+<tr>
+  <td>19</td>
+  <td><code>(store)/page.tsx</code><br><small style="color:var(--muted)">app/(store)/page.tsx</small></td>
+  <td><span class="tag tag-hook">UI</span></td>
+  <td>External entry / no inbound edge</td>
+  <td><code>BlackFridayBanner()</code><br><small style="color:var(--muted)">components/BlackFridayBanner.tsx</small><br><code>BlackFridayBanner.tsx</code><br><small style="color:var(--muted)">components/BlackFridayBanner.tsx</small><br><code>getAllCategories()</code><br><small style="color:var(--muted)">lib/products/getAllCategories.ts</small><br>+9 more</td>
+  <td>Module file in app/(store)/page.tsx.</td>
+</tr>
+<tr>
+  <td>20</td>
+  <td><code>dynamic</code><br><small style="color:var(--muted)">app/(store)/page.tsx</small></td>
+  <td><span class="tag tag-hook">UI</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>dynamic node in app/(store)/page.tsx.</td>
+</tr>
+<tr>
+  <td>21</td>
+  <td><code>revalidate</code><br><small style="color:var(--muted)">app/(store)/page.tsx</small></td>
+  <td><span class="tag tag-hook">UI</span></td>
+  <td>External entry / no inbound edge</td>
+  <td>No direct outbound edge</td>
+  <td>revalidate node in app/(store)/page.tsx.</td>
+</tr>
+<tr>
+  <td>22</td>
+  <td><code>BlackFridayBanner.tsx</code><br><small style="color:var(--muted)">components/BlackFridayBanner.tsx</small></td>
+  <td><span class="tag tag-hook">UI</span></td>
+  <td><code>page.tsx</code><br><small style="color:var(--muted)">app/(store)/page.tsx</small></td>
+  <td><code>COUPON_CODES</code><br><small style="color:var(--muted)">lib/sales/couponCodes.ts</small><br><code>couponCodes.ts</code><br><small style="color:var(--muted)">lib/sales/couponCodes.ts</small><br><code>getActiveSaleByCouponCode()</code><br><small style="color:var(--muted)">lib/sales/getActiveSaleByCouponCode.ts</small><br>+1 more</td>
+  <td>Module file in components/BlackFridayBanner.tsx.</td>
+</tr>
+<tr>
+  <td>23</td>
+  <td><code>HeroBanner.tsx</code><br><small style="color:var(--muted)">components/HeroBanner.tsx</small></td>
+  <td><span class="tag tag-hook">UI</span></td>
+  <td><code>page.tsx</code><br><small style="color:var(--muted)">app/(store)/page.tsx</small></td>
+  <td>No direct outbound edge</td>
+  <td>Module file in components/HeroBanner.tsx.</td>
+</tr>
+<tr>
+  <td>24</td>
+  <td><code>TrustBar.tsx</code><br><small style="color:var(--muted)">components/TrustBar.tsx</small></td>
+  <td><span class="tag tag-hook">UI</span></td>
+  <td><code>page.tsx</code><br><small style="color:var(--muted)">app/(store)/page.tsx</small></td>
+  <td>No direct outbound edge</td>
+  <td>Module file in components/TrustBar.tsx.</td>
+</tr>
+<tr>
+  <td>25</td>
+  <td><code>live.ts</code><br><small style="color:var(--muted)">sanity/lib/live.ts</small></td>
+  <td><span class="tag tag-class">Module</span></td>
+  <td><code>getActiveSaleByCouponCode.ts</code><br><small style="color:var(--muted)">lib/sales/getActiveSaleByCouponCode.ts</small><br><code>getAllCategories.ts</code><br><small style="color:var(--muted)">lib/products/getAllCategories.ts</small><br><code>getAllProducts.ts</code><br><small style="color:var(--muted)">lib/products/getAllProducts.ts</small><br>+5 more</td>
+  <td><code>client.ts</code><br><small style="color:var(--muted)">sanity/lib/client.ts</small></td>
+  <td>Module file in sanity/lib/live.ts.</td>
+</tr>
+<tr>
+  <td>26</td>
+  <td><code>getAllCategories.ts</code><br><small style="color:var(--muted)">lib/products/getAllCategories.ts</small></td>
+  <td><span class="tag tag-class">Module</span></td>
+  <td><code>page.tsx</code><br><small style="color:var(--muted)">categories/[slug]/page.tsx</small><br><code>page.tsx</code><br><small style="color:var(--muted)">(store)/categories/page.tsx</small><br><code>page.tsx</code><br><small style="color:var(--muted)">app/(store)/page.tsx</small></td>
+  <td><code>live.ts</code><br><small style="color:var(--muted)">sanity/lib/live.ts</small></td>
+  <td>Module file in lib/products/getAllCategories.ts.</td>
+</tr>
+<tr>
+  <td>27</td>
+  <td><code>getAllProducts.ts</code><br><small style="color:var(--muted)">lib/products/getAllProducts.ts</small></td>
+  <td><span class="tag tag-class">Module</span></td>
+  <td><code>page.tsx</code><br><small style="color:var(--muted)">app/(store)/page.tsx</small></td>
+  <td><code>live.ts</code><br><small style="color:var(--muted)">sanity/lib/live.ts</small></td>
+  <td>Module file in lib/products/getAllProducts.ts.</td>
+</tr>
+<tr>
+  <td>28</td>
+  <td><code>getProductsByCategory.tsx</code><br><small style="color:var(--muted)">lib/products/getProductsByCategory.tsx</small></td>
+  <td><span class="tag tag-hook">UI</span></td>
+  <td><code>page.tsx</code><br><small style="color:var(--muted)">categories/[slug]/page.tsx</small></td>
+  <td><code>live.ts</code><br><small style="color:var(--muted)">sanity/lib/live.ts</small></td>
+  <td>Module file in lib/products/getProductsByCategory.tsx.</td>
+</tr>
+<tr>
+  <td>29</td>
+  <td><code>couponCodes.ts</code><br><small style="color:var(--muted)">lib/sales/couponCodes.ts</small></td>
+  <td><span class="tag tag-class">Module</span></td>
+  <td><code>BlackFridayBanner.tsx</code><br><small style="color:var(--muted)">components/BlackFridayBanner.tsx</small><br><code>getActiveSaleByCouponCode.ts</code><br><small style="color:var(--muted)">lib/sales/getActiveSaleByCouponCode.ts</small></td>
+  <td>No direct outbound edge</td>
+  <td>Module file in lib/sales/couponCodes.ts.</td>
+</tr>
+<tr>
+  <td>30</td>
+  <td><code>COUPON_CODES</code><br><small style="color:var(--muted)">lib/sales/couponCodes.ts</small></td>
+  <td><span class="tag tag-class">Class</span></td>
+  <td><code>BlackFridayBanner.tsx</code><br><small style="color:var(--muted)">components/BlackFridayBanner.tsx</small></td>
+  <td>No direct outbound edge</td>
+  <td>COUPON_CODES node in lib/sales/couponCodes.ts.</td>
+</tr>
+</table>
+
+<div class="grid">
+  <div class="card">
+    <h4>Key Files</h4>
+    <table style="width:100%;font-size:0.85rem;">
+      <tr><th>File</th><th>Coverage</th></tr>
+      <tr><td><code>categories/[slug]/page.tsx</code></td><td>4 nodes</td></tr>
+<tr><td><code>(store)/categories/page.tsx</code></td><td>4 nodes</td></tr>
+<tr><td><code>app/(store)/page.tsx</code></td><td>4 nodes</td></tr>
+<tr><td><code>lib/sales/couponCodes.ts</code></td><td>3 nodes</td></tr>
+<tr><td><code>components/BlackFridayBanner.tsx</code></td><td>2 nodes</td></tr>
+<tr><td><code>components/HeroBanner.tsx</code></td><td>2 nodes</td></tr>
+<tr><td><code>components/TrustBar.tsx</code></td><td>2 nodes</td></tr>
+<tr><td><code>lib/products/getAllCategories.ts</code></td><td>2 nodes</td></tr>
+    </table>
+  </div>
+  <div class="card">
+    <h4>Design Notes</h4>
+    <p>This section comes from graphify community clustering. Relationship summary: contains x18, imports x15, imports x13, calls x6. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+  </div>
+</div>
+<hr>
+
+<!-- ====== 6. useBasketStore ====== -->
+<h2 id="usebasketstore">6. useBasketStore</h2>
+<p>useBasketStore groups implementation around components, store, app, layouttsx, mostly in app/(store)/layout.tsx, store/store.ts, components/BottomBar.tsx. This section covers 29 nodes and 53 internal edges; the diagram shows only representative relationships to stay readable.</p>
+
+<div class="mermaid">
+%%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
+flowchart LR
+    %% Section: useBasketStore (29 nodes, 53 edges)
     subgraph usebasketstore_store_success_page_tsx_08b80fab["(store)/success/page.tsx"]
         app_store_success_page_4573ec80("page.tsx")
         app_store_success_page_successpage_656fa5e4("SuccessPage()<br/><small>(store)/success/page.tsx</small>")
-    end
-    subgraph usebasketstore_components_AddToBasket_tsx_8de9b87e["components/AddToBasket.tsx"]
-        components_addtobasket_0b32284a("AddToBasket.tsx")
-        components_addtobasket_addtobasketbutton_ca603f4f("AddToBasketButton()<br/><small>components/AddToBasket.tsx</small>")
     end
     subgraph usebasketstore_components_BottomBar_tsx_428d0c5b["components/BottomBar.tsx"]
         components_bottombar_bottombar_3405e754("BottomBar()<br/><small>components/BottomBar.tsx</small>")
@@ -1250,10 +1623,13 @@ flowchart LR
         components_headerfallback_06a5bf7f("HeaderFallback.tsx")
         components_headerfallback_headerfallback_e2fd2eea("HeaderFallback()<br/><small>components/HeaderFallback.tsx</small>")
     end
+    subgraph usebasketstore_store_store_ts_9e309451["store/store.ts"]
+        store_store_usebasketstore_434ac472("useBasketStore<br/><small>store/store.ts</small>")
+        store_store_af410977("store.ts")
+    end
     app_store_layout_895c5125("layout.tsx")
-    store_store_usebasketstore_434ac472("useBasketStore<br/><small>store/store.ts</small>")
+    components_addtobasket_0b32284a("AddToBasket.tsx")
     app_store_success_page_successpage_656fa5e4 -->|calls| store_store_usebasketstore_434ac472
-    components_addtobasket_addtobasketbutton_ca603f4f -->|calls| store_store_usebasketstore_434ac472
     components_bottombar_bottombar_3405e754 -->|calls| store_store_usebasketstore_434ac472
     components_header_header_9e0fa858 -->|calls| store_store_usebasketstore_434ac472
     components_headerclerk_headerclerk_4c31e856 -->|calls| store_store_usebasketstore_434ac472
@@ -1269,16 +1645,17 @@ flowchart LR
     app_store_layout_895c5125 -->|imports| components_footer_17e210a3
     app_store_layout_895c5125 -->|imports| components_bottombar_f0f5646e
     app_store_success_page_4573ec80 -->|imports| store_store_usebasketstore_434ac472
+    app_store_success_page_4573ec80 -->|imports| store_store_af410977
     components_addtobasket_0b32284a -->|imports| store_store_usebasketstore_434ac472
+    components_addtobasket_0b32284a -->|imports| store_store_af410977
     components_bottombar_f0f5646e -->|imports| store_store_usebasketstore_434ac472
+    components_bottombar_f0f5646e -->|imports| store_store_af410977
     components_header_e71efc6a -->|imports| store_store_usebasketstore_434ac472
+    components_header_e71efc6a -->|imports| store_store_af410977
     components_headerclerk_854be994 -->|imports| store_store_usebasketstore_434ac472
-    components_headerfallback_06a5bf7f -->|imports| store_store_usebasketstore_434ac472
-    %% Omitted for readability: 13 nodes, 0 edges
+    %% Omitted for readability: 11 nodes, 3 edges
     class app_store_success_page_4573ec80 ui;
     class app_store_success_page_successpage_656fa5e4 ui;
-    class components_addtobasket_0b32284a ui;
-    class components_addtobasket_addtobasketbutton_ca603f4f ui;
     class components_bottombar_bottombar_3405e754 ui;
     class components_bottombar_f0f5646e ui;
     class components_disabledraftmode_disabledraftmode_5cbbbf0d ui;
@@ -1291,8 +1668,10 @@ flowchart LR
     class components_headerclerk_headerclerk_4c31e856 ui;
     class components_headerfallback_06a5bf7f ui;
     class components_headerfallback_headerfallback_e2fd2eea ui;
-    class app_store_layout_895c5125 ui;
     class store_store_usebasketstore_434ac472 ui;
+    class store_store_af410977 ui;
+    class app_store_layout_895c5125 ui;
+    class components_addtobasket_0b32284a ui;
     classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
     classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
     classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
@@ -1364,14 +1743,6 @@ flowchart LR
 </tr>
 <tr>
   <td>7</td>
-  <td><code>AddToBasketButton()</code><br><small style="color:var(--muted)">components/AddToBasket.tsx</small></td>
-  <td><span class="tag tag-hook">UI</span></td>
-  <td><code>page.tsx</code><br><small style="color:var(--muted)">product/[slug]/page.tsx</small><br><code>page.tsx</code><br><small style="color:var(--muted)">(store)/basket/page.tsx</small></td>
-  <td><code>useBasketStore</code><br><small style="color:var(--muted)">store/store.ts</small></td>
-  <td>AddToBasketButton() node in components/AddToBasket.tsx.</td>
-</tr>
-<tr>
-  <td>8</td>
   <td><code>BottomBar()</code><br><small style="color:var(--muted)">components/BottomBar.tsx</small></td>
   <td><span class="tag tag-hook">UI</span></td>
   <td><code>layout.tsx</code><br><small style="color:var(--muted)">app/(store)/layout.tsx</small></td>
@@ -1379,7 +1750,7 @@ flowchart LR
   <td>BottomBar() node in components/BottomBar.tsx.</td>
 </tr>
 <tr>
-  <td>9</td>
+  <td>8</td>
   <td><code>DisableDraftMode()</code><br><small style="color:var(--muted)">components/DisableDraftMode.tsx</small></td>
   <td><span class="tag tag-hook">UI</span></td>
   <td><code>layout.tsx</code><br><small style="color:var(--muted)">app/(store)/layout.tsx</small></td>
@@ -1387,7 +1758,7 @@ flowchart LR
   <td>DisableDraftMode() node in components/DisableDraftMode.tsx.</td>
 </tr>
 <tr>
-  <td>10</td>
+  <td>9</td>
   <td><code>Footer()</code><br><small style="color:var(--muted)">components/Footer.tsx</small></td>
   <td><span class="tag tag-hook">UI</span></td>
   <td><code>layout.tsx</code><br><small style="color:var(--muted)">app/(store)/layout.tsx</small></td>
@@ -1395,7 +1766,7 @@ flowchart LR
   <td>Footer() node in components/Footer.tsx.</td>
 </tr>
 <tr>
-  <td>11</td>
+  <td>10</td>
   <td><code>Header()</code><br><small style="color:var(--muted)">components/Header.tsx</small></td>
   <td><span class="tag tag-hook">UI</span></td>
   <td>External entry / no inbound edge</td>
@@ -1403,7 +1774,7 @@ flowchart LR
   <td>Header() node in components/Header.tsx.</td>
 </tr>
 <tr>
-  <td>12</td>
+  <td>11</td>
   <td><code>HeaderClerk()</code><br><small style="color:var(--muted)">components/HeaderClerk.tsx</small></td>
   <td><span class="tag tag-hook">UI</span></td>
   <td><code>layout.tsx</code><br><small style="color:var(--muted)">app/(store)/layout.tsx</small></td>
@@ -1411,7 +1782,7 @@ flowchart LR
   <td>HeaderClerk() node in components/HeaderClerk.tsx.</td>
 </tr>
 <tr>
-  <td>13</td>
+  <td>12</td>
   <td><code>HeaderFallback()</code><br><small style="color:var(--muted)">components/HeaderFallback.tsx</small></td>
   <td><span class="tag tag-hook">UI</span></td>
   <td><code>layout.tsx</code><br><small style="color:var(--muted)">app/(store)/layout.tsx</small></td>
@@ -1419,7 +1790,7 @@ flowchart LR
   <td>HeaderFallback() node in components/HeaderFallback.tsx.</td>
 </tr>
 <tr>
-  <td>14</td>
+  <td>13</td>
   <td><code>SearchBar()</code><br><small style="color:var(--muted)">components/SearchBar.tsx</small></td>
   <td><span class="tag tag-hook">UI</span></td>
   <td><code>HeaderClerk.tsx</code><br><small style="color:var(--muted)">components/HeaderClerk.tsx</small><br><code>HeaderFallback.tsx</code><br><small style="color:var(--muted)">components/HeaderFallback.tsx</small></td>
@@ -1427,7 +1798,7 @@ flowchart LR
   <td>SearchBar() node in components/SearchBar.tsx.</td>
 </tr>
 <tr>
-  <td>15</td>
+  <td>14</td>
   <td><code>(store)/layout.tsx</code><br><small style="color:var(--muted)">app/(store)/layout.tsx</small></td>
   <td><span class="tag tag-hook">UI</span></td>
   <td>External entry / no inbound edge</td>
@@ -1435,7 +1806,7 @@ flowchart LR
   <td>Module file in app/(store)/layout.tsx.</td>
 </tr>
 <tr>
-  <td>16</td>
+  <td>15</td>
   <td><code>geistMono</code><br><small style="color:var(--muted)">app/(store)/layout.tsx</small></td>
   <td><span class="tag tag-hook">UI</span></td>
   <td>External entry / no inbound edge</td>
@@ -1443,7 +1814,7 @@ flowchart LR
   <td>geistMono node in app/(store)/layout.tsx.</td>
 </tr>
 <tr>
-  <td>17</td>
+  <td>16</td>
   <td><code>geistSans</code><br><small style="color:var(--muted)">app/(store)/layout.tsx</small></td>
   <td><span class="tag tag-hook">UI</span></td>
   <td>External entry / no inbound edge</td>
@@ -1451,7 +1822,7 @@ flowchart LR
   <td>geistSans node in app/(store)/layout.tsx.</td>
 </tr>
 <tr>
-  <td>18</td>
+  <td>17</td>
   <td><code>metadata</code><br><small style="color:var(--muted)">app/(store)/layout.tsx</small></td>
   <td><span class="tag tag-hook">UI</span></td>
   <td>External entry / no inbound edge</td>
@@ -1459,7 +1830,7 @@ flowchart LR
   <td>metadata node in app/(store)/layout.tsx.</td>
 </tr>
 <tr>
-  <td>19</td>
+  <td>18</td>
   <td><code>success/page.tsx</code><br><small style="color:var(--muted)">(store)/success/page.tsx</small></td>
   <td><span class="tag tag-hook">UI</span></td>
   <td>External entry / no inbound edge</td>
@@ -1467,15 +1838,15 @@ flowchart LR
   <td>Module file in (store)/success/page.tsx.</td>
 </tr>
 <tr>
-  <td>20</td>
+  <td>19</td>
   <td><code>AddToBasket.tsx</code><br><small style="color:var(--muted)">components/AddToBasket.tsx</small></td>
   <td><span class="tag tag-hook">UI</span></td>
-  <td><code>page.tsx</code><br><small style="color:var(--muted)">product/[slug]/page.tsx</small><br><code>page.tsx</code><br><small style="color:var(--muted)">(store)/basket/page.tsx</small></td>
+  <td><code>page.tsx</code><br><small style="color:var(--muted)">(store)/basket/page.tsx</small><br><code>page.tsx</code><br><small style="color:var(--muted)">product/[slug]/page.tsx</small></td>
   <td><code>Product</code><br><small style="color:var(--muted)">sanity.types.ts</small><br><code>sanity.types.ts</code><br><small style="color:var(--muted)">sanity.types.ts</small><br><code>store.ts</code><br><small style="color:var(--muted)">store/store.ts</small><br>+1 more</td>
   <td>Module file in components/AddToBasket.tsx.</td>
 </tr>
 <tr>
-  <td>21</td>
+  <td>20</td>
   <td><code>BottomBar.tsx</code><br><small style="color:var(--muted)">components/BottomBar.tsx</small></td>
   <td><span class="tag tag-hook">UI</span></td>
   <td><code>layout.tsx</code><br><small style="color:var(--muted)">app/(store)/layout.tsx</small></td>
@@ -1483,7 +1854,7 @@ flowchart LR
   <td>Module file in components/BottomBar.tsx.</td>
 </tr>
 <tr>
-  <td>22</td>
+  <td>21</td>
   <td><code>tabs</code><br><small style="color:var(--muted)">components/BottomBar.tsx</small></td>
   <td><span class="tag tag-hook">UI</span></td>
   <td>External entry / no inbound edge</td>
@@ -1491,7 +1862,7 @@ flowchart LR
   <td>tabs node in components/BottomBar.tsx.</td>
 </tr>
 <tr>
-  <td>23</td>
+  <td>22</td>
   <td><code>DisableDraftMode.tsx</code><br><small style="color:var(--muted)">components/DisableDraftMode.tsx</small></td>
   <td><span class="tag tag-hook">UI</span></td>
   <td><code>layout.tsx</code><br><small style="color:var(--muted)">app/(store)/layout.tsx</small></td>
@@ -1499,7 +1870,7 @@ flowchart LR
   <td>Module file in components/DisableDraftMode.tsx.</td>
 </tr>
 <tr>
-  <td>24</td>
+  <td>23</td>
   <td><code>Footer.tsx</code><br><small style="color:var(--muted)">components/Footer.tsx</small></td>
   <td><span class="tag tag-hook">UI</span></td>
   <td><code>layout.tsx</code><br><small style="color:var(--muted)">app/(store)/layout.tsx</small></td>
@@ -1507,7 +1878,7 @@ flowchart LR
   <td>Module file in components/Footer.tsx.</td>
 </tr>
 <tr>
-  <td>25</td>
+  <td>24</td>
   <td><code>Header.tsx</code><br><small style="color:var(--muted)">components/Header.tsx</small></td>
   <td><span class="tag tag-hook">UI</span></td>
   <td>External entry / no inbound edge</td>
@@ -1515,7 +1886,7 @@ flowchart LR
   <td>Module file in components/Header.tsx.</td>
 </tr>
 <tr>
-  <td>26</td>
+  <td>25</td>
   <td><code>HeaderClerk.tsx</code><br><small style="color:var(--muted)">components/HeaderClerk.tsx</small></td>
   <td><span class="tag tag-hook">UI</span></td>
   <td><code>layout.tsx</code><br><small style="color:var(--muted)">app/(store)/layout.tsx</small></td>
@@ -1523,7 +1894,7 @@ flowchart LR
   <td>Module file in components/HeaderClerk.tsx.</td>
 </tr>
 <tr>
-  <td>27</td>
+  <td>26</td>
   <td><code>HeaderFallback.tsx</code><br><small style="color:var(--muted)">components/HeaderFallback.tsx</small></td>
   <td><span class="tag tag-hook">UI</span></td>
   <td><code>layout.tsx</code><br><small style="color:var(--muted)">app/(store)/layout.tsx</small></td>
@@ -1531,7 +1902,7 @@ flowchart LR
   <td>Module file in components/HeaderFallback.tsx.</td>
 </tr>
 <tr>
-  <td>28</td>
+  <td>27</td>
   <td><code>SearchBar.tsx</code><br><small style="color:var(--muted)">components/SearchBar.tsx</small></td>
   <td><span class="tag tag-hook">UI</span></td>
   <td><code>HeaderClerk.tsx</code><br><small style="color:var(--muted)">components/HeaderClerk.tsx</small><br><code>HeaderFallback.tsx</code><br><small style="color:var(--muted)">components/HeaderFallback.tsx</small></td>
@@ -1539,20 +1910,20 @@ flowchart LR
   <td>Module file in components/SearchBar.tsx.</td>
 </tr>
 <tr>
-  <td>29</td>
-  <td><code>live.ts</code><br><small style="color:var(--muted)">sanity/lib/live.ts</small></td>
-  <td><span class="tag tag-class">Module</span></td>
-  <td><code>getActiveSaleByCouponCode.ts</code><br><small style="color:var(--muted)">lib/sales/getActiveSaleByCouponCode.ts</small><br><code>getAllCategories.ts</code><br><small style="color:var(--muted)">lib/products/getAllCategories.ts</small><br><code>getAllProducts.ts</code><br><small style="color:var(--muted)">lib/products/getAllProducts.ts</small><br>+5 more</td>
-  <td><code>client.ts</code><br><small style="color:var(--muted)">sanity/lib/client.ts</small></td>
-  <td>Module file in sanity/lib/live.ts.</td>
-</tr>
-<tr>
-  <td>30</td>
+  <td>28</td>
   <td><code>store.ts</code><br><small style="color:var(--muted)">store/store.ts</small></td>
   <td><span class="tag tag-hook">UI</span></td>
   <td><code>AddToBasket.tsx</code><br><small style="color:var(--muted)">components/AddToBasket.tsx</small><br><code>BottomBar.tsx</code><br><small style="color:var(--muted)">components/BottomBar.tsx</small><br><code>createCheckoutSession.ts</code><br><small style="color:var(--muted)">actions/createCheckoutSession.ts</small><br>+6 more</td>
   <td><code>Product</code><br><small style="color:var(--muted)">sanity.types.ts</small><br><code>sanity.types.ts</code><br><small style="color:var(--muted)">sanity.types.ts</small></td>
   <td>Module file in store/store.ts.</td>
+</tr>
+<tr>
+  <td>29</td>
+  <td><code>useBasketStore</code><br><small style="color:var(--muted)">store/store.ts</small></td>
+  <td><span class="tag tag-hook">UI</span></td>
+  <td><code>AddToBasket.tsx</code><br><small style="color:var(--muted)">components/AddToBasket.tsx</small><br><code>AddToBasketButton()</code><br><small style="color:var(--muted)">components/AddToBasket.tsx</small><br><code>BasketPage()</code><br><small style="color:var(--muted)">(store)/basket/page.tsx</small><br>+13 more</td>
+  <td>No direct outbound edge</td>
+  <td>useBasketStore node in store/store.ts.</td>
 </tr>
 </table>
 
@@ -1563,9 +1934,9 @@ flowchart LR
       <tr><th>File</th><th>Coverage</th></tr>
       <tr><td><code>app/(store)/layout.tsx</code></td><td>5 nodes</td></tr>
 <tr><td><code>store/store.ts</code></td><td>4 nodes</td></tr>
-<tr><td><code>components/AddToBasket.tsx</code></td><td>3 nodes</td></tr>
 <tr><td><code>components/BottomBar.tsx</code></td><td>3 nodes</td></tr>
 <tr><td><code>(store)/success/page.tsx</code></td><td>2 nodes</td></tr>
+<tr><td><code>components/AddToBasket.tsx</code></td><td>2 nodes</td></tr>
 <tr><td><code>components/DisableDraftMode.tsx</code></td><td>2 nodes</td></tr>
 <tr><td><code>components/Footer.tsx</code></td><td>2 nodes</td></tr>
 <tr><td><code>components/Header.tsx</code></td><td>2 nodes</td></tr>
@@ -1573,13 +1944,13 @@ flowchart LR
   </div>
   <div class="card">
     <h4>Design Notes</h4>
-    <p>This section comes from graphify community clustering. Relationship summary: contains x18, imports x15, imports x14, calls x6. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
+    <p>This section comes from graphify community clustering. Relationship summary: contains x17, imports x15, imports x13, calls x5. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
   </div>
 </div>
 <hr>
 
-<!-- ====== 6. index.ts ====== -->
-<h2 id="index-ts">6. index.ts</h2>
+<!-- ====== 7. index.ts ====== -->
+<h2 id="index-ts">7. index.ts</h2>
 <p>index.ts groups implementation around sanity, schematypes, app, envts, mostly in sanity/env.ts, studio/[[...tool]]/page.tsx, sanity/lib/image.ts. This section covers 29 nodes and 46 internal edges; the diagram shows only representative relationships to stay readable.</p>
 
 <div class="mermaid">
@@ -1924,357 +2295,6 @@ flowchart LR
   <div class="card">
     <h4>Design Notes</h4>
     <p>This section comes from graphify community clustering. Relationship summary: imports x17, contains x15, imports x13, indirect call x1. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
-  </div>
-</div>
-<hr>
-
-<!-- ====== 7. (store)/page.tsx ====== -->
-<h2 id="store-page-tsx">7. (store)/page.tsx</h2>
-<p>(store)/page.tsx groups implementation around pagetsx, sanity, store, app, mostly in (store)/categories/page.tsx, app/(store)/page.tsx, lib/sales/couponCodes.ts. This section covers 28 nodes and 46 internal edges; the diagram shows only representative relationships to stay readable.</p>
-
-<div class="mermaid">
-%%{init: {"theme": "dark", "themeVariables": {"fontSize": "15.0px", "fontFamily": "Segoe UI, system-ui, sans-serif", "primaryColor": "#1e293b", "primaryTextColor": "#e2e8f0", "primaryBorderColor": "#38bdf8", "secondaryColor": "#0f172a", "tertiaryColor": "#334155", "lineColor": "#64748b", "textColor": "#e2e8f0"}, "flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 48, "rankSpacing": 64, "padding": 14, "diagramPadding": 10, "useMaxWidth": true}}}%%
-flowchart LR
-    %% Section: (store)/page.tsx (28 nodes, 46 edges)
-    subgraph store_page_tsx_store_categories_page_tsx_bde93f4a["(store)/categories/page.tsx"]
-        app_store_categories_page_81080e99("page.tsx")
-        app_store_categories_page_categoriespage_bd2e4bb9("CategoriesPage()<br/><small>(store)/categories/page.tsx</small>")
-    end
-    subgraph store_page_tsx_app_store_page_tsx_d59d2727["app/(store)/page.tsx"]
-        app_store_page_31c63648("page.tsx")
-        app_store_page_home_ce2c27a0("Home()<br/><small>app/(store)/page.tsx</small>")
-    end
-    subgraph store_page_tsx_categories_slug_page_tsx_036e3776["categories/[slug]/page.tsx"]
-        app_store_categories_slug_page_b0530cdc("page.tsx")
-        app_store_categories_slug_page_categorypage_ba2936a5("CategoryPage()<br/><small>categories/[slug]/page.tsx</small>")
-    end
-    subgraph store_page_tsx_components_BlackFridayBanner_tsx_00eb5549["components/BlackFridayBanner.tsx"]
-        components_blackfridaybanner_c93a1c77("BlackFridayBanner.tsx")
-        components_blackfridaybanner_blackfridaybanner_168d8825("BlackFridayBanner()<br/><small>components/BlackFridayBanner.tsx</small>")
-    end
-    subgraph store_page_tsx_components_HeroBanner_tsx_ab53b49f["components/HeroBanner.tsx"]
-        components_herobanner_herobanner_80d5824e("HeroBanner()<br/><small>components/HeroBanner.tsx</small>")
-        components_herobanner_dc13f455("HeroBanner.tsx")
-    end
-    subgraph store_page_tsx_lib_products_getAllCategories_ts_184f3419["lib/products/getAllCategories.ts"]
-        sanity_lib_products_getallcategories_getallcateg_e0b134ec("getAllCategories()<br/><small>lib/products/getAllCategories.ts</small>")
-        sanity_lib_products_getallcategories_b29300b3("getAllCategories.ts")
-    end
-    subgraph store_page_tsx_lib_products_getProductsByCategor_48caa6a6["lib/products/getProductsByCategory.tsx"]
-        sanity_lib_products_getproductsbycategory_getpro_fbd908b0("getProductsByCategory()<br/><small>lib/products/getProductsByCategory.tsx</small>")
-        sanity_lib_products_getproductsbycategory_bc4cf314("getProductsByCategory.tsx")
-    end
-    components_productsview_productsview_34af5f3d("ProductsView()<br/><small>components/ProductsView.tsx</small>")
-    components_trustbar_trustbar_faa833bb("TrustBar()<br/><small>components/TrustBar.tsx</small>")
-    sanity_lib_products_getallproducts_getallproduct_6d7d4429("getAllProducts()<br/><small>lib/products/getAllProducts.ts</small>")
-    sanity_lib_sales_getactivesalebycouponcode_getac_524d76c6("getActiveSaleByCouponCode()<br/><small>lib/sales/getActiveSaleByCouponCode.ts</small>")
-    app_store_categories_page_categoriespage_bd2e4bb9 -->|calls| sanity_lib_products_getallcategories_getallcateg_e0b134ec
-    app_store_categories_slug_page_categorypage_ba2936a5 -->|calls| sanity_lib_products_getproductsbycategory_getpro_fbd908b0
-    app_store_categories_slug_page_categorypage_ba2936a5 -->|calls| sanity_lib_products_getallcategories_getallcateg_e0b134ec
-    app_store_page_home_ce2c27a0 -->|calls| sanity_lib_products_getallproducts_getallproduct_6d7d4429
-    app_store_page_home_ce2c27a0 -->|calls| sanity_lib_products_getallcategories_getallcateg_e0b134ec
-    components_blackfridaybanner_blackfridaybanner_168d8825 -->|calls| sanity_lib_sales_getactivesalebycouponcode_getac_524d76c6
-    app_store_categories_page_81080e99 -->|imports| sanity_lib_products_getallcategories_getallcateg_e0b134ec
-    app_store_categories_page_81080e99 -->|imports| sanity_lib_products_getallcategories_b29300b3
-    app_store_categories_slug_page_b0530cdc -->|imports| components_productsview_productsview_34af5f3d
-    app_store_categories_slug_page_b0530cdc -->|imports| sanity_lib_products_getallcategories_getallcateg_e0b134ec
-    app_store_categories_slug_page_b0530cdc -->|imports| sanity_lib_products_getproductsbycategory_getpro_fbd908b0
-    app_store_categories_slug_page_b0530cdc -->|imports| sanity_lib_products_getallcategories_b29300b3
-    app_store_categories_slug_page_b0530cdc -->|imports| sanity_lib_products_getproductsbycategory_bc4cf314
-    app_store_page_31c63648 -->|imports| components_blackfridaybanner_blackfridaybanner_168d8825
-    app_store_page_31c63648 -->|imports| components_herobanner_herobanner_80d5824e
-    app_store_page_31c63648 -->|imports| components_trustbar_trustbar_faa833bb
-    app_store_page_31c63648 -->|imports| components_productsview_productsview_34af5f3d
-    app_store_page_31c63648 -->|imports| sanity_lib_products_getallcategories_getallcateg_e0b134ec
-    app_store_page_31c63648 -->|imports| sanity_lib_products_getallproducts_getallproduct_6d7d4429
-    app_store_page_31c63648 -->|imports| components_blackfridaybanner_c93a1c77
-    app_store_page_31c63648 -->|imports| components_herobanner_dc13f455
-    app_store_page_31c63648 -->|imports| sanity_lib_products_getallcategories_b29300b3
-    components_blackfridaybanner_c93a1c77 -->|imports| sanity_lib_sales_getactivesalebycouponcode_getac_524d76c6
-    %% Omitted for readability: 10 nodes, 0 edges
-    class app_store_categories_page_81080e99 ui;
-    class app_store_categories_page_categoriespage_bd2e4bb9 ui;
-    class app_store_page_31c63648 ui;
-    class app_store_page_home_ce2c27a0 ui;
-    class app_store_categories_slug_page_b0530cdc ui;
-    class app_store_categories_slug_page_categorypage_ba2936a5 ui;
-    class components_blackfridaybanner_c93a1c77 ui;
-    class components_blackfridaybanner_blackfridaybanner_168d8825 ui;
-    class components_herobanner_herobanner_80d5824e ui;
-    class components_herobanner_dc13f455 ui;
-    class sanity_lib_products_getallcategories_getallcateg_e0b134ec function;
-    class sanity_lib_products_getallcategories_b29300b3 module;
-    class sanity_lib_products_getproductsbycategory_getpro_fbd908b0 ui;
-    class sanity_lib_products_getproductsbycategory_bc4cf314 ui;
-    class components_productsview_productsview_34af5f3d ui;
-    class components_trustbar_trustbar_faa833bb ui;
-    class sanity_lib_products_getallproducts_getallproduct_6d7d4429 function;
-    class sanity_lib_sales_getactivesalebycouponcode_getac_524d76c6 function;
-    classDef entry fill:#422006,stroke:#fbbf24,color:#fde68a,stroke-width:1px;
-    classDef api fill:#450a0a,stroke:#f87171,color:#fee2e2,stroke-width:1px;
-    classDef async fill:#2e1065,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
-    classDef klass fill:#064e3b,stroke:#34d399,color:#d1fae5,stroke-width:1px;
-    classDef ui fill:#831843,stroke:#f472b6,color:#fce7f3,stroke-width:1px;
-    classDef module fill:#172554,stroke:#60a5fa,color:#dbeafe,stroke-width:1px;
-    classDef test fill:#3f3f46,stroke:#a1a1aa,color:#f4f4f5,stroke-width:1px;
-    classDef concept fill:#292524,stroke:#a8a29e,color:#fafaf9,stroke-dasharray:4 3;
-    classDef function fill:#0f172a,stroke:#38bdf8,color:#e0f2fe,stroke-width:1px;
-</div>
-
-<h3>Call Details</h3>
-<table class="call-table">
-<tr>
-  <th style="width:5%">#</th>
-  <th style="width:28%">Node</th>
-  <th style="width:10%">Type</th>
-  <th style="width:17%">Caller</th>
-  <th style="width:20%">Callees</th>
-  <th style="width:20%">Description</th>
-</tr>
-<tr>
-  <td>1</td>
-  <td><code>CouponCode</code><br><small style="color:var(--muted)">lib/sales/couponCodes.ts</small></td>
-  <td><span class="tag tag-class">Class</span></td>
-  <td><code>getActiveSaleByCouponCode.ts</code><br><small style="color:var(--muted)">lib/sales/getActiveSaleByCouponCode.ts</small></td>
-  <td>No direct outbound edge</td>
-  <td>CouponCode node in lib/sales/couponCodes.ts.</td>
-</tr>
-<tr>
-  <td>2</td>
-  <td><code>CategoriesPage()</code><br><small style="color:var(--muted)">(store)/categories/page.tsx</small></td>
-  <td><span class="tag tag-hook">UI</span></td>
-  <td>External entry / no inbound edge</td>
-  <td><code>getAllCategories()</code><br><small style="color:var(--muted)">lib/products/getAllCategories.ts</small></td>
-  <td>Organizes documentation pages, navigation, or content lookup.</td>
-</tr>
-<tr>
-  <td>3</td>
-  <td><code>CategoryPage()</code><br><small style="color:var(--muted)">categories/[slug]/page.tsx</small></td>
-  <td><span class="tag tag-hook">UI</span></td>
-  <td>External entry / no inbound edge</td>
-  <td><code>getAllCategories()</code><br><small style="color:var(--muted)">lib/products/getAllCategories.ts</small><br><code>getProductsByCategory()</code><br><small style="color:var(--muted)">lib/products/getProductsByCategory.tsx</small></td>
-  <td>Organizes documentation pages, navigation, or content lookup.</td>
-</tr>
-<tr>
-  <td>4</td>
-  <td><code>Home()</code><br><small style="color:var(--muted)">app/(store)/page.tsx</small></td>
-  <td><span class="tag tag-hook">UI</span></td>
-  <td>External entry / no inbound edge</td>
-  <td><code>getAllCategories()</code><br><small style="color:var(--muted)">lib/products/getAllCategories.ts</small><br><code>getAllProducts()</code><br><small style="color:var(--muted)">lib/products/getAllProducts.ts</small></td>
-  <td>Home() node in app/(store)/page.tsx.</td>
-</tr>
-<tr>
-  <td>5</td>
-  <td><code>BlackFridayBanner()</code><br><small style="color:var(--muted)">components/BlackFridayBanner.tsx</small></td>
-  <td><span class="tag tag-hook">UI</span></td>
-  <td><code>page.tsx</code><br><small style="color:var(--muted)">app/(store)/page.tsx</small></td>
-  <td><code>getActiveSaleByCouponCode()</code><br><small style="color:var(--muted)">lib/sales/getActiveSaleByCouponCode.ts</small></td>
-  <td>BlackFridayBanner() node in components/BlackFridayBanner.tsx.</td>
-</tr>
-<tr>
-  <td>6</td>
-  <td><code>HeroBanner()</code><br><small style="color:var(--muted)">components/HeroBanner.tsx</small></td>
-  <td><span class="tag tag-hook">UI</span></td>
-  <td><code>page.tsx</code><br><small style="color:var(--muted)">app/(store)/page.tsx</small></td>
-  <td>No direct outbound edge</td>
-  <td>HeroBanner() node in components/HeroBanner.tsx.</td>
-</tr>
-<tr>
-  <td>7</td>
-  <td><code>ProductsView()</code><br><small style="color:var(--muted)">components/ProductsView.tsx</small></td>
-  <td><span class="tag tag-hook">UI</span></td>
-  <td><code>page.tsx</code><br><small style="color:var(--muted)">app/(store)/page.tsx</small><br><code>page.tsx</code><br><small style="color:var(--muted)">categories/[slug]/page.tsx</small></td>
-  <td>No direct outbound edge</td>
-  <td>ProductsView() node in components/ProductsView.tsx.</td>
-</tr>
-<tr>
-  <td>8</td>
-  <td><code>TrustBar()</code><br><small style="color:var(--muted)">components/TrustBar.tsx</small></td>
-  <td><span class="tag tag-hook">UI</span></td>
-  <td><code>page.tsx</code><br><small style="color:var(--muted)">app/(store)/page.tsx</small></td>
-  <td>No direct outbound edge</td>
-  <td>TrustBar() node in components/TrustBar.tsx.</td>
-</tr>
-<tr>
-  <td>9</td>
-  <td><code>getAllCategories()</code><br><small style="color:var(--muted)">lib/products/getAllCategories.ts</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td><code>CategoriesPage()</code><br><small style="color:var(--muted)">(store)/categories/page.tsx</small><br><code>CategoryPage()</code><br><small style="color:var(--muted)">categories/[slug]/page.tsx</small><br><code>Home()</code><br><small style="color:var(--muted)">app/(store)/page.tsx</small><br>+3 more</td>
-  <td>No direct outbound edge</td>
-  <td>getAllCategories() node in lib/products/getAllCategories.ts.</td>
-</tr>
-<tr>
-  <td>10</td>
-  <td><code>getAllProducts()</code><br><small style="color:var(--muted)">lib/products/getAllProducts.ts</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td><code>Home()</code><br><small style="color:var(--muted)">app/(store)/page.tsx</small><br><code>page.tsx</code><br><small style="color:var(--muted)">app/(store)/page.tsx</small></td>
-  <td>No direct outbound edge</td>
-  <td>getAllProducts() node in lib/products/getAllProducts.ts.</td>
-</tr>
-<tr>
-  <td>11</td>
-  <td><code>getProductsByCategory()</code><br><small style="color:var(--muted)">lib/products/getProductsByCategory.tsx</small></td>
-  <td><span class="tag tag-hook">UI</span></td>
-  <td><code>CategoryPage()</code><br><small style="color:var(--muted)">categories/[slug]/page.tsx</small><br><code>page.tsx</code><br><small style="color:var(--muted)">categories/[slug]/page.tsx</small></td>
-  <td>No direct outbound edge</td>
-  <td>getProductsByCategory() node in lib/products/getProductsByCategory.tsx.</td>
-</tr>
-<tr>
-  <td>12</td>
-  <td><code>getActiveSaleByCouponCode()</code><br><small style="color:var(--muted)">lib/sales/getActiveSaleByCouponCode.ts</small></td>
-  <td><span class="tag tag-func">Function</span></td>
-  <td><code>BlackFridayBanner()</code><br><small style="color:var(--muted)">components/BlackFridayBanner.tsx</small><br><code>BlackFridayBanner.tsx</code><br><small style="color:var(--muted)">components/BlackFridayBanner.tsx</small></td>
-  <td>No direct outbound edge</td>
-  <td>getActiveSaleByCouponCode() node in lib/sales/getActiveSaleByCouponCode.ts.</td>
-</tr>
-<tr>
-  <td>13</td>
-  <td><code>categories/page.tsx</code><br><small style="color:var(--muted)">(store)/categories/page.tsx</small></td>
-  <td><span class="tag tag-hook">UI</span></td>
-  <td>External entry / no inbound edge</td>
-  <td><code>Category</code><br><small style="color:var(--muted)">sanity.types.ts</small><br><code>getAllCategories()</code><br><small style="color:var(--muted)">lib/products/getAllCategories.ts</small><br><code>getAllCategories.ts</code><br><small style="color:var(--muted)">lib/products/getAllCategories.ts</small><br>+1 more</td>
-  <td>Module file in (store)/categories/page.tsx.</td>
-</tr>
-<tr>
-  <td>14</td>
-  <td><code>dynamic</code><br><small style="color:var(--muted)">(store)/categories/page.tsx</small></td>
-  <td><span class="tag tag-hook">UI</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>dynamic node in (store)/categories/page.tsx.</td>
-</tr>
-<tr>
-  <td>15</td>
-  <td><code>revalidate</code><br><small style="color:var(--muted)">(store)/categories/page.tsx</small></td>
-  <td><span class="tag tag-hook">UI</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>revalidate node in (store)/categories/page.tsx.</td>
-</tr>
-<tr>
-  <td>16</td>
-  <td><code>categories/[slug]/page.tsx</code><br><small style="color:var(--muted)">categories/[slug]/page.tsx</small></td>
-  <td><span class="tag tag-hook">UI</span></td>
-  <td>External entry / no inbound edge</td>
-  <td><code>getAllCategories()</code><br><small style="color:var(--muted)">lib/products/getAllCategories.ts</small><br><code>getAllCategories.ts</code><br><small style="color:var(--muted)">lib/products/getAllCategories.ts</small><br><code>getProductsByCategory()</code><br><small style="color:var(--muted)">lib/products/getProductsByCategory.tsx</small><br>+3 more</td>
-  <td>Module file in categories/[slug]/page.tsx.</td>
-</tr>
-<tr>
-  <td>17</td>
-  <td><code>(store)/page.tsx</code><br><small style="color:var(--muted)">app/(store)/page.tsx</small></td>
-  <td><span class="tag tag-hook">UI</span></td>
-  <td>External entry / no inbound edge</td>
-  <td><code>BlackFridayBanner()</code><br><small style="color:var(--muted)">components/BlackFridayBanner.tsx</small><br><code>BlackFridayBanner.tsx</code><br><small style="color:var(--muted)">components/BlackFridayBanner.tsx</small><br><code>getAllCategories()</code><br><small style="color:var(--muted)">lib/products/getAllCategories.ts</small><br>+9 more</td>
-  <td>Module file in app/(store)/page.tsx.</td>
-</tr>
-<tr>
-  <td>18</td>
-  <td><code>dynamic</code><br><small style="color:var(--muted)">app/(store)/page.tsx</small></td>
-  <td><span class="tag tag-hook">UI</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>dynamic node in app/(store)/page.tsx.</td>
-</tr>
-<tr>
-  <td>19</td>
-  <td><code>revalidate</code><br><small style="color:var(--muted)">app/(store)/page.tsx</small></td>
-  <td><span class="tag tag-hook">UI</span></td>
-  <td>External entry / no inbound edge</td>
-  <td>No direct outbound edge</td>
-  <td>revalidate node in app/(store)/page.tsx.</td>
-</tr>
-<tr>
-  <td>20</td>
-  <td><code>BlackFridayBanner.tsx</code><br><small style="color:var(--muted)">components/BlackFridayBanner.tsx</small></td>
-  <td><span class="tag tag-hook">UI</span></td>
-  <td><code>page.tsx</code><br><small style="color:var(--muted)">app/(store)/page.tsx</small></td>
-  <td><code>COUPON_CODES</code><br><small style="color:var(--muted)">lib/sales/couponCodes.ts</small><br><code>couponCodes.ts</code><br><small style="color:var(--muted)">lib/sales/couponCodes.ts</small><br><code>getActiveSaleByCouponCode()</code><br><small style="color:var(--muted)">lib/sales/getActiveSaleByCouponCode.ts</small><br>+1 more</td>
-  <td>Module file in components/BlackFridayBanner.tsx.</td>
-</tr>
-<tr>
-  <td>21</td>
-  <td><code>HeroBanner.tsx</code><br><small style="color:var(--muted)">components/HeroBanner.tsx</small></td>
-  <td><span class="tag tag-hook">UI</span></td>
-  <td><code>page.tsx</code><br><small style="color:var(--muted)">app/(store)/page.tsx</small></td>
-  <td>No direct outbound edge</td>
-  <td>Module file in components/HeroBanner.tsx.</td>
-</tr>
-<tr>
-  <td>22</td>
-  <td><code>TrustBar.tsx</code><br><small style="color:var(--muted)">components/TrustBar.tsx</small></td>
-  <td><span class="tag tag-hook">UI</span></td>
-  <td><code>page.tsx</code><br><small style="color:var(--muted)">app/(store)/page.tsx</small></td>
-  <td>No direct outbound edge</td>
-  <td>Module file in components/TrustBar.tsx.</td>
-</tr>
-<tr>
-  <td>23</td>
-  <td><code>getAllCategories.ts</code><br><small style="color:var(--muted)">lib/products/getAllCategories.ts</small></td>
-  <td><span class="tag tag-class">Module</span></td>
-  <td><code>page.tsx</code><br><small style="color:var(--muted)">app/(store)/page.tsx</small><br><code>page.tsx</code><br><small style="color:var(--muted)">categories/[slug]/page.tsx</small><br><code>page.tsx</code><br><small style="color:var(--muted)">(store)/categories/page.tsx</small></td>
-  <td><code>live.ts</code><br><small style="color:var(--muted)">sanity/lib/live.ts</small></td>
-  <td>Module file in lib/products/getAllCategories.ts.</td>
-</tr>
-<tr>
-  <td>24</td>
-  <td><code>getAllProducts.ts</code><br><small style="color:var(--muted)">lib/products/getAllProducts.ts</small></td>
-  <td><span class="tag tag-class">Module</span></td>
-  <td><code>page.tsx</code><br><small style="color:var(--muted)">app/(store)/page.tsx</small></td>
-  <td><code>live.ts</code><br><small style="color:var(--muted)">sanity/lib/live.ts</small></td>
-  <td>Module file in lib/products/getAllProducts.ts.</td>
-</tr>
-<tr>
-  <td>25</td>
-  <td><code>getProductsByCategory.tsx</code><br><small style="color:var(--muted)">lib/products/getProductsByCategory.tsx</small></td>
-  <td><span class="tag tag-hook">UI</span></td>
-  <td><code>page.tsx</code><br><small style="color:var(--muted)">categories/[slug]/page.tsx</small></td>
-  <td><code>live.ts</code><br><small style="color:var(--muted)">sanity/lib/live.ts</small></td>
-  <td>Module file in lib/products/getProductsByCategory.tsx.</td>
-</tr>
-<tr>
-  <td>26</td>
-  <td><code>couponCodes.ts</code><br><small style="color:var(--muted)">lib/sales/couponCodes.ts</small></td>
-  <td><span class="tag tag-class">Module</span></td>
-  <td><code>BlackFridayBanner.tsx</code><br><small style="color:var(--muted)">components/BlackFridayBanner.tsx</small><br><code>getActiveSaleByCouponCode.ts</code><br><small style="color:var(--muted)">lib/sales/getActiveSaleByCouponCode.ts</small></td>
-  <td>No direct outbound edge</td>
-  <td>Module file in lib/sales/couponCodes.ts.</td>
-</tr>
-<tr>
-  <td>27</td>
-  <td><code>COUPON_CODES</code><br><small style="color:var(--muted)">lib/sales/couponCodes.ts</small></td>
-  <td><span class="tag tag-class">Class</span></td>
-  <td><code>BlackFridayBanner.tsx</code><br><small style="color:var(--muted)">components/BlackFridayBanner.tsx</small></td>
-  <td>No direct outbound edge</td>
-  <td>COUPON_CODES node in lib/sales/couponCodes.ts.</td>
-</tr>
-<tr>
-  <td>28</td>
-  <td><code>getActiveSaleByCouponCode.ts</code><br><small style="color:var(--muted)">lib/sales/getActiveSaleByCouponCode.ts</small></td>
-  <td><span class="tag tag-class">Module</span></td>
-  <td><code>BlackFridayBanner.tsx</code><br><small style="color:var(--muted)">components/BlackFridayBanner.tsx</small></td>
-  <td><code>CouponCode</code><br><small style="color:var(--muted)">lib/sales/couponCodes.ts</small><br><code>couponCodes.ts</code><br><small style="color:var(--muted)">lib/sales/couponCodes.ts</small><br><code>live.ts</code><br><small style="color:var(--muted)">sanity/lib/live.ts</small></td>
-  <td>Module file in lib/sales/getActiveSaleByCouponCode.ts.</td>
-</tr>
-</table>
-
-<div class="grid">
-  <div class="card">
-    <h4>Key Files</h4>
-    <table style="width:100%;font-size:0.85rem;">
-      <tr><th>File</th><th>Coverage</th></tr>
-      <tr><td><code>(store)/categories/page.tsx</code></td><td>4 nodes</td></tr>
-<tr><td><code>app/(store)/page.tsx</code></td><td>4 nodes</td></tr>
-<tr><td><code>lib/sales/couponCodes.ts</code></td><td>3 nodes</td></tr>
-<tr><td><code>categories/[slug]/page.tsx</code></td><td>2 nodes</td></tr>
-<tr><td><code>components/BlackFridayBanner.tsx</code></td><td>2 nodes</td></tr>
-<tr><td><code>components/HeroBanner.tsx</code></td><td>2 nodes</td></tr>
-<tr><td><code>components/TrustBar.tsx</code></td><td>2 nodes</td></tr>
-<tr><td><code>lib/products/getAllCategories.ts</code></td><td>2 nodes</td></tr>
-    </table>
-  </div>
-  <div class="card">
-    <h4>Design Notes</h4>
-    <p>This section comes from graphify community clustering. Relationship summary: contains x16, imports x13, imports x11, calls x6. The diagram prioritizes high-confidence calls or usage relationships; the table keeps the broader node inventory.</p>
   </div>
 </div>
 <hr>
@@ -3080,8 +3100,8 @@ flowchart LR
   <div class="card">
     <h4>Graph</h4>
     <table style="width:100%;font-size:0.85rem;">
-      <tr><td>Nodes</td><td>354</td></tr>
-      <tr><td>Edges</td><td>535</td></tr>
+      <tr><td>Nodes</td><td>356</td></tr>
+      <tr><td>Edges</td><td>537</td></tr>
       <tr><td>Hyperedges</td><td>0</td></tr>
       <tr><td>Communities</td><td>23</td></tr>
       <tr><td>Documented Sections</td><td>15</td></tr>
@@ -3090,7 +3110,7 @@ flowchart LR
   <div class="card">
     <h4>Edge Confidence</h4>
     <table style="width:100%;font-size:0.85rem;">
-      <tr><td>EXTRACTED</td><td>534</td></tr>
+      <tr><td>EXTRACTED</td><td>536</td></tr>
       <tr><td>INFERRED</td><td>1</td></tr>
       <tr><td>AMBIGUOUS</td><td>0</td></tr>
     </table>
@@ -3099,7 +3119,7 @@ flowchart LR
 
 <div style="text-align:center; padding:40px 0; color: var(--muted); font-size:0.9rem;">
   <p>ecommerce-sanity-master — Architecture Documentation</p>
-  <p>Generated: 2026-08-25 12:39 UTC · graphify callflow-html</p>
+  <p>Generated: 2026-08-25 12:42 UTC · graphify callflow-html</p>
 </div>
 
 </div><!-- .container -->

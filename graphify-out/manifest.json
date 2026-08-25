@@ -18,10 +18,10 @@
     "semantic_hash": ""
   },
   "app/(store)/categories/[slug]/page.tsx": {
-    "mtime": 1787032858.1677969,
-    "seen": 1787658504.1866372,
-    "ast_hash": "972818b3464726470001b6d69b5b86ff",
-    "semantic_hash": "972818b3464726470001b6d69b5b86ff"
+    "mtime": 1787661726.3168905,
+    "seen": 1787661734.5291069,
+    "ast_hash": "42f4fca3b645cce47132aa32e89ae9d9",
+    "semantic_hash": ""
   },
   "app/(store)/categories/page.tsx": {
     "mtime": 1787032858.1679506,
@@ -192,9 +192,9 @@
     "semantic_hash": "4870ecf032591e7dc71cd4e3c36bb683"
   },
   "components/ui/category-selector.tsx": {
-    "mtime": 1787660565.8858545,
-    "seen": 1787660572.8126888,
-    "ast_hash": "0557b3fc3e7ae71f580df60629d2ecb2",
+    "mtime": 1787661719.6860354,
+    "seen": 1787661734.52921,
+    "ast_hash": "2f7cc0811684fc6b188900bb9f4c4122",
     "semantic_hash": ""
   },
   "components/ui/category-selectorORIGINAL.tsx": {
@@ -516,9 +516,9 @@
     "semantic_hash": ""
   },
   "components/CategoryPills.tsx": {
-    "mtime": 1787661296.8517323,
-    "seen": 1787661364.5491352,
-    "ast_hash": "1d14fb8197fcfbea70d9e975f86c6bf6",
+    "mtime": 1787661714.387982,
+    "seen": 1787661734.5291898,
+    "ast_hash": "35ed57e2086a99b6c2ed7479c845de00",
     "semantic_hash": ""
   },
   "components/HeroBanner.tsx": {

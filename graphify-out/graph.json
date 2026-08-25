@@ -568,6 +568,18 @@
       "source_location": "L9"
     },
     {
+      "id": "components_addtobasket_addtobasketbutton",
+      "label": "AddToBasketButton()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "basket/page.tsx",
+      "file_type": "code",
+      "norm_label": "addtobasketbutton()",
+      "source_file": "components/AddToBasket.tsx",
+      "source_location": "L12"
+    },
+    {
       "id": "components_loader_loader",
       "label": "Loader()",
       "_callable": true,
@@ -688,6 +700,18 @@
       "source_location": "L13"
     },
     {
+      "id": "components_ui_category_selector_categoryselectorcomponent",
+      "label": "CategorySelectorComponent()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "cn",
+      "file_type": "code",
+      "norm_label": "categoryselectorcomponent()",
+      "source_file": "components/ui/category-selector.tsx",
+      "source_location": "L18"
+    },
+    {
       "id": "components_ui_category_selectororiginal_categoryselectorcomponent",
       "label": "CategorySelectorComponent()",
       "_callable": true,
@@ -794,18 +818,6 @@
       "norm_label": "successpage()",
       "source_file": "app/(store)/success/page.tsx",
       "source_location": "L9"
-    },
-    {
-      "id": "components_addtobasket_addtobasketbutton",
-      "label": "AddToBasketButton()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "useBasketStore",
-      "file_type": "code",
-      "norm_label": "addtobasketbutton()",
-      "source_file": "components/AddToBasket.tsx",
-      "source_location": "L12"
     },
     {
       "id": "components_bottombar_bottombar",
@@ -928,18 +940,6 @@
       "source_location": "L4"
     },
     {
-      "id": "components_ui_category_selector_categoryselectorcomponent",
-      "label": "CategorySelectorComponent()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "sanity.types.ts",
-      "file_type": "code",
-      "norm_label": "categoryselectorcomponent()",
-      "source_file": "components/ui/category-selector.tsx",
-      "source_location": "L18"
-    },
-    {
       "id": "sanity_lib_products_searchproductsbyname_searchproductsbyname",
       "label": "searchProductsByName()",
       "_callable": true,
@@ -973,7 +973,7 @@
       "file_type": "code",
       "norm_label": "categorypage()",
       "source_file": "app/(store)/categories/[slug]/page.tsx",
-      "source_location": "L5"
+      "source_location": "L8"
     },
     {
       "id": "app_store_page_home",
@@ -3282,17 +3282,6 @@
       "source_location": "L1"
     },
     {
-      "id": "sanity_lib_live",
-      "label": "live.ts",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "useBasketStore",
-      "file_type": "code",
-      "norm_label": "live.ts",
-      "source_file": "sanity/lib/live.ts",
-      "source_location": "L1"
-    },
-    {
       "id": "store_store",
       "label": "store.ts",
       "_origin": "ast",
@@ -3436,6 +3425,28 @@
       "source_location": "L1"
     },
     {
+      "id": "app_store_categories_slug_page_dynamic",
+      "label": "dynamic",
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "(store)/page.tsx",
+      "file_type": "code",
+      "norm_label": "dynamic",
+      "source_file": "app/(store)/categories/[slug]/page.tsx",
+      "source_location": "L5"
+    },
+    {
+      "id": "app_store_categories_slug_page_revalidate",
+      "label": "revalidate",
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "(store)/page.tsx",
+      "file_type": "code",
+      "norm_label": "revalidate",
+      "source_file": "app/(store)/categories/[slug]/page.tsx",
+      "source_location": "L6"
+    },
+    {
       "id": "app_store_page",
       "label": "(store)/page.tsx",
       "_origin": "ast",
@@ -3499,6 +3510,17 @@
       "file_type": "code",
       "norm_label": "trustbar.tsx",
       "source_file": "components/TrustBar.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "sanity_lib_live",
+      "label": "live.ts",
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "(store)/page.tsx",
+      "file_type": "code",
+      "norm_label": "live.ts",
+      "source_file": "sanity/lib/live.ts",
       "source_location": "L1"
     },
     {
@@ -4123,7 +4145,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/(store)/categories/[slug]/page.tsx",
-      "source_location": "L8",
+      "source_location": "L12",
       "weight": 1.0
     },
     {
@@ -4135,7 +4157,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/(store)/categories/[slug]/page.tsx",
-      "source_location": "L9",
+      "source_location": "L13",
       "weight": 1.0
     },
     {
@@ -4411,7 +4433,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "components/ui/category-selector.tsx",
-      "source_location": "L72",
+      "source_location": "L74",
       "weight": 1.0
     },
     {
@@ -7813,13 +7835,35 @@
     },
     {
       "source": "app_store_categories_slug_page",
-      "target": "app_store_categories_slug_page_categorypage",
+      "target": "app_store_categories_slug_page_dynamic",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/(store)/categories/[slug]/page.tsx",
       "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "app_store_categories_slug_page",
+      "target": "app_store_categories_slug_page_revalidate",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/(store)/categories/[slug]/page.tsx",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "app_store_categories_slug_page",
+      "target": "app_store_categories_slug_page_categorypage",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/(store)/categories/[slug]/page.tsx",
+      "source_location": "L8",
       "weight": 1.0
     },
     {
@@ -10232,5 +10276,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "21d02f1a49cc60fd759a9318b928691923c294cd"
+  "built_at_commit": "c3e6916054679742f505ad57c8ba9fd6c1205737"
 }

@@ -30,6 +30,32 @@
       "source_location": "L7"
     },
     {
+      "id": "components_addtobasket_addtobasketbuttonprops",
+      "label": "AddToBasketButtonProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "basket/page.tsx",
+      "file_type": "code",
+      "norm_label": "addtobasketbuttonprops",
+      "source_file": "components/AddToBasket.tsx",
+      "source_location": "L7"
+    },
+    {
+      "id": "sanity_lib_sales_couponcodes_couponcode",
+      "label": "CouponCode",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "BlackFridayBanner.tsx",
+      "file_type": "code",
+      "norm_label": "couponcode",
+      "source_file": "sanity/lib/sales/couponCodes.ts",
+      "source_location": "L7"
+    },
+    {
       "id": "types_clerk_nextjs_d_middlewarehandler",
       "label": "MiddlewareHandler",
       "_callable": true,
@@ -56,56 +82,43 @@
       "source_location": "L37"
     },
     {
-      "id": "components_addtobasket_addtobasketbuttonprops",
-      "label": "AddToBasketButtonProps",
+      "id": "components_ui_category_selector_categoryselectorprops",
+      "label": "CategorySelectorProps",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "community": 5,
-      "community_name": "useBasketStore",
+      "community": 2,
+      "community_name": "cn",
       "file_type": "code",
-      "norm_label": "addtobasketbuttonprops",
-      "source_file": "components/AddToBasket.tsx",
-      "source_location": "L7"
+      "norm_label": "categoryselectorprops",
+      "source_file": "components/ui/category-selector.tsx",
+      "source_location": "L14"
     },
     {
-      "id": "sanity_types_product",
-      "label": "Product",
+      "id": "components_ui_category_selectororiginal_categoryselectorprops",
+      "label": "CategorySelectorProps",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "community": 5,
-      "community_name": "useBasketStore",
+      "community": 2,
+      "community_name": "cn",
       "file_type": "code",
-      "norm_label": "product",
+      "norm_label": "categoryselectorprops",
+      "source_file": "components/ui/category-selectorORIGINAL.tsx",
+      "source_location": "L14"
+    },
+    {
+      "id": "sanity_types_category",
+      "label": "Category",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "cn",
+      "file_type": "code",
+      "norm_label": "category",
       "source_file": "sanity.types.ts",
-      "source_location": "L116"
-    },
-    {
-      "id": "store_store_basketitem",
-      "label": "BasketItem",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "useBasketStore",
-      "file_type": "code",
-      "norm_label": "basketitem",
-      "source_file": "store/store.ts",
-      "source_location": "L5"
-    },
-    {
-      "id": "store_store_basketstate",
-      "label": "BasketState",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "useBasketStore",
-      "file_type": "code",
-      "norm_label": "basketstate",
-      "source_file": "store/store.ts",
-      "source_location": "L10"
+      "source_location": "L176"
     },
     {
       "id": "components_productsview_productsviewprops",
@@ -119,32 +132,6 @@
       "norm_label": "productsviewprops",
       "source_file": "components/ProductsView.tsx",
       "source_location": "L7"
-    },
-    {
-      "id": "components_ui_category_selector_categoryselectorprops",
-      "label": "CategorySelectorProps",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "sanity.types.ts",
-      "file_type": "code",
-      "norm_label": "categoryselectorprops",
-      "source_file": "components/ui/category-selector.tsx",
-      "source_location": "L14"
-    },
-    {
-      "id": "components_ui_category_selectororiginal_categoryselectorprops",
-      "label": "CategorySelectorProps",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "sanity.types.ts",
-      "file_type": "code",
-      "norm_label": "categoryselectorprops",
-      "source_file": "components/ui/category-selectorORIGINAL.tsx",
-      "source_location": "L14"
     },
     {
       "id": "sanity_types_active_sale_by_coupon_queryresult",
@@ -212,19 +199,6 @@
       "source_location": "L193"
     },
     {
-      "id": "sanity_types_category",
-      "label": "Category",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "sanity.types.ts",
-      "file_type": "code",
-      "norm_label": "category",
-      "source_file": "sanity.types.ts",
-      "source_location": "L176"
-    },
-    {
       "id": "sanity_types_geopoint",
       "label": "Geopoint",
       "_callable": true,
@@ -262,6 +236,19 @@
       "norm_label": "order",
       "source_file": "sanity.types.ts",
       "source_location": "L86"
+    },
+    {
+      "id": "sanity_types_product",
+      "label": "Product",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "sanity.types.ts",
+      "file_type": "code",
+      "norm_label": "product",
+      "source_file": "sanity.types.ts",
+      "source_location": "L116"
     },
     {
       "id": "sanity_types_product_by_category_queryresult",
@@ -459,17 +446,30 @@
       "source_location": "L187"
     },
     {
-      "id": "sanity_lib_sales_couponcodes_couponcode",
-      "label": "CouponCode",
+      "id": "store_store_basketitem",
+      "label": "BasketItem",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "community": 7,
-      "community_name": "(store)/page.tsx",
+      "community": 6,
+      "community_name": "sanity.types.ts",
       "file_type": "code",
-      "norm_label": "couponcode",
-      "source_file": "sanity/lib/sales/couponCodes.ts",
-      "source_location": "L7"
+      "norm_label": "basketitem",
+      "source_file": "store/store.ts",
+      "source_location": "L5"
+    },
+    {
+      "id": "store_store_basketstate",
+      "label": "BasketState",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "sanity.types.ts",
+      "file_type": "code",
+      "norm_label": "basketstate",
+      "source_file": "store/store.ts",
+      "source_location": "L10"
     },
     {
       "id": "actions_createcheckoutsession_createcheckoutsession",
@@ -568,6 +568,18 @@
       "source_location": "L9"
     },
     {
+      "id": "components_addtobasket_addtobasketbutton",
+      "label": "AddToBasketButton()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "basket/page.tsx",
+      "file_type": "code",
+      "norm_label": "addtobasketbutton()",
+      "source_file": "components/AddToBasket.tsx",
+      "source_location": "L12"
+    },
+    {
       "id": "components_loader_loader",
       "label": "Loader()",
       "_callable": true,
@@ -650,6 +662,30 @@
       "norm_label": "getproductbyslug()",
       "source_file": "sanity/lib/products/getProductBySlug.ts",
       "source_location": "L4"
+    },
+    {
+      "id": "components_blackfridaybanner_blackfridaybanner",
+      "label": "BlackFridayBanner()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "BlackFridayBanner.tsx",
+      "file_type": "code",
+      "norm_label": "blackfridaybanner()",
+      "source_file": "components/BlackFridayBanner.tsx",
+      "source_location": "L4"
+    },
+    {
+      "id": "sanity_lib_sales_getactivesalebycouponcode_getactivesalebycouponcode",
+      "label": "getActiveSaleByCouponCode()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "BlackFridayBanner.tsx",
+      "file_type": "code",
+      "norm_label": "getactivesalebycouponcode()",
+      "source_file": "sanity/lib/sales/getActiveSaleByCouponCode.ts",
+      "source_location": "L5"
     },
     {
       "id": "app_studio_layout_rootlayout",
@@ -796,18 +832,6 @@
       "source_location": "L9"
     },
     {
-      "id": "components_addtobasket_addtobasketbutton",
-      "label": "AddToBasketButton()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "useBasketStore",
-      "file_type": "code",
-      "norm_label": "addtobasketbutton()",
-      "source_file": "components/AddToBasket.tsx",
-      "source_location": "L12"
-    },
-    {
       "id": "components_bottombar_bottombar",
       "label": "BottomBar()",
       "_callable": true,
@@ -892,18 +916,6 @@
       "source_location": "L7"
     },
     {
-      "id": "app_store_search_page_searchpage",
-      "label": "SearchPage()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "sanity.types.ts",
-      "file_type": "code",
-      "norm_label": "searchpage()",
-      "source_file": "app/(store)/search/page.tsx",
-      "source_location": "L4"
-    },
-    {
       "id": "components_categorypills_categorypills",
       "label": "CategoryPills()",
       "_callable": true,
@@ -925,7 +937,7 @@
       "file_type": "code",
       "norm_label": "productgrid()",
       "source_file": "components/ProductGrid.tsx",
-      "source_location": "L7"
+      "source_location": "L4"
     },
     {
       "id": "components_ui_category_selector_categoryselectorcomponent",
@@ -938,18 +950,6 @@
       "norm_label": "categoryselectorcomponent()",
       "source_file": "components/ui/category-selector.tsx",
       "source_location": "L18"
-    },
-    {
-      "id": "sanity_lib_products_searchproductsbyname_searchproductsbyname",
-      "label": "searchProductsByName()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "sanity.types.ts",
-      "file_type": "code",
-      "norm_label": "searchproductsbyname()",
-      "source_file": "sanity/lib/products/searchProductsByName.ts",
-      "source_location": "L4"
     },
     {
       "id": "app_store_categories_page_categoriespage",
@@ -988,15 +988,15 @@
       "source_location": "L11"
     },
     {
-      "id": "components_blackfridaybanner_blackfridaybanner",
-      "label": "BlackFridayBanner()",
+      "id": "app_store_search_page_searchpage",
+      "label": "SearchPage()",
       "_callable": true,
       "_origin": "ast",
       "community": 7,
       "community_name": "(store)/page.tsx",
       "file_type": "code",
-      "norm_label": "blackfridaybanner()",
-      "source_file": "components/BlackFridayBanner.tsx",
+      "norm_label": "searchpage()",
+      "source_file": "app/(store)/search/page.tsx",
       "source_location": "L4"
     },
     {
@@ -1072,16 +1072,16 @@
       "source_location": "L4"
     },
     {
-      "id": "sanity_lib_sales_getactivesalebycouponcode_getactivesalebycouponcode",
-      "label": "getActiveSaleByCouponCode()",
+      "id": "sanity_lib_products_searchproductsbyname_searchproductsbyname",
+      "label": "searchProductsByName()",
       "_callable": true,
       "_origin": "ast",
       "community": 7,
       "community_name": "(store)/page.tsx",
       "file_type": "code",
-      "norm_label": "getactivesalebycouponcode()",
-      "source_file": "sanity/lib/sales/getActiveSaleByCouponCode.ts",
-      "source_location": "L5"
+      "norm_label": "searchproductsbyname()",
+      "source_file": "sanity/lib/products/searchProductsByName.ts",
+      "source_location": "L4"
     },
     {
       "id": "app_draft_mode_enable_route_get",
@@ -1748,6 +1748,17 @@
       "source_location": "L1"
     },
     {
+      "id": "components_addtobasket",
+      "label": "AddToBasket.tsx",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "basket/page.tsx",
+      "file_type": "code",
+      "norm_label": "addtobasket.tsx",
+      "source_file": "components/AddToBasket.tsx",
+      "source_location": "L1"
+    },
+    {
       "id": "components_loader",
       "label": "Loader.tsx",
       "_origin": "ast",
@@ -1844,6 +1855,50 @@
       "file_type": "code",
       "norm_label": "getproductbyslug.ts",
       "source_file": "sanity/lib/products/getProductBySlug.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "components_blackfridaybanner",
+      "label": "BlackFridayBanner.tsx",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "BlackFridayBanner.tsx",
+      "file_type": "code",
+      "norm_label": "blackfridaybanner.tsx",
+      "source_file": "components/BlackFridayBanner.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "sanity_lib_sales_couponcodes",
+      "label": "couponCodes.ts",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "BlackFridayBanner.tsx",
+      "file_type": "code",
+      "norm_label": "couponcodes.ts",
+      "source_file": "sanity/lib/sales/couponCodes.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "sanity_lib_sales_couponcodes_coupon_codes",
+      "label": "COUPON_CODES",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "BlackFridayBanner.tsx",
+      "file_type": "code",
+      "norm_label": "coupon_codes",
+      "source_file": "sanity/lib/sales/couponCodes.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "sanity_lib_sales_getactivesalebycouponcode",
+      "label": "getActiveSaleByCouponCode.ts",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "BlackFridayBanner.tsx",
+      "file_type": "code",
+      "norm_label": "getactivesalebycouponcode.ts",
+      "source_file": "sanity/lib/sales/getActiveSaleByCouponCode.ts",
       "source_location": "L1"
     },
     {
@@ -2147,17 +2202,6 @@
       "norm_label": "npm_flags",
       "source_file": "vercel.json",
       "source_location": "L4"
-    },
-    {
-      "id": "postcss_load_config",
-      "label": "postcss-load-config",
-      "_origin": "ast",
-      "community": 19,
-      "community_name": "postcss.config.mjs",
-      "confidence": "EXTRACTED",
-      "file_type": "code",
-      "norm_label": "postcss-load-config",
-      "source_file": "postcss-load-config"
     },
     {
       "id": "postcss_config",
@@ -3183,17 +3227,6 @@
       "source_location": "L1"
     },
     {
-      "id": "components_addtobasket",
-      "label": "AddToBasket.tsx",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "useBasketStore",
-      "file_type": "code",
-      "norm_label": "addtobasket.tsx",
-      "source_file": "components/AddToBasket.tsx",
-      "source_location": "L1"
-    },
-    {
       "id": "components_bottombar",
       "label": "BottomBar.tsx",
       "_origin": "ast",
@@ -3282,17 +3315,6 @@
       "source_location": "L1"
     },
     {
-      "id": "sanity_lib_live",
-      "label": "live.ts",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "useBasketStore",
-      "file_type": "code",
-      "norm_label": "live.ts",
-      "source_file": "sanity/lib/live.ts",
-      "source_location": "L1"
-    },
-    {
       "id": "store_store",
       "label": "store.ts",
       "_origin": "ast",
@@ -3313,17 +3335,6 @@
       "norm_label": "usebasketstore",
       "source_file": "store/store.ts",
       "source_location": "L20"
-    },
-    {
-      "id": "app_store_search_page",
-      "label": "search/page.tsx",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "sanity.types.ts",
-      "file_type": "code",
-      "norm_label": "search/page.tsx",
-      "source_file": "app/(store)/search/page.tsx",
-      "source_location": "L1"
     },
     {
       "id": "components_categorypills",
@@ -3356,17 +3367,6 @@
       "file_type": "code",
       "norm_label": "productsview.tsx",
       "source_file": "components/ProductsView.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "sanity_lib_products_searchproductsbyname",
-      "label": "searchProductsByName.ts",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "sanity.types.ts",
-      "file_type": "code",
-      "norm_label": "searchproductsbyname.ts",
-      "source_file": "sanity/lib/products/searchProductsByName.ts",
       "source_location": "L1"
     },
     {
@@ -3469,14 +3469,14 @@
       "source_location": "L9"
     },
     {
-      "id": "components_blackfridaybanner",
-      "label": "BlackFridayBanner.tsx",
+      "id": "app_store_search_page",
+      "label": "search/page.tsx",
       "_origin": "ast",
       "community": 7,
       "community_name": "(store)/page.tsx",
       "file_type": "code",
-      "norm_label": "blackfridaybanner.tsx",
-      "source_file": "components/BlackFridayBanner.tsx",
+      "norm_label": "search/page.tsx",
+      "source_file": "app/(store)/search/page.tsx",
       "source_location": "L1"
     },
     {
@@ -3499,6 +3499,17 @@
       "file_type": "code",
       "norm_label": "trustbar.tsx",
       "source_file": "components/TrustBar.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "sanity_lib_live",
+      "label": "live.ts",
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "(store)/page.tsx",
+      "file_type": "code",
+      "norm_label": "live.ts",
+      "source_file": "sanity/lib/live.ts",
       "source_location": "L1"
     },
     {
@@ -3535,36 +3546,14 @@
       "source_location": "L1"
     },
     {
-      "id": "sanity_lib_sales_couponcodes",
-      "label": "couponCodes.ts",
+      "id": "sanity_lib_products_searchproductsbyname",
+      "label": "searchProductsByName.ts",
       "_origin": "ast",
       "community": 7,
       "community_name": "(store)/page.tsx",
       "file_type": "code",
-      "norm_label": "couponcodes.ts",
-      "source_file": "sanity/lib/sales/couponCodes.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "sanity_lib_sales_couponcodes_coupon_codes",
-      "label": "COUPON_CODES",
-      "_origin": "ast",
-      "community": 7,
-      "community_name": "(store)/page.tsx",
-      "file_type": "code",
-      "norm_label": "coupon_codes",
-      "source_file": "sanity/lib/sales/couponCodes.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "sanity_lib_sales_getactivesalebycouponcode",
-      "label": "getActiveSaleByCouponCode.ts",
-      "_origin": "ast",
-      "community": 7,
-      "community_name": "(store)/page.tsx",
-      "file_type": "code",
-      "norm_label": "getactivesalebycouponcode.ts",
-      "source_file": "sanity/lib/sales/getActiveSaleByCouponCode.ts",
+      "norm_label": "searchproductsbyname.ts",
+      "source_file": "sanity/lib/products/searchProductsByName.ts",
       "source_location": "L1"
     },
     {
@@ -4183,7 +4172,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/(store)/page.tsx",
-      "source_location": "L12",
+      "source_location": "L13",
       "weight": 1.0
     },
     {
@@ -4195,7 +4184,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/(store)/page.tsx",
-      "source_location": "L13",
+      "source_location": "L14",
       "weight": 1.0
     },
     {
@@ -4616,30 +4605,6 @@
       "context": "field",
       "source_file": "components/AddToBasket.tsx",
       "source_location": "L8",
-      "weight": 1.0
-    },
-    {
-      "source": "components_productsview_productsviewprops",
-      "target": "sanity_types_product",
-      "relation": "references",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "field",
-      "source_file": "components/ProductsView.tsx",
-      "source_location": "L8",
-      "weight": 1.0
-    },
-    {
-      "source": "components_productsview_productsviewprops",
-      "target": "sanity_types_category",
-      "relation": "references",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "field",
-      "source_file": "components/ProductsView.tsx",
-      "source_location": "L9",
       "weight": 1.0
     },
     {
@@ -5088,18 +5053,6 @@
     },
     {
       "source": "app_store_page",
-      "target": "components_blackfridaybanner_blackfridaybanner",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "app/(store)/page.tsx",
-      "source_location": "L1",
-      "weight": 1.0
-    },
-    {
-      "source": "app_store_page",
       "target": "components_herobanner_herobanner",
       "relation": "imports",
       "_origin": "ast",
@@ -5419,19 +5372,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "components/ProductGrid.tsx",
-      "source_location": "L3",
-      "weight": 1.0
-    },
-    {
-      "source": "components_productgrid",
-      "target": "components_productthumb_productthumb",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "components/ProductGrid.tsx",
-      "source_location": "L5",
+      "source_location": "L1",
       "weight": 1.0
     },
     {
@@ -7135,7 +7076,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "components/ProductGrid.tsx",
-      "source_location": "L3",
+      "source_location": "L1",
       "weight": 1.0
     },
     {
@@ -7147,7 +7088,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "components/ProductGrid.tsx",
-      "source_location": "L5",
+      "source_location": "L2",
       "weight": 1.0
     },
     {
@@ -8358,7 +8299,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "components/ProductGrid.tsx",
-      "source_location": "L7",
+      "source_location": "L4",
       "weight": 1.0
     },
     {
@@ -10210,15 +10151,6 @@
       "weight": 1.0
     },
     {
-      "source": "postcss_config",
-      "target": "postcss_load_config",
-      "relation": "dynamic_import",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "postcss.config.mjs"
-    },
-    {
       "source": "sanity_config",
       "target": "sanity_structure_structure",
       "relation": "indirect_call",
@@ -10232,5 +10164,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "21d02f1a49cc60fd759a9318b928691923c294cd"
+  "built_at_commit": "c3e6916054679742f505ad57c8ba9fd6c1205737"
 }

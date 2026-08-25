@@ -44,6 +44,7 @@ export function CategorySelectorComponent({ categories }: CategorySelectorProps)
                 const selectedCategory = categories.find((c) => c.title?.toLowerCase().includes(e.currentTarget.value.toLowerCase()));
                 if (selectedCategory?.slug?.current) {
                   setValue(selectedCategory._id);
+                  window.scrollTo({ top: 0, behavior: "instant" });
                   router.push(`/categories/${selectedCategory.slug.current}`);
                   setOpen(false);
                 }
@@ -61,6 +62,7 @@ export function CategorySelectorComponent({ categories }: CategorySelectorProps)
                   onSelect={() => {
                     if (category.slug?.current) {
                       setValue(category._id);
+                      window.scrollTo({ top: 0, behavior: "instant" });
                       router.push(`/categories/${category.slug.current}`);
                     } else {
                       console.warn(`Category "${category.title}" has no slug.`);
