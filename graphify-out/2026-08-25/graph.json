@@ -784,6 +784,42 @@
       "source_location": "L6"
     },
     {
+      "id": "app_store_search_page_searchpage",
+      "label": "SearchPage()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 24,
+      "community_name": "search/page.tsx",
+      "file_type": "code",
+      "norm_label": "searchpage()",
+      "source_file": "app/(store)/search/page.tsx",
+      "source_location": "L4"
+    },
+    {
+      "id": "components_productgrid_productgrid",
+      "label": "ProductGrid()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 24,
+      "community_name": "search/page.tsx",
+      "file_type": "code",
+      "norm_label": "productgrid()",
+      "source_file": "components/ProductGrid.tsx",
+      "source_location": "L4"
+    },
+    {
+      "id": "sanity_lib_products_searchproductsbyname_searchproductsbyname",
+      "label": "searchProductsByName()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 24,
+      "community_name": "search/page.tsx",
+      "file_type": "code",
+      "norm_label": "searchproductsbyname()",
+      "source_file": "sanity/lib/products/searchProductsByName.ts",
+      "source_location": "L4"
+    },
+    {
       "id": "app_store_loading_loading",
       "label": "Loading()",
       "_callable": true,
@@ -904,18 +940,6 @@
       "source_location": "L7"
     },
     {
-      "id": "app_store_search_page_searchpage",
-      "label": "SearchPage()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "sanity.types.ts",
-      "file_type": "code",
-      "norm_label": "searchpage()",
-      "source_file": "app/(store)/search/page.tsx",
-      "source_location": "L4"
-    },
-    {
       "id": "components_categorypills_categorypills",
       "label": "CategoryPills()",
       "_callable": true,
@@ -928,18 +952,6 @@
       "source_location": "L7"
     },
     {
-      "id": "components_productgrid_productgrid",
-      "label": "ProductGrid()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "sanity.types.ts",
-      "file_type": "code",
-      "norm_label": "productgrid()",
-      "source_file": "components/ProductGrid.tsx",
-      "source_location": "L4"
-    },
-    {
       "id": "components_ui_category_selector_categoryselectorcomponent",
       "label": "CategorySelectorComponent()",
       "_callable": true,
@@ -950,18 +962,6 @@
       "norm_label": "categoryselectorcomponent()",
       "source_file": "components/ui/category-selector.tsx",
       "source_location": "L18"
-    },
-    {
-      "id": "sanity_lib_products_searchproductsbyname_searchproductsbyname",
-      "label": "searchProductsByName()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "sanity.types.ts",
-      "file_type": "code",
-      "norm_label": "searchproductsbyname()",
-      "source_file": "sanity/lib/products/searchProductsByName.ts",
-      "source_location": "L4"
     },
     {
       "id": "app_store_categories_page_categoriespage",
@@ -2194,17 +2194,6 @@
       "source_location": "L4"
     },
     {
-      "id": "postcss_load_config",
-      "label": "postcss-load-config",
-      "_origin": "ast",
-      "community": 19,
-      "community_name": "postcss.config.mjs",
-      "confidence": "EXTRACTED",
-      "file_type": "code",
-      "norm_label": "postcss-load-config",
-      "source_file": "postcss-load-config"
-    },
-    {
       "id": "postcss_config",
       "label": "postcss.config.mjs",
       "_origin": "ast",
@@ -2521,6 +2510,28 @@
       "file_type": "code",
       "norm_label": "tailwind.config.ts",
       "source_file": "tailwind.config.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_store_search_page",
+      "label": "search/page.tsx",
+      "_origin": "ast",
+      "community": 24,
+      "community_name": "search/page.tsx",
+      "file_type": "code",
+      "norm_label": "search/page.tsx",
+      "source_file": "app/(store)/search/page.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "sanity_lib_products_searchproductsbyname",
+      "label": "searchProductsByName.ts",
+      "_origin": "ast",
+      "community": 24,
+      "community_name": "search/page.tsx",
+      "file_type": "code",
+      "norm_label": "searchproductsbyname.ts",
+      "source_file": "sanity/lib/products/searchProductsByName.ts",
       "source_location": "L1"
     },
     {
@@ -3338,17 +3349,6 @@
       "source_location": "L1"
     },
     {
-      "id": "app_store_search_page",
-      "label": "search/page.tsx",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "sanity.types.ts",
-      "file_type": "code",
-      "norm_label": "search/page.tsx",
-      "source_file": "app/(store)/search/page.tsx",
-      "source_location": "L1"
-    },
-    {
       "id": "components_categorypills",
       "label": "CategoryPills.tsx",
       "_origin": "ast",
@@ -3368,17 +3368,6 @@
       "file_type": "code",
       "norm_label": "productsview.tsx",
       "source_file": "components/ProductsView.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "sanity_lib_products_searchproductsbyname",
-      "label": "searchProductsByName.ts",
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "sanity.types.ts",
-      "file_type": "code",
-      "norm_label": "searchproductsbyname.ts",
-      "source_file": "sanity/lib/products/searchProductsByName.ts",
       "source_location": "L1"
     },
     {
@@ -10360,15 +10349,6 @@
       "weight": 1.0
     },
     {
-      "source": "postcss_config",
-      "target": "postcss_load_config",
-      "relation": "dynamic_import",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "postcss.config.mjs"
-    },
-    {
       "source": "sanity_config",
       "target": "sanity_structure_structure",
       "relation": "indirect_call",
@@ -10382,5 +10362,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "88e709b6720208090f5adfcf88970b38f9bcff96"
+  "built_at_commit": "4017086d048a7b3db21d560a68cce4435bc3b382"
 }
