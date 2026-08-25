@@ -54,9 +54,9 @@
     "semantic_hash": ""
   },
   "app/(store)/product/[slug]/page.tsx": {
-    "mtime": 1787662181.287868,
-    "seen": 1787662188.6175842,
-    "ast_hash": "a195a3c292d177ee3318d181b1d509ee",
+    "mtime": 1787662355.5460277,
+    "seen": 1787662363.26219,
+    "ast_hash": "b6c8320d0726dab4702dcfd4d473764c",
     "semantic_hash": ""
   },
   "app/(store)/search/loading.tsx": {

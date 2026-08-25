@@ -11,6 +11,7 @@ interface BasketState {
   items: BasketItem[];
   addItem: (product: Product) => void;
   removeItem: (productId: string) => void;
+  deleteItem: (productId: string) => void;
   clearBasket: () => void;
   getTotalPrice: () => number;
   getItemCount: (productId: string) => number;
@@ -44,6 +45,10 @@ const useBasketStore = create<BasketState>()(
             }
             return acc;
           }, [] as BasketItem[]),
+        })),
+      deleteItem: (productId) =>
+        set((state) => ({
+          items: state.items.filter((item) => item.product._id !== productId),
         })),
       clearBasket: () => set({ items: [] }),
       getTotalPrice: () => get().items.reduce((total, item) => total + (item.product.price ?? 0) * item.quantity, 0),
