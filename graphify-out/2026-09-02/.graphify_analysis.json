@@ -1,0 +1,562 @@
+{
+  "communities": {
+    "0": [
+      "class_variance_authority",
+      "clerk_nextjs",
+      "clsx",
+      "cmdk",
+      "framer_motion",
+      "lucide_react",
+      "next",
+      "next_sanity",
+      "package_dependencies",
+      "package_dependencies_class_variance_authority",
+      "package_dependencies_clerk_nextjs",
+      "package_dependencies_clsx",
+      "package_dependencies_cmdk",
+      "package_dependencies_framer_motion",
+      "package_dependencies_lucide_react",
+      "package_dependencies_next",
+      "package_dependencies_next_sanity",
+      "package_dependencies_radix_ui_react_dialog",
+      "package_dependencies_radix_ui_react_popover",
+      "package_dependencies_radix_ui_react_slot",
+      "package_dependencies_react",
+      "package_dependencies_react_dom",
+      "package_dependencies_react_is",
+      "package_dependencies_sanity",
+      "package_dependencies_sanity_icons",
+      "package_dependencies_sanity_image_url",
+      "package_dependencies_sanity_vision",
+      "package_dependencies_stripe",
+      "package_dependencies_styled_components",
+      "package_dependencies_tailwind_merge",
+      "package_dependencies_tailwindcss_animate",
+      "package_dependencies_zustand",
+      "radix_ui_react_dialog",
+      "radix_ui_react_popover",
+      "radix_ui_react_slot",
+      "react",
+      "react_dom",
+      "react_is",
+      "sanity",
+      "sanity_icons",
+      "sanity_image_url",
+      "sanity_vision",
+      "stripe",
+      "styled_components",
+      "tailwind_merge",
+      "tailwindcss_animate",
+      "zustand"
+    ],
+    "1": [
+      "actions_createcheckoutsession",
+      "actions_createcheckoutsession_createcheckoutsession",
+      "actions_createcheckoutsession_groupedbasketitem",
+      "actions_createcheckoutsession_metadata",
+      "app_store_basket_page",
+      "app_store_basket_page_basketpage",
+      "app_store_orders_page",
+      "app_store_orders_page_orders",
+      "app_store_product_slug_page",
+      "app_store_product_slug_page_dynamic",
+      "app_store_product_slug_page_productpage",
+      "app_store_product_slug_page_revalidate",
+      "app_store_webhook_route",
+      "app_store_webhook_route_createorderinsanity",
+      "app_store_webhook_route_post",
+      "components_addtobasket_addtobasketbutton",
+      "components_productthumb",
+      "components_productthumb_productthumb",
+      "lib_formatcurrency",
+      "lib_formatcurrency_formatcurrency",
+      "lib_formatidr",
+      "lib_formatidr_formatidr",
+      "lib_imageurl",
+      "lib_imageurl_builder",
+      "lib_imageurl_imageurl",
+      "lib_stripe",
+      "sanity_lib_live",
+      "sanity_lib_orders_getmyorders",
+      "sanity_lib_orders_getmyorders_getmyorders",
+      "sanity_lib_products_getproductbyslug",
+      "sanity_lib_products_getproductbyslug_getproductbyslug"
+    ],
+    "2": [
+      "app_store_success_page",
+      "app_store_success_page_successpage",
+      "components_ui_button",
+      "components_ui_button_button",
+      "components_ui_button_buttonprops",
+      "components_ui_button_buttonvariants",
+      "components_ui_category_selector",
+      "components_ui_category_selector_categoryselectorcomponent",
+      "components_ui_category_selectororiginal",
+      "components_ui_category_selectororiginal_categoryselectorcomponent",
+      "components_ui_command",
+      "components_ui_command_command",
+      "components_ui_command_commanddialog",
+      "components_ui_command_commandempty",
+      "components_ui_command_commandgroup",
+      "components_ui_command_commandinput",
+      "components_ui_command_commanditem",
+      "components_ui_command_commandlist",
+      "components_ui_command_commandseparator",
+      "components_ui_command_commandshortcut",
+      "components_ui_dialog",
+      "components_ui_dialog_dialogcontent",
+      "components_ui_dialog_dialogdescription",
+      "components_ui_dialog_dialogfooter",
+      "components_ui_dialog_dialogheader",
+      "components_ui_dialog_dialogoverlay",
+      "components_ui_dialog_dialogtitle",
+      "components_ui_popover",
+      "components_ui_popover_popovercontent",
+      "lib_utils",
+      "lib_utils_cn"
+    ],
+    "3": [
+      "eslint",
+      "eslint_config_next",
+      "eslint_eslintrc",
+      "package",
+      "package_devdependencies",
+      "package_devdependencies_eslint",
+      "package_devdependencies_eslint_config_next",
+      "package_devdependencies_eslint_eslintrc",
+      "package_devdependencies_postcss",
+      "package_devdependencies_tailwindcss",
+      "package_devdependencies_tailwindcss_typography",
+      "package_devdependencies_types_node",
+      "package_devdependencies_types_react",
+      "package_devdependencies_types_react_dom",
+      "package_devdependencies_typescript",
+      "package_name",
+      "package_private",
+      "package_scripts",
+      "package_scripts_build",
+      "package_scripts_dev",
+      "package_scripts_lint",
+      "package_scripts_start",
+      "package_scripts_typegen",
+      "package_version",
+      "postcss",
+      "tailwindcss",
+      "tailwindcss_typography",
+      "types_node",
+      "types_react",
+      "types_react_dom",
+      "typescript"
+    ],
+    "4": [
+      "ref_d_ts",
+      "ref_dom",
+      "ref_dom_iterable",
+      "ref_esnext",
+      "ref_next_dev_types_ts",
+      "ref_next_env_d_ts",
+      "ref_next_types_ts",
+      "ref_node_modules",
+      "ref_ts",
+      "ref_tsx",
+      "tsconfig",
+      "tsconfig_compileroptions",
+      "tsconfig_compileroptions_allowjs",
+      "tsconfig_compileroptions_esmoduleinterop",
+      "tsconfig_compileroptions_incremental",
+      "tsconfig_compileroptions_isolatedmodules",
+      "tsconfig_compileroptions_jsx",
+      "tsconfig_compileroptions_lib",
+      "tsconfig_compileroptions_module",
+      "tsconfig_compileroptions_moduleresolution",
+      "tsconfig_compileroptions_noemit",
+      "tsconfig_compileroptions_paths",
+      "tsconfig_compileroptions_plugins",
+      "tsconfig_compileroptions_resolvejsonmodule",
+      "tsconfig_compileroptions_skiplibcheck",
+      "tsconfig_compileroptions_strict",
+      "tsconfig_compileroptions_target",
+      "tsconfig_exclude",
+      "tsconfig_include"
+    ],
+    "5": [
+      "app_store_layout",
+      "app_store_layout_geistmono",
+      "app_store_layout_geistsans",
+      "app_store_layout_metadata",
+      "app_store_layout_rootlayout",
+      "components_addtobasket",
+      "components_addtobasket_addtobasketbuttonprops",
+      "components_bottombar",
+      "components_bottombar_bottombar",
+      "components_bottombar_tabs",
+      "components_disabledraftmode",
+      "components_disabledraftmode_disabledraftmode",
+      "components_header",
+      "components_header_header",
+      "components_headerclerk",
+      "components_headerclerk_headerclerk",
+      "components_headerfallback",
+      "components_headerfallback_headerfallback",
+      "components_searchbar",
+      "components_searchbar_searchbar",
+      "sanity_types_product",
+      "store_store",
+      "store_store_basketitem",
+      "store_store_basketstate",
+      "store_store_usebasketstore"
+    ],
+    "6": [
+      "sanity_types",
+      "sanity_types_active_sale_by_coupon_queryresult",
+      "sanity_types_all_categories_queryresult",
+      "sanity_types_all_products_queryresult",
+      "sanity_types_allsanityschematypes",
+      "sanity_types_blockcontent",
+      "sanity_types_geopoint",
+      "sanity_types_my_orders_queryresult",
+      "sanity_types_order",
+      "sanity_types_product_by_category_queryresult",
+      "sanity_types_product_by_id_queryresult",
+      "sanity_types_product_search_queryresult",
+      "sanity_types_sale",
+      "sanity_types_sanity_client",
+      "sanity_types_sanityassetsourcedata",
+      "sanity_types_sanityfileasset",
+      "sanity_types_sanityimageasset",
+      "sanity_types_sanityimagecrop",
+      "sanity_types_sanityimagedimensions",
+      "sanity_types_sanityimagehotspot",
+      "sanity_types_sanityimagemetadata",
+      "sanity_types_sanityimagepalette",
+      "sanity_types_sanityimagepaletteswatch",
+      "sanity_types_sanityqueries",
+      "sanity_types_slug"
+    ],
+    "7": [
+      "app_store_categories_page",
+      "app_store_categories_page_categoriespage",
+      "app_store_categories_page_dynamic",
+      "app_store_categories_page_revalidate",
+      "app_store_categories_slug_page",
+      "app_store_categories_slug_page_categorypage",
+      "app_store_page",
+      "app_store_page_dynamic",
+      "app_store_page_home",
+      "app_store_page_revalidate",
+      "components_productsview",
+      "components_productsview_productsview",
+      "components_productsview_productsviewprops",
+      "components_ui_category_selector_categoryselectorprops",
+      "components_ui_category_selectororiginal_categoryselectorprops",
+      "sanity_lib_products_getallcategories",
+      "sanity_lib_products_getallcategories_getallcategories",
+      "sanity_lib_products_getallproducts",
+      "sanity_lib_products_getallproducts_getallproducts",
+      "sanity_lib_products_getproductsbycategory",
+      "sanity_lib_products_getproductsbycategory_getproductsbycategory",
+      "sanity_types_category"
+    ],
+    "8": [
+      "components",
+      "components_aliases",
+      "components_aliases_components",
+      "components_aliases_hooks",
+      "components_aliases_lib",
+      "components_aliases_ui",
+      "components_aliases_utils",
+      "components_iconlibrary",
+      "components_rsc",
+      "components_schema",
+      "components_style",
+      "components_tailwind",
+      "components_tailwind_basecolor",
+      "components_tailwind_config",
+      "components_tailwind_css",
+      "components_tailwind_cssvariables",
+      "components_tailwind_prefix",
+      "components_tsx"
+    ],
+    "9": [
+      "app_draft_mode_enable_route",
+      "app_draft_mode_enable_route_get",
+      "app_studio_tool_page",
+      "app_studio_tool_page_dynamic",
+      "app_studio_tool_page_studiopage",
+      "sanity_config",
+      "sanity_env",
+      "sanity_env_apiversion",
+      "sanity_env_dataset",
+      "sanity_env_projectid",
+      "sanity_lib_backendclient",
+      "sanity_lib_client",
+      "sanity_lib_image",
+      "sanity_lib_image_builder",
+      "sanity_lib_image_urlfor",
+      "sanity_structure",
+      "sanity_structure_structure"
+    ],
+    "10": [
+      "sanity_schematypes_blockcontenttype",
+      "sanity_schematypes_blockcontenttype_blockcontenttype",
+      "sanity_schematypes_categorytype",
+      "sanity_schematypes_categorytype_categorytype",
+      "sanity_schematypes_index",
+      "sanity_schematypes_index_schema",
+      "sanity_schematypes_ordertype",
+      "sanity_schematypes_ordertype_ordertype",
+      "sanity_schematypes_producttype",
+      "sanity_schematypes_producttype_producttype",
+      "sanity_schematypes_salestype",
+      "sanity_schematypes_salestype_salestype"
+    ],
+    "11": [
+      "components_blackfridaybanner",
+      "components_blackfridaybanner_blackfridaybanner",
+      "sanity_lib_sales_couponcodes",
+      "sanity_lib_sales_couponcodes_coupon_codes",
+      "sanity_lib_sales_couponcodes_couponcode",
+      "sanity_lib_sales_getactivesalebycouponcode",
+      "sanity_lib_sales_getactivesalebycouponcode_getactivesalebycouponcode"
+    ],
+    "12": [
+      "app_store_loading",
+      "app_store_loading_loading",
+      "app_store_search_loading",
+      "app_store_search_loading_loading",
+      "components_loader",
+      "components_loader_loader"
+    ],
+    "13": [
+      "app_store_search_page",
+      "app_store_search_page_searchpage",
+      "components_productgrid",
+      "components_productgrid_productgrid",
+      "sanity_lib_products_searchproductsbyname",
+      "sanity_lib_products_searchproductsbyname_searchproductsbyname"
+    ],
+    "14": [
+      "app_studio_layout",
+      "app_studio_layout_geistmono",
+      "app_studio_layout_geistsans",
+      "app_studio_layout_metadata",
+      "app_studio_layout_rootlayout"
+    ],
+    "15": [
+      "eslint_config",
+      "eslint_config_compat",
+      "eslint_config_dirname",
+      "eslint_config_eslintconfig",
+      "eslint_config_filename"
+    ],
+    "16": [
+      "middleware",
+      "middleware_config",
+      "middleware_hasclerkkeys",
+      "middleware_middleware"
+    ],
+    "17": [
+      "types_clerk_nextjs_d",
+      "types_clerk_nextjs_d_clerk_nextjs",
+      "types_clerk_nextjs_d_clerk_nextjs_server",
+      "types_clerk_nextjs_d_middlewarehandler"
+    ],
+    "18": [
+      "vercel",
+      "vercel_build",
+      "vercel_build_env",
+      "vercel_env_npm_flags"
+    ],
+    "19": [
+      "postcss_config",
+      "postcss_config_config",
+      "postcss_load_config"
+    ],
+    "20": [
+      "app_draft_mode_disable_route",
+      "app_draft_mode_disable_route_get"
+    ],
+    "21": [
+      "next_config",
+      "next_config_nextconfig"
+    ],
+    "22": [
+      "sanity_cli"
+    ],
+    "23": [
+      "tailwind_config"
+    ]
+  },
+  "cohesion": {
+    "0": 0.0425531914893617,
+    "1": 0.13548387096774195,
+    "2": 0.16989247311827957,
+    "3": 0.06451612903225806,
+    "4": 0.06896551724137931,
+    "5": 0.15333333333333332,
+    "6": 0.08,
+    "7": 0.15584415584415584,
+    "8": 0.1111111111111111,
+    "9": 0.20588235294117646,
+    "10": 0.24242424242424243,
+    "11": 0.5238095238095238,
+    "12": 0.4666666666666667,
+    "13": 0.5333333333333333,
+    "14": 0.4,
+    "15": 0.4,
+    "16": 0.6666666666666666,
+    "17": 0.5,
+    "18": 0.5,
+    "19": 0.6666666666666666,
+    "20": 1.0,
+    "21": 1.0,
+    "22": 1.0,
+    "23": 1.0
+  },
+  "gods": [
+    {
+      "id": "lib_utils_cn",
+      "label": "cn()",
+      "degree": 24
+    },
+    {
+      "id": "tsconfig_compileroptions",
+      "label": "compilerOptions",
+      "degree": 16
+    },
+    {
+      "id": "store_store_usebasketstore",
+      "label": "useBasketStore",
+      "degree": 15
+    },
+    {
+      "id": "lib_imageurl_imageurl",
+      "label": "imageUrl()",
+      "degree": 11
+    },
+    {
+      "id": "sanity_types_product",
+      "label": "Product",
+      "degree": 10
+    },
+    {
+      "id": "sanity_types_category",
+      "label": "Category",
+      "degree": 8
+    },
+    {
+      "id": "lib_formatidr_formatidr",
+      "label": "formatIDR()",
+      "degree": 7
+    },
+    {
+      "id": "sanity_lib_products_getallcategories_getallcategories",
+      "label": "getAllCategories()",
+      "degree": 7
+    },
+    {
+      "id": "tsconfig_include",
+      "label": "include",
+      "degree": 7
+    },
+    {
+      "id": "components_ui_button_button",
+      "label": "Button",
+      "degree": 6
+    }
+  ],
+  "surprises": [
+    {
+      "source": "SuccessPage()",
+      "target": "useBasketStore",
+      "source_files": [
+        "app/(store)/success/page.tsx",
+        "store/store.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "connects across different repos/directories; bridges separate communities; peripheral node `SuccessPage()` unexpectedly reaches hub `useBasketStore`"
+    },
+    {
+      "source": "AddToBasketButtonProps",
+      "target": "Product",
+      "source_files": [
+        "components/AddToBasket.tsx",
+        "sanity.types.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "connects across different repos/directories; peripheral node `AddToBasketButtonProps` unexpectedly reaches hub `Product`"
+    },
+    {
+      "source": "ProductsViewProps",
+      "target": "Product",
+      "source_files": [
+        "components/ProductsView.tsx",
+        "sanity.types.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "connects across different repos/directories; bridges separate communities"
+    },
+    {
+      "source": "BasketState",
+      "target": "Product",
+      "source_files": [
+        "store/store.ts",
+        "sanity.types.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "connects across different repos/directories; peripheral node `BasketState` unexpectedly reaches hub `Product`"
+    },
+    {
+      "source": "CategorySelectorProps",
+      "target": "Category",
+      "source_files": [
+        "components/ui/category-selector.tsx",
+        "sanity.types.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "connects across different repos/directories; peripheral node `CategorySelectorProps` unexpectedly reaches hub `Category`"
+    }
+  ],
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `dependencies` connect `dependencies` to `devDependencies`?",
+      "why": "High betweenness centrality (0.043) - this node is a cross-community bridge."
+    },
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `GroupedBasketItem`, `MiddlewareHandler`, `ButtonProps` to the rest of the system?",
+      "why": "133 weakly-connected nodes found - possible documentation gaps or missing edges."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `dependencies` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.0425531914893617 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `basket/page.tsx` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.13548387096774195 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `devDependencies` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.06451612903225806 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `compilerOptions` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.06896551724137931 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `sanity.types.ts` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.08 - nodes in this community are weakly interconnected."
+    }
+  ]
+}

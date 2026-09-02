@@ -29,15 +29,17 @@ function AddToBasketButton({ product, disabled }: AddToBasketButtonProps) {
     <div className="flex items-center justify-center space-x-2">
       <button
         onClick={() => removeItem(product._id)}
-        className={`w-8 h-8 rounded-full flex items-center justify-center transition-colors duration-150 ${itemCount === 0 ? "bg-stone-100 text-stone-300 cursor-not-allowed" : "bg-stone-100 hover:bg-[#E8F8EA] hover:text-[#03AC0E] text-stone-800 border border-stone-200"}`}
+        className={`w-8 h-8 rounded-full flex items-center justify-center transition-all duration-150 ${itemCount === 0 ? "bg-slate-100 text-slate-300 cursor-not-allowed" : "bg-white hover:bg-[#E0F2FE] hover:text-[#0284C7] text-slate-800 border border-[#BAE6FD]"}`}
         disabled={itemCount === 0 || disabled}
       >
         <span className="text-lg font-bold leading-none">-</span>
       </button>
-      <span className="w-8 text-center font-mono font-bold text-stone-900">{itemCount}</span>
+      <span className="w-8 text-center font-mono font-bold text-slate-900">
+        {itemCount}
+      </span>
       <button
         onClick={() => addItem(product)}
-        className={`w-8 h-8 rounded-full flex items-center justify-center transition-colors duration-150 shadow-sm ${disabled ? "bg-stone-300 cursor-not-allowed" : "bg-[#03AC0E] hover:bg-[#028A0B] text-white"}`}
+        className={`w-8 h-8 rounded-full flex items-center justify-center transition-all duration-150 shadow-sm ${disabled ? "bg-slate-300 cursor-not-allowed" : "bg-gradient-to-r from-[#0284C7] to-[#38BDF8] hover:opacity-95 text-white shadow-sky-500/30 hover:scale-105"}`}
         disabled={disabled}
       >
         <span className="text-lg font-bold leading-none">+</span>

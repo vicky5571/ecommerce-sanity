@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Poppins, Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 import HeaderClerk from "@/components/HeaderClerk";
@@ -11,6 +11,11 @@ import { VisualEditing } from "next-sanity";
 import { draftMode } from "next/headers";
 import { DisableDraftMode } from "@/components/DisableDraftMode";
 
+const poppins = Poppins({
+  variable: "--font-poppins",
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800"],
+});
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -34,7 +39,9 @@ export default async function RootLayout({
 
   const content = (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body
+        className={`${poppins.variable} ${geistSans.variable} ${geistMono.variable} font-sans antialiased bg-background text-foreground`}
+      >
         {(await draftMode()).isEnabled && (
           <>
             <DisableDraftMode />
@@ -55,7 +62,12 @@ export default async function RootLayout({
   );
 
   // Provide a safe fallback publishable key so client hooks don't throw during build.
-  const publishableKey = clerkPublishableKey ?? "local_fallback_publishable_key";
+  const publishableKey =
+    clerkPublishableKey ?? "local_fallback_publishable_key";
 
-  return <ClerkProvider publishableKey={publishableKey} dynamic>{content}</ClerkProvider>;
+  return (
+    <ClerkProvider publishableKey={publishableKey} dynamic>
+      {content}
+    </ClerkProvider>
+  );
 }

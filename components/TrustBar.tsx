@@ -2,44 +2,52 @@ import { Truck, ShieldCheck, Lock, RotateCcw } from "lucide-react";
 
 export default function TrustBar() {
   return (
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 p-4 rounded-xl bg-white border border-stone-200/90 shadow-2xs mb-6 text-xs text-stone-700">
-      <div className="flex items-center gap-2.5">
-        <div className="p-2 rounded-lg bg-[#E8F8EA] text-[#03AC0E] shrink-0">
-          <Truck className="w-4 h-4" />
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 p-4 sm:p-5 rounded-2xl bg-white border border-[#BAE6FD]/70 shadow-xs mb-6 text-xs text-slate-700">
+      <div className="flex items-center gap-3">
+        <div className="p-2.5 rounded-xl bg-[#E0F2FE] text-[#0284C7] shrink-0">
+          <Truck className="w-5 h-5" />
         </div>
         <div>
-          <p className="font-bold text-stone-900 leading-tight">Pengiriman Cepat</p>
-          <p className="text-[11px] text-stone-500">JNE &amp; SiCepat</p>
+          <p className="font-bold text-slate-900 leading-tight">
+            Pengiriman Cepat
+          </p>
+          <p className="text-[11px] text-slate-500 mt-0.5">JNE &amp; SiCepat</p>
         </div>
       </div>
 
-      <div className="flex items-center gap-2.5">
-        <div className="p-2 rounded-lg bg-[#E8F8EA] text-[#03AC0E] shrink-0">
-          <ShieldCheck className="w-4 h-4" />
+      <div className="flex items-center gap-3">
+        <div className="p-2.5 rounded-xl bg-[#E0F2FE] text-[#0284C7] shrink-0">
+          <ShieldCheck className="w-5 h-5" />
         </div>
         <div>
-          <p className="font-bold text-stone-900 leading-tight">100% Original</p>
-          <p className="text-[11px] text-stone-500">Jaminan Asli</p>
+          <p className="font-bold text-slate-900 leading-tight">
+            100% Original
+          </p>
+          <p className="text-[11px] text-slate-500 mt-0.5">Jaminan Mutu</p>
         </div>
       </div>
 
-      <div className="flex items-center gap-2.5">
-        <div className="p-2 rounded-lg bg-[#E8F8EA] text-[#03AC0E] shrink-0">
-          <Lock className="w-4 h-4" />
+      <div className="flex items-center gap-3">
+        <div className="p-2.5 rounded-xl bg-[#E0F2FE] text-[#0284C7] shrink-0">
+          <Lock className="w-5 h-5" />
         </div>
         <div>
-          <p className="font-bold text-stone-900 leading-tight">Stripe &amp; QRIS</p>
-          <p className="text-[11px] text-stone-500">Transaksi Aman</p>
+          <p className="font-bold text-slate-900 leading-tight">
+            Transaksi Aman
+          </p>
+          <p className="text-[11px] text-slate-500 mt-0.5">Stripe &amp; QRIS</p>
         </div>
       </div>
 
-      <div className="flex items-center gap-2.5">
-        <div className="p-2 rounded-lg bg-[#E8F8EA] text-[#03AC0E] shrink-0">
-          <RotateCcw className="w-4 h-4" />
+      <div className="flex items-center gap-3">
+        <div className="p-2.5 rounded-xl bg-[#E0F2FE] text-[#0284C7] shrink-0">
+          <RotateCcw className="w-5 h-5" />
         </div>
         <div>
-          <p className="font-bold text-stone-900 leading-tight">Garansi Retur</p>
-          <p className="text-[11px] text-stone-500">7 Hari Penukaran</p>
+          <p className="font-bold text-slate-900 leading-tight">
+            Garansi Retur
+          </p>
+          <p className="text-[11px] text-slate-500 mt-0.5">7 Hari Garansi</p>
         </div>
       </div>
     </div>

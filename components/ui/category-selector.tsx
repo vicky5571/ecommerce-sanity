@@ -4,8 +4,19 @@ import { Check, ChevronsUpDown } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList } from "@/components/ui/command";
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import {
+  Command,
+  CommandEmpty,
+  CommandGroup,
+  CommandInput,
+  CommandItem,
+  CommandList,
+} from "@/components/ui/command";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
 
 import { useRouter } from "next/navigation";
 import { useState } from "react";
@@ -15,7 +26,9 @@ interface CategorySelectorProps {
   categories: Category[];
 }
 
-export function CategorySelectorComponent({ categories }: CategorySelectorProps) {
+export function CategorySelectorComponent({
+  categories,
+}: CategorySelectorProps) {
   const [open, setOpen] = useState(false);
   const [value, setValue] = useState<string>("");
   const router = useRouter();
@@ -27,9 +40,13 @@ export function CategorySelectorComponent({ categories }: CategorySelectorProps)
           variant="outline"
           role="combobox"
           aria-expanded={open}
-          className="w-full max-w-full flex justify-between items-center bg-white hover:bg-[#E8F8EA] hover:text-[#03AC0E] hover:border-[#03AC0E] text-stone-900 border-stone-300 font-medium py-2 px-4 rounded-lg shadow-sm transition-colors"
+          className="w-full max-w-full flex justify-between items-center bg-white hover:bg-[#E0F2FE] hover:text-[#0284C7] hover:border-[#0284C7] text-slate-800 border border-[#BAE6FD] font-medium py-2 px-4 rounded-full shadow-2xs transition-all"
         >
-          <span>{value ? categories.find((category) => category._id === value)?.title : "Filter by Category"}</span>
+          <span>
+            {value
+              ? categories.find((category) => category._id === value)?.title
+              : "Filter by Category"}
+          </span>
           <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
         </Button>
       </PopoverTrigger>
@@ -41,7 +58,11 @@ export function CategorySelectorComponent({ categories }: CategorySelectorProps)
             className="h-9"
             onKeyDown={(e) => {
               if (e.key === "Enter") {
-                const selectedCategory = categories.find((c) => c.title?.toLowerCase().includes(e.currentTarget.value.toLowerCase()));
+                const selectedCategory = categories.find((c) =>
+                  c.title
+                    ?.toLowerCase()
+                    .includes(e.currentTarget.value.toLowerCase()),
+                );
                 if (selectedCategory?.slug?.current) {
                   setValue(selectedCategory._id);
                   window.scrollTo({ top: 0, behavior: "instant" });
@@ -71,7 +92,12 @@ export function CategorySelectorComponent({ categories }: CategorySelectorProps)
                   }}
                 >
                   {category.title}
-                  <Check className={cn("ml-auto h-4 w-4", value === category._id ? "opacity-100" : "opacity-0")} />
+                  <Check
+                    className={cn(
+                      "ml-auto h-4 w-4",
+                      value === category._id ? "opacity-100" : "opacity-0",
+                    )}
+                  />
                 </CommandItem>
               ))}
 
