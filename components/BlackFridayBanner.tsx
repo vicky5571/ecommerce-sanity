@@ -1,5 +1,6 @@
 import { COUPON_CODES } from "@/sanity/lib/sales/couponCodes";
 import { getActiveSaleByCouponCode } from "@/sanity/lib/sales/getActiveSaleByCouponCode";
+import CopyCouponButton from "./CopyCouponButton";
 
 async function BlackFridayBanner() {
   const sale = await getActiveSaleByCouponCode(COUPON_CODES.BFRIDAY);
@@ -27,18 +28,10 @@ async function BlackFridayBanner() {
         </div>
 
         <div className="shrink-0">
-          <div className="inline-flex items-center gap-2 bg-white text-slate-900 py-3 sm:py-3.5 px-5 sm:px-7 rounded-full shadow-lg shadow-sky-950/20 hover:scale-105 transition-all duration-300 border border-white">
-            <span className="font-bold text-xs sm:text-sm">
-              Kode:{" "}
-              <span className="text-[#0284C7] font-black">
-                {sale.couponCode}
-              </span>
-            </span>
-            <span className="w-px h-4 bg-slate-200 mx-1" />
-            <span className="font-extrabold text-xs sm:text-sm text-[#0284C7]">
-              Diskon {sale.discountAmount}%
-            </span>
-          </div>
+          <CopyCouponButton
+            couponCode={sale.couponCode ?? "BFRIDAY"}
+            discountAmount={sale.discountAmount}
+          />
         </div>
       </div>
     </div>

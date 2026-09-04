@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { imageUrl } from "@/lib/imageUrl";
 import { formatIDR } from "@/lib/formatIDR";
 import { getProductBySlug } from "@/sanity/lib/products/getProductBySlug";
@@ -10,6 +11,52 @@ import { ChevronRight, Home, ShieldCheck } from "lucide-react";
 
 export const dynamic = "force-static";
 export const revalidate = 60;
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const product = await getProductBySlug(slug);
+
+  if (!product) {
+    return {
+      title: "Produk Tidak Ditemukan",
+      description: "Produk yang Anda cari tidak tersedia di StealtForce.",
+    };
+  }
+
+  const title = product.name ?? "Produk StealtForce";
+  const priceFormatted = formatIDR(product.price ?? 0);
+  const description = `Beli ${title} seharga ${priceFormatted} dengan jaminan 100% original hanya di StealtForce.`;
+  const imageSrc = product.image ? imageUrl(product.image).url() : undefined;
+
+  return {
+    title,
+    description,
+    openGraph: {
+      title: `${title} - ${priceFormatted} | StealtForce`,
+      description,
+      images: imageSrc
+        ? [
+            {
+              url: imageSrc,
+              width: 800,
+              height: 800,
+              alt: title,
+            },
+          ]
+        : [],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${title} - ${priceFormatted}`,
+      description,
+      images: imageSrc ? [imageSrc] : [],
+    },
+  };
+}
 
 async function ProductPage({
   params,

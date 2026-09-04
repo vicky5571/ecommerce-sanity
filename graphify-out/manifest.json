@@ -6,14 +6,14 @@
     "semantic_hash": "9b58b1c6308fed6ec424ea28f0ce13b9"
   },
   "actions/createCheckoutSession.ts": {
-    "mtime": 1788551631.5220437,
-    "seen": 1788551677.3125398,
+    "mtime": 1788551696.648463,
+    "seen": 1788553390.3956769,
     "ast_hash": "3134fd8bff2d5cfef89cf65c21486e44",
     "semantic_hash": ""
   },
   "app/(store)/basket/page.tsx": {
-    "mtime": 1788551643.8608406,
-    "seen": 1788551677.312541,
+    "mtime": 1788551696.648491,
+    "seen": 1788553390.395684,
     "ast_hash": "7e4ca1ab8e880331196c0f025da2632f",
     "semantic_hash": ""
   },
@@ -30,9 +30,9 @@
     "semantic_hash": "3dece6d9b15f34931c739d7d4c7cbbb2"
   },
   "app/(store)/layout.tsx": {
-    "mtime": 1788356196.3906617,
-    "seen": 1788356562.993566,
-    "ast_hash": "d17ee248e895511878778ded4bf937a3",
+    "mtime": 1788553354.5489452,
+    "seen": 1788553390.395692,
+    "ast_hash": "89c075358b72fc07c080be724b277398",
     "semantic_hash": ""
   },
   "app/(store)/loading.tsx": {
@@ -54,9 +54,9 @@
     "semantic_hash": ""
   },
   "app/(store)/product/[slug]/page.tsx": {
-    "mtime": 1788356202.8159516,
-    "seen": 1788356562.993572,
-    "ast_hash": "2e063e1dcefdf60991870f98edc6fb59",
+    "mtime": 1788553361.8980277,
+    "seen": 1788553390.3957021,
+    "ast_hash": "f740e0d7543d3c8d6c710defeabdb80f",
     "semantic_hash": ""
   },
   "app/(store)/search/loading.tsx": {
@@ -78,8 +78,8 @@
     "semantic_hash": ""
   },
   "app/(store)/webhook/route.ts": {
-    "mtime": 1788551621.9891324,
-    "seen": 1788551677.31256,
+    "mtime": 1788551696.648548,
+    "seen": 1788553390.395712,
     "ast_hash": "7ec3316360772ca06290c1727fc3df08",
     "semantic_hash": ""
   },
@@ -120,9 +120,9 @@
     "semantic_hash": ""
   },
   "components/BlackFridayBanner.tsx": {
-    "mtime": 1788356196.9413416,
-    "seen": 1788356562.99359,
-    "ast_hash": "96efaf46664d06b20fc9d24c35e3e2d5",
+    "mtime": 1788553329.858683,
+    "seen": 1788553390.395731,
+    "ast_hash": "d265e537b93f061de0408d30ecb35075",
     "semantic_hash": ""
   },
   "components/BottomBar.tsx": {
@@ -180,9 +180,9 @@
     "semantic_hash": ""
   },
   "components/SearchBar.tsx": {
-    "mtime": 1788356197.3529117,
-    "seen": 1788356562.9936051,
-    "ast_hash": "afd0e7fc24c6b45508d6ee7ad808b283",
+    "mtime": 1788553348.0415103,
+    "seen": 1788553390.395763,
+    "ast_hash": "dc33108f3144dac9a99b6b15b4b0c999",
     "semantic_hash": ""
   },
   "components/ui/button.tsx": {
@@ -426,8 +426,8 @@
     "semantic_hash": "60f782f6952586706ab8e70a3045bb99"
   },
   "store/store.ts": {
-    "mtime": 1788551653.084775,
-    "seen": 1788551677.3127072,
+    "mtime": 1788551696.655495,
+    "seen": 1788553390.396338,
     "ast_hash": "9830b173a9e31a62f0cb3e44e452a0b6",
     "semantic_hash": ""
   },
@@ -516,14 +516,14 @@
     "semantic_hash": ""
   },
   "components/Footer.tsx": {
-    "mtime": 1788356198.2281218,
-    "seen": 1788356562.993595,
-    "ast_hash": "cfe19c420ab320d12847f976efc3873e",
+    "mtime": 1788553376.8308635,
+    "seen": 1788553390.395744,
+    "ast_hash": "a4496b4d67f96ad977a75f0850b2ea63",
     "semantic_hash": ""
   },
   "components/ProductBuyBox.tsx": {
-    "mtime": 1788551659.9983027,
-    "seen": 1788551677.312584,
+    "mtime": 1788551696.6485837,
+    "seen": 1788553390.395755,
     "ast_hash": "239046f301624e665d4a362394ab25bb",
     "semantic_hash": ""
   },
@@ -543,6 +543,18 @@
     "mtime": 1788449136.6553204,
     "seen": 1788551677.312528,
     "ast_hash": "67ecd9a6d1564dc74062239001dffd46",
+    "semantic_hash": ""
+  },
+  "actions/searchProducts.ts": {
+    "mtime": 1788553337.141856,
+    "seen": 1788553390.3956811,
+    "ast_hash": "cb6f699204d102d7f3576b368314c3c7",
+    "semantic_hash": ""
+  },
+  "components/CopyCouponButton.tsx": {
+    "mtime": 1788553321.438757,
+    "seen": 1788553390.3957388,
+    "ast_hash": "f90714741dd54b9879acdf18ed4360c5",
     "semantic_hash": ""
   }
 }

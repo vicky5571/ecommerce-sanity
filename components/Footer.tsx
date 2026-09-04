@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ShieldCheck, HelpCircle, PhoneCall, ExternalLink } from "lucide-react";
+import { ShieldCheck, HelpCircle, PhoneCall } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -114,34 +114,27 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Col 4: Platform & Developer */}
+          {/* Col 4: Keamanan & Layanan */}
           <div>
             <h4 className="font-bold text-[#38BDF8] mb-3 text-sm tracking-wide uppercase">
-              Developer &amp; Studio
+              Layanan &amp; Keamanan
             </h4>
             <ul className="space-y-2 text-xs text-slate-300">
               <li>
-                <Link
-                  href="/studio"
-                  className="hover:text-[#38BDF8] hover:translate-x-1 inline-flex items-center gap-1 transition-all"
-                >
-                  <span>Sanity Studio</span>
-                  <ExternalLink className="w-2.5 h-2.5 text-slate-400" />
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/draft-mode/enable"
-                  className="hover:text-[#38BDF8] hover:translate-x-1 inline-block transition-all"
-                >
-                  Live Preview Mode
-                </Link>
-              </li>
-              <li>
-                <span className="text-slate-400 text-[11px] block mt-1">
-                  Mata Uang:{" "}
-                  <strong className="text-white">IDR (Rupiah)</strong>
+                <span className="text-slate-400">Jam Operasional:</span>
+                <span className="block font-medium text-white mt-0.5">
+                  Setiap Hari, 08.00 - 21.00 WIB
                 </span>
+              </li>
+              <li>
+                <span className="text-slate-400">Jaminan Mutu:</span>
+                <span className="block font-medium text-white mt-0.5">
+                  100% Produk Original
+                </span>
+              </li>
+              <li>
+                <span className="text-slate-400">Mata Uang Transaksi:</span>
+                <strong className="block text-white mt-0.5">IDR (Rupiah)</strong>
               </li>
             </ul>
           </div>
