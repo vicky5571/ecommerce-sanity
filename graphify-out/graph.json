@@ -14,7 +14,7 @@
       "file_type": "code",
       "norm_label": "groupedbasketitem",
       "source_file": "actions/createCheckoutSession.ts",
-      "source_location": "L14"
+      "source_location": "L15"
     },
     {
       "id": "actions_createcheckoutsession_metadata",
@@ -27,7 +27,7 @@
       "file_type": "code",
       "norm_label": "metadata",
       "source_file": "actions/createCheckoutSession.ts",
-      "source_location": "L7"
+      "source_location": "L8"
     },
     {
       "id": "types_clerk_nextjs_d_middlewarehandler",
@@ -481,7 +481,7 @@
       "file_type": "code",
       "norm_label": "createcheckoutsession()",
       "source_file": "actions/createCheckoutSession.ts",
-      "source_location": "L19"
+      "source_location": "L20"
     },
     {
       "id": "app_store_basket_page_basketpage",
@@ -4107,7 +4107,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "actions/createCheckoutSession.ts",
-      "source_location": "L64",
+      "source_location": "L93",
       "weight": 1.0
     },
     {
@@ -4407,7 +4407,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "components/ProductBuyBox.tsx",
-      "source_location": "L18",
+      "source_location": "L17",
       "weight": 1.0
     },
     {
@@ -4419,7 +4419,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "components/ProductBuyBox.tsx",
-      "source_location": "L93",
+      "source_location": "L88",
       "weight": 1.0
     },
     {
@@ -6595,6 +6595,18 @@
       "weight": 1.0
     },
     {
+      "source": "actions_createcheckoutsession",
+      "target": "sanity_lib_backendclient",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "actions/createCheckoutSession.ts",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
       "source": "app_draft_mode_enable_route",
       "target": "sanity_lib_client",
       "relation": "imports_from",
@@ -7802,7 +7814,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "actions/createCheckoutSession.ts",
-      "source_location": "L14",
+      "source_location": "L15",
       "weight": 1.0
     },
     {
@@ -7813,7 +7825,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "actions/createCheckoutSession.ts",
-      "source_location": "L19",
+      "source_location": "L20",
       "weight": 1.0
     },
     {
@@ -7824,7 +7836,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "actions/createCheckoutSession.ts",
-      "source_location": "L7",
+      "source_location": "L8",
       "weight": 1.0
     },
     {
@@ -10380,5 +10392,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "1995a0dd0534001143a0f358cb689226f0e02ec5"
+  "built_at_commit": "0252b6434c0cbf2ca25f611fda2a0ce85a3a968c"
 }

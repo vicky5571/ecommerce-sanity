@@ -56,13 +56,52 @@
       "source_location": "L36"
     },
     {
+      "id": "components_ui_category_selector_categoryselectorprops",
+      "label": "CategorySelectorProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "cn",
+      "file_type": "code",
+      "norm_label": "categoryselectorprops",
+      "source_file": "components/ui/category-selector.tsx",
+      "source_location": "L25"
+    },
+    {
+      "id": "components_ui_category_selectororiginal_categoryselectorprops",
+      "label": "CategorySelectorProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "cn",
+      "file_type": "code",
+      "norm_label": "categoryselectorprops",
+      "source_file": "components/ui/category-selectorORIGINAL.tsx",
+      "source_location": "L14"
+    },
+    {
+      "id": "sanity_types_category",
+      "label": "Category",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "cn",
+      "file_type": "code",
+      "norm_label": "category",
+      "source_file": "sanity.types.ts",
+      "source_location": "L176"
+    },
+    {
       "id": "components_addtobasket_addtobasketbuttonprops",
       "label": "AddToBasketButtonProps",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
       "community": 5,
-      "community_name": "useBasketStore",
+      "community_name": "(store)/layout.tsx",
       "file_type": "code",
       "norm_label": "addtobasketbuttonprops",
       "source_file": "components/AddToBasket.tsx",
@@ -75,7 +114,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 5,
-      "community_name": "useBasketStore",
+      "community_name": "(store)/layout.tsx",
       "file_type": "code",
       "norm_label": "product",
       "source_file": "sanity.types.ts",
@@ -88,7 +127,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 5,
-      "community_name": "useBasketStore",
+      "community_name": "(store)/layout.tsx",
       "file_type": "code",
       "norm_label": "basketitem",
       "source_file": "store/store.ts",
@@ -101,7 +140,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 5,
-      "community_name": "useBasketStore",
+      "community_name": "(store)/layout.tsx",
       "file_type": "code",
       "norm_label": "basketstate",
       "source_file": "store/store.ts",
@@ -119,32 +158,6 @@
       "norm_label": "productsviewprops",
       "source_file": "components/ProductsView.tsx",
       "source_location": "L7"
-    },
-    {
-      "id": "components_ui_category_selector_categoryselectorprops",
-      "label": "CategorySelectorProps",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "sanity.types.ts",
-      "file_type": "code",
-      "norm_label": "categoryselectorprops",
-      "source_file": "components/ui/category-selector.tsx",
-      "source_location": "L25"
-    },
-    {
-      "id": "components_ui_category_selectororiginal_categoryselectorprops",
-      "label": "CategorySelectorProps",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "sanity.types.ts",
-      "file_type": "code",
-      "norm_label": "categoryselectorprops",
-      "source_file": "components/ui/category-selectorORIGINAL.tsx",
-      "source_location": "L14"
     },
     {
       "id": "sanity_types_active_sale_by_coupon_queryresult",
@@ -210,19 +223,6 @@
       "norm_label": "blockcontent",
       "source_file": "sanity.types.ts",
       "source_location": "L193"
-    },
-    {
-      "id": "sanity_types_category",
-      "label": "Category",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "sanity.types.ts",
-      "file_type": "code",
-      "norm_label": "category",
-      "source_file": "sanity.types.ts",
-      "source_location": "L176"
     },
     {
       "id": "sanity_types_geopoint",
@@ -496,6 +496,18 @@
       "source_location": "L25"
     },
     {
+      "id": "app_store_loading_loading",
+      "label": "Loading()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "basket/page.tsx",
+      "file_type": "code",
+      "norm_label": "loading()",
+      "source_file": "app/(store)/loading.tsx",
+      "source_location": "L3"
+    },
+    {
       "id": "app_store_orders_page_orders",
       "label": "Orders()",
       "_callable": true,
@@ -520,16 +532,16 @@
       "source_location": "L14"
     },
     {
-      "id": "app_store_search_page_searchpage",
-      "label": "SearchPage()",
+      "id": "app_store_search_loading_loading",
+      "label": "Loading()",
       "_callable": true,
       "_origin": "ast",
       "community": 1,
       "community_name": "basket/page.tsx",
       "file_type": "code",
-      "norm_label": "searchpage()",
-      "source_file": "app/(store)/search/page.tsx",
-      "source_location": "L6"
+      "norm_label": "loading()",
+      "source_file": "app/(store)/search/loading.tsx",
+      "source_location": "L3"
     },
     {
       "id": "app_store_webhook_route_createorderinsanity",
@@ -556,6 +568,18 @@
       "source_location": "L9"
     },
     {
+      "id": "components_loader_loader",
+      "label": "Loader()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "basket/page.tsx",
+      "file_type": "code",
+      "norm_label": "loader()",
+      "source_file": "components/Loader.tsx",
+      "source_location": "L1"
+    },
+    {
       "id": "components_productbuybox_productbuybox",
       "label": "ProductBuyBox()",
       "_callable": true,
@@ -566,30 +590,6 @@
       "norm_label": "productbuybox()",
       "source_file": "components/ProductBuyBox.tsx",
       "source_location": "L10"
-    },
-    {
-      "id": "components_productgrid_productgrid",
-      "label": "ProductGrid()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "basket/page.tsx",
-      "file_type": "code",
-      "norm_label": "productgrid()",
-      "source_file": "components/ProductGrid.tsx",
-      "source_location": "L4"
-    },
-    {
-      "id": "components_productthumb_productthumb",
-      "label": "ProductThumb()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "basket/page.tsx",
-      "file_type": "code",
-      "norm_label": "productthumb()",
-      "source_file": "components/ProductThumb.tsx",
-      "source_location": "L12"
     },
     {
       "id": "lib_formatidr_formatidr",
@@ -637,18 +637,6 @@
       "file_type": "code",
       "norm_label": "getproductbyslug()",
       "source_file": "sanity/lib/products/getProductBySlug.ts",
-      "source_location": "L4"
-    },
-    {
-      "id": "sanity_lib_products_searchproductsbyname_searchproductsbyname",
-      "label": "searchProductsByName()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "basket/page.tsx",
-      "file_type": "code",
-      "norm_label": "searchproductsbyname()",
-      "source_file": "sanity/lib/products/searchProductsByName.ts",
       "source_location": "L4"
     },
     {
@@ -808,48 +796,12 @@
       "source_location": "L3"
     },
     {
-      "id": "app_store_loading_loading",
-      "label": "Loading()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 25,
-      "community_name": "Loader.tsx",
-      "file_type": "code",
-      "norm_label": "loading()",
-      "source_file": "app/(store)/loading.tsx",
-      "source_location": "L3"
-    },
-    {
-      "id": "app_store_search_loading_loading",
-      "label": "Loading()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 25,
-      "community_name": "Loader.tsx",
-      "file_type": "code",
-      "norm_label": "loading()",
-      "source_file": "app/(store)/search/loading.tsx",
-      "source_location": "L3"
-    },
-    {
-      "id": "components_loader_loader",
-      "label": "Loader()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 25,
-      "community_name": "Loader.tsx",
-      "file_type": "code",
-      "norm_label": "loader()",
-      "source_file": "components/Loader.tsx",
-      "source_location": "L1"
-    },
-    {
       "id": "app_store_layout_rootlayout",
       "label": "RootLayout()",
       "_callable": true,
       "_origin": "ast",
       "community": 5,
-      "community_name": "useBasketStore",
+      "community_name": "(store)/layout.tsx",
       "file_type": "code",
       "norm_label": "rootlayout()",
       "source_file": "app/(store)/layout.tsx",
@@ -861,7 +813,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 5,
-      "community_name": "useBasketStore",
+      "community_name": "(store)/layout.tsx",
       "file_type": "code",
       "norm_label": "successpage()",
       "source_file": "app/(store)/success/page.tsx",
@@ -873,7 +825,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 5,
-      "community_name": "useBasketStore",
+      "community_name": "(store)/layout.tsx",
       "file_type": "code",
       "norm_label": "addtobasketbutton()",
       "source_file": "components/AddToBasket.tsx",
@@ -885,7 +837,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 5,
-      "community_name": "useBasketStore",
+      "community_name": "(store)/layout.tsx",
       "file_type": "code",
       "norm_label": "bottombar()",
       "source_file": "components/BottomBar.tsx",
@@ -897,7 +849,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 5,
-      "community_name": "useBasketStore",
+      "community_name": "(store)/layout.tsx",
       "file_type": "code",
       "norm_label": "disabledraftmode()",
       "source_file": "components/DisableDraftMode.tsx",
@@ -909,7 +861,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 5,
-      "community_name": "useBasketStore",
+      "community_name": "(store)/layout.tsx",
       "file_type": "code",
       "norm_label": "footer()",
       "source_file": "components/Footer.tsx",
@@ -921,7 +873,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 5,
-      "community_name": "useBasketStore",
+      "community_name": "(store)/layout.tsx",
       "file_type": "code",
       "norm_label": "header()",
       "source_file": "components/Header.tsx",
@@ -933,7 +885,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 5,
-      "community_name": "useBasketStore",
+      "community_name": "(store)/layout.tsx",
       "file_type": "code",
       "norm_label": "headerclerk()",
       "source_file": "components/HeaderClerk.tsx",
@@ -945,11 +897,35 @@
       "_callable": true,
       "_origin": "ast",
       "community": 5,
-      "community_name": "useBasketStore",
+      "community_name": "(store)/layout.tsx",
       "file_type": "code",
       "norm_label": "headerfallback()",
       "source_file": "components/HeaderFallback.tsx",
       "source_location": "L9"
+    },
+    {
+      "id": "components_productgrid_productgrid",
+      "label": "ProductGrid()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "(store)/layout.tsx",
+      "file_type": "code",
+      "norm_label": "productgrid()",
+      "source_file": "components/ProductGrid.tsx",
+      "source_location": "L4"
+    },
+    {
+      "id": "components_productthumb_productthumb",
+      "label": "ProductThumb()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "(store)/layout.tsx",
+      "file_type": "code",
+      "norm_label": "productthumb()",
+      "source_file": "components/ProductThumb.tsx",
+      "source_location": "L12"
     },
     {
       "id": "components_searchbar_searchbar",
@@ -957,7 +933,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 5,
-      "community_name": "useBasketStore",
+      "community_name": "(store)/layout.tsx",
       "file_type": "code",
       "norm_label": "searchbar()",
       "source_file": "components/SearchBar.tsx",
@@ -1024,6 +1000,18 @@
       "source_location": "L10"
     },
     {
+      "id": "app_store_search_page_searchpage",
+      "label": "SearchPage()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "(store)/page.tsx",
+      "file_type": "code",
+      "norm_label": "searchpage()",
+      "source_file": "app/(store)/search/page.tsx",
+      "source_location": "L6"
+    },
+    {
       "id": "components_blackfridaybanner_blackfridaybanner",
       "label": "BlackFridayBanner()",
       "_callable": true,
@@ -1081,6 +1069,18 @@
       "file_type": "code",
       "norm_label": "getproductsbycategory()",
       "source_file": "sanity/lib/products/getProductsByCategory.tsx",
+      "source_location": "L4"
+    },
+    {
+      "id": "sanity_lib_products_searchproductsbyname_searchproductsbyname",
+      "label": "searchProductsByName()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "(store)/page.tsx",
+      "file_type": "code",
+      "norm_label": "searchproductsbyname()",
+      "source_file": "sanity/lib/products/searchProductsByName.ts",
       "source_location": "L4"
     },
     {
@@ -1683,6 +1683,17 @@
       "source_location": "L1"
     },
     {
+      "id": "app_store_loading",
+      "label": "(store)/loading.tsx",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "basket/page.tsx",
+      "file_type": "code",
+      "norm_label": "(store)/loading.tsx",
+      "source_file": "app/(store)/loading.tsx",
+      "source_location": "L1"
+    },
+    {
       "id": "app_store_orders_page",
       "label": "orders/page.tsx",
       "_origin": "ast",
@@ -1727,14 +1738,14 @@
       "source_location": "L12"
     },
     {
-      "id": "app_store_search_page",
-      "label": "search/page.tsx",
+      "id": "app_store_search_loading",
+      "label": "search/loading.tsx",
       "_origin": "ast",
       "community": 1,
       "community_name": "basket/page.tsx",
       "file_type": "code",
-      "norm_label": "search/page.tsx",
-      "source_file": "app/(store)/search/page.tsx",
+      "norm_label": "search/loading.tsx",
+      "source_file": "app/(store)/search/loading.tsx",
       "source_location": "L1"
     },
     {
@@ -1749,6 +1760,17 @@
       "source_location": "L1"
     },
     {
+      "id": "components_loader",
+      "label": "Loader.tsx",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "basket/page.tsx",
+      "file_type": "code",
+      "norm_label": "loader.tsx",
+      "source_file": "components/Loader.tsx",
+      "source_location": "L1"
+    },
+    {
       "id": "components_productbuybox",
       "label": "ProductBuyBox.tsx",
       "_origin": "ast",
@@ -1757,28 +1779,6 @@
       "file_type": "code",
       "norm_label": "productbuybox.tsx",
       "source_file": "components/ProductBuyBox.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "components_productgrid",
-      "label": "ProductGrid.tsx",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "basket/page.tsx",
-      "file_type": "code",
-      "norm_label": "productgrid.tsx",
-      "source_file": "components/ProductGrid.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "components_productthumb",
-      "label": "ProductThumb.tsx",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "basket/page.tsx",
-      "file_type": "code",
-      "norm_label": "productthumb.tsx",
-      "source_file": "components/ProductThumb.tsx",
       "source_location": "L1"
     },
     {
@@ -1845,17 +1845,6 @@
       "file_type": "code",
       "norm_label": "getproductbyslug.ts",
       "source_file": "sanity/lib/products/getProductBySlug.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "sanity_lib_products_searchproductsbyname",
-      "label": "searchProductsByName.ts",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "basket/page.tsx",
-      "file_type": "code",
-      "norm_label": "searchproductsbyname.ts",
-      "source_file": "sanity/lib/products/searchProductsByName.ts",
       "source_location": "L1"
     },
     {
@@ -2172,17 +2161,6 @@
       "source_location": "L4"
     },
     {
-      "id": "postcss_load_config",
-      "label": "postcss-load-config",
-      "_origin": "ast",
-      "community": 19,
-      "community_name": "postcss.config.mjs",
-      "confidence": "EXTRACTED",
-      "file_type": "code",
-      "norm_label": "postcss-load-config",
-      "source_file": "postcss-load-config"
-    },
-    {
       "id": "postcss_config",
       "label": "postcss.config.mjs",
       "_origin": "ast",
@@ -2203,6 +2181,17 @@
       "norm_label": "config",
       "source_file": "postcss.config.mjs",
       "source_location": "L2"
+    },
+    {
+      "id": "app_store_success_page",
+      "label": "success/page.tsx",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "cn",
+      "file_type": "code",
+      "norm_label": "success/page.tsx",
+      "source_file": "app/(store)/success/page.tsx",
+      "source_location": "L1"
     },
     {
       "id": "components_ui_button",
@@ -2499,39 +2488,6 @@
       "file_type": "code",
       "norm_label": "global-error.tsx",
       "source_file": "app/global-error.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "app_store_loading",
-      "label": "(store)/loading.tsx",
-      "_origin": "ast",
-      "community": 25,
-      "community_name": "Loader.tsx",
-      "file_type": "code",
-      "norm_label": "(store)/loading.tsx",
-      "source_file": "app/(store)/loading.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "app_store_search_loading",
-      "label": "search/loading.tsx",
-      "_origin": "ast",
-      "community": 25,
-      "community_name": "Loader.tsx",
-      "file_type": "code",
-      "norm_label": "search/loading.tsx",
-      "source_file": "app/(store)/search/loading.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "components_loader",
-      "label": "Loader.tsx",
-      "_origin": "ast",
-      "community": 25,
-      "community_name": "Loader.tsx",
-      "file_type": "code",
-      "norm_label": "loader.tsx",
-      "source_file": "components/Loader.tsx",
       "source_location": "L1"
     },
     {
@@ -3199,7 +3155,7 @@
       "label": "(store)/layout.tsx",
       "_origin": "ast",
       "community": 5,
-      "community_name": "useBasketStore",
+      "community_name": "(store)/layout.tsx",
       "file_type": "code",
       "norm_label": "(store)/layout.tsx",
       "source_file": "app/(store)/layout.tsx",
@@ -3210,7 +3166,7 @@
       "label": "geistMono",
       "_origin": "ast",
       "community": 5,
-      "community_name": "useBasketStore",
+      "community_name": "(store)/layout.tsx",
       "file_type": "code",
       "norm_label": "geistmono",
       "source_file": "app/(store)/layout.tsx",
@@ -3221,7 +3177,7 @@
       "label": "geistSans",
       "_origin": "ast",
       "community": 5,
-      "community_name": "useBasketStore",
+      "community_name": "(store)/layout.tsx",
       "file_type": "code",
       "norm_label": "geistsans",
       "source_file": "app/(store)/layout.tsx",
@@ -3232,7 +3188,7 @@
       "label": "metadata",
       "_origin": "ast",
       "community": 5,
-      "community_name": "useBasketStore",
+      "community_name": "(store)/layout.tsx",
       "file_type": "code",
       "norm_label": "metadata",
       "source_file": "app/(store)/layout.tsx",
@@ -3243,29 +3199,18 @@
       "label": "poppins",
       "_origin": "ast",
       "community": 5,
-      "community_name": "useBasketStore",
+      "community_name": "(store)/layout.tsx",
       "file_type": "code",
       "norm_label": "poppins",
       "source_file": "app/(store)/layout.tsx",
       "source_location": "L14"
     },
     {
-      "id": "app_store_success_page",
-      "label": "success/page.tsx",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "useBasketStore",
-      "file_type": "code",
-      "norm_label": "success/page.tsx",
-      "source_file": "app/(store)/success/page.tsx",
-      "source_location": "L1"
-    },
-    {
       "id": "components_addtobasket",
       "label": "AddToBasket.tsx",
       "_origin": "ast",
       "community": 5,
-      "community_name": "useBasketStore",
+      "community_name": "(store)/layout.tsx",
       "file_type": "code",
       "norm_label": "addtobasket.tsx",
       "source_file": "components/AddToBasket.tsx",
@@ -3276,7 +3221,7 @@
       "label": "BottomBar.tsx",
       "_origin": "ast",
       "community": 5,
-      "community_name": "useBasketStore",
+      "community_name": "(store)/layout.tsx",
       "file_type": "code",
       "norm_label": "bottombar.tsx",
       "source_file": "components/BottomBar.tsx",
@@ -3287,7 +3232,7 @@
       "label": "tabs",
       "_origin": "ast",
       "community": 5,
-      "community_name": "useBasketStore",
+      "community_name": "(store)/layout.tsx",
       "file_type": "code",
       "norm_label": "tabs",
       "source_file": "components/BottomBar.tsx",
@@ -3298,7 +3243,7 @@
       "label": "DisableDraftMode.tsx",
       "_origin": "ast",
       "community": 5,
-      "community_name": "useBasketStore",
+      "community_name": "(store)/layout.tsx",
       "file_type": "code",
       "norm_label": "disabledraftmode.tsx",
       "source_file": "components/DisableDraftMode.tsx",
@@ -3309,7 +3254,7 @@
       "label": "Footer.tsx",
       "_origin": "ast",
       "community": 5,
-      "community_name": "useBasketStore",
+      "community_name": "(store)/layout.tsx",
       "file_type": "code",
       "norm_label": "footer.tsx",
       "source_file": "components/Footer.tsx",
@@ -3320,7 +3265,7 @@
       "label": "Header.tsx",
       "_origin": "ast",
       "community": 5,
-      "community_name": "useBasketStore",
+      "community_name": "(store)/layout.tsx",
       "file_type": "code",
       "norm_label": "header.tsx",
       "source_file": "components/Header.tsx",
@@ -3331,7 +3276,7 @@
       "label": "HeaderClerk.tsx",
       "_origin": "ast",
       "community": 5,
-      "community_name": "useBasketStore",
+      "community_name": "(store)/layout.tsx",
       "file_type": "code",
       "norm_label": "headerclerk.tsx",
       "source_file": "components/HeaderClerk.tsx",
@@ -3342,10 +3287,32 @@
       "label": "HeaderFallback.tsx",
       "_origin": "ast",
       "community": 5,
-      "community_name": "useBasketStore",
+      "community_name": "(store)/layout.tsx",
       "file_type": "code",
       "norm_label": "headerfallback.tsx",
       "source_file": "components/HeaderFallback.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "components_productgrid",
+      "label": "ProductGrid.tsx",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "(store)/layout.tsx",
+      "file_type": "code",
+      "norm_label": "productgrid.tsx",
+      "source_file": "components/ProductGrid.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "components_productthumb",
+      "label": "ProductThumb.tsx",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "(store)/layout.tsx",
+      "file_type": "code",
+      "norm_label": "productthumb.tsx",
+      "source_file": "components/ProductThumb.tsx",
       "source_location": "L1"
     },
     {
@@ -3353,7 +3320,7 @@
       "label": "SearchBar.tsx",
       "_origin": "ast",
       "community": 5,
-      "community_name": "useBasketStore",
+      "community_name": "(store)/layout.tsx",
       "file_type": "code",
       "norm_label": "searchbar.tsx",
       "source_file": "components/SearchBar.tsx",
@@ -3364,7 +3331,7 @@
       "label": "store.ts",
       "_origin": "ast",
       "community": 5,
-      "community_name": "useBasketStore",
+      "community_name": "(store)/layout.tsx",
       "file_type": "code",
       "norm_label": "store.ts",
       "source_file": "store/store.ts",
@@ -3375,7 +3342,7 @@
       "label": "useBasketStore",
       "_origin": "ast",
       "community": 5,
-      "community_name": "useBasketStore",
+      "community_name": "(store)/layout.tsx",
       "file_type": "code",
       "norm_label": "usebasketstore",
       "source_file": "store/store.ts",
@@ -3525,6 +3492,17 @@
       "source_location": "L8"
     },
     {
+      "id": "app_store_search_page",
+      "label": "search/page.tsx",
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "(store)/page.tsx",
+      "file_type": "code",
+      "norm_label": "search/page.tsx",
+      "source_file": "app/(store)/search/page.tsx",
+      "source_location": "L1"
+    },
+    {
       "id": "components_blackfridaybanner",
       "label": "BlackFridayBanner.tsx",
       "_origin": "ast",
@@ -3588,6 +3566,17 @@
       "file_type": "code",
       "norm_label": "getproductsbycategory.tsx",
       "source_file": "sanity/lib/products/getProductsByCategory.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "sanity_lib_products_searchproductsbyname",
+      "label": "searchProductsByName.ts",
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "(store)/page.tsx",
+      "file_type": "code",
+      "norm_label": "searchproductsbyname.ts",
+      "source_file": "sanity/lib/products/searchProductsByName.ts",
       "source_location": "L1"
     },
     {
@@ -4687,54 +4676,6 @@
       "weight": 1.0
     },
     {
-      "source": "components_addtobasket_addtobasketbuttonprops",
-      "target": "sanity_types_product",
-      "relation": "references",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "field",
-      "source_file": "components/AddToBasket.tsx",
-      "source_location": "L8",
-      "weight": 1.0
-    },
-    {
-      "source": "components_productsview_productsviewprops",
-      "target": "sanity_types_product",
-      "relation": "references",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "field",
-      "source_file": "components/ProductsView.tsx",
-      "source_location": "L8",
-      "weight": 1.0
-    },
-    {
-      "source": "components_productsview_productsviewprops",
-      "target": "sanity_types_category",
-      "relation": "references",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "field",
-      "source_file": "components/ProductsView.tsx",
-      "source_location": "L9",
-      "weight": 1.0
-    },
-    {
-      "source": "components_ui_category_selector_categoryselectorprops",
-      "target": "sanity_types_category",
-      "relation": "references",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "field",
-      "source_file": "components/ui/category-selector.tsx",
-      "source_location": "L26",
-      "weight": 1.0
-    },
-    {
       "source": "components_ui_category_selectororiginal_categoryselectorprops",
       "target": "sanity_types_category",
       "relation": "references",
@@ -4960,18 +4901,6 @@
       "context": "import",
       "source_file": "app/(store)/basket/page.tsx",
       "source_location": "L15",
-      "weight": 1.0
-    },
-    {
-      "source": "app_store_basket_page",
-      "target": "store_store_usebasketstore",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "app/(store)/basket/page.tsx",
-      "source_location": "L3",
       "weight": 1.0
     },
     {
@@ -5276,18 +5205,6 @@
     },
     {
       "source": "app_store_search_page",
-      "target": "components_productgrid_productgrid",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "app/(store)/search/page.tsx",
-      "source_location": "L1",
-      "weight": 1.0
-    },
-    {
-      "source": "app_store_search_page",
       "target": "sanity_lib_products_searchproductsbyname_searchproductsbyname",
       "relation": "imports",
       "_origin": "ast",
@@ -5308,18 +5225,6 @@
       "context": "import",
       "source_file": "app/(store)/success/page.tsx",
       "source_location": "L5",
-      "weight": 1.0
-    },
-    {
-      "source": "app_store_success_page",
-      "target": "store_store_usebasketstore",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "app/(store)/success/page.tsx",
-      "source_location": "L7",
       "weight": 1.0
     },
     {
@@ -5347,18 +5252,6 @@
       "weight": 1.0
     },
     {
-      "source": "components_addtobasket",
-      "target": "store_store_usebasketstore",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "components/AddToBasket.tsx",
-      "source_location": "L4",
-      "weight": 1.0
-    },
-    {
       "source": "components_blackfridaybanner",
       "target": "sanity_lib_sales_couponcodes_coupon_codes",
       "relation": "imports",
@@ -5383,18 +5276,6 @@
       "weight": 1.0
     },
     {
-      "source": "components_bottombar",
-      "target": "store_store_usebasketstore",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "components/BottomBar.tsx",
-      "source_location": "L6",
-      "weight": 1.0
-    },
-    {
       "source": "components_categorypills",
       "target": "sanity_types_category",
       "relation": "imports",
@@ -5407,30 +5288,6 @@
       "weight": 1.0
     },
     {
-      "source": "components_header",
-      "target": "store_store_usebasketstore",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "components/Header.tsx",
-      "source_location": "L13",
-      "weight": 1.0
-    },
-    {
-      "source": "components_headerclerk",
-      "target": "store_store_usebasketstore",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "components/HeaderClerk.tsx",
-      "source_location": "L12",
-      "weight": 1.0
-    },
-    {
       "source": "components_headerclerk",
       "target": "components_searchbar_searchbar",
       "relation": "imports",
@@ -5440,18 +5297,6 @@
       "context": "import",
       "source_file": "components/HeaderClerk.tsx",
       "source_location": "L13",
-      "weight": 1.0
-    },
-    {
-      "source": "components_headerfallback",
-      "target": "store_store_usebasketstore",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "components/HeaderFallback.tsx",
-      "source_location": "L5",
       "weight": 1.0
     },
     {
@@ -5476,18 +5321,6 @@
       "context": "import",
       "source_file": "components/ProductBuyBox.tsx",
       "source_location": "L3",
-      "weight": 1.0
-    },
-    {
-      "source": "components_productbuybox",
-      "target": "store_store_usebasketstore",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "components/ProductBuyBox.tsx",
-      "source_location": "L4",
       "weight": 1.0
     },
     {
@@ -5552,18 +5385,6 @@
     },
     {
       "source": "components_productsview",
-      "target": "components_productgrid_productgrid",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "components/ProductsView.tsx",
-      "source_location": "L2",
-      "weight": 1.0
-    },
-    {
-      "source": "components_productsview",
       "target": "components_ui_category_selector_categoryselectorcomponent",
       "relation": "imports",
       "_origin": "ast",
@@ -5620,18 +5441,6 @@
       "context": "import",
       "source_file": "components/ProductThumb.tsx",
       "source_location": "L5",
-      "weight": 1.0
-    },
-    {
-      "source": "components_productthumb",
-      "target": "store_store_usebasketstore",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "components/ProductThumb.tsx",
-      "source_location": "L8",
       "weight": 1.0
     },
     {
@@ -10358,15 +10167,6 @@
       "weight": 1.0
     },
     {
-      "source": "postcss_config",
-      "target": "postcss_load_config",
-      "relation": "dynamic_import",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "postcss.config.mjs"
-    },
-    {
       "source": "sanity_config",
       "target": "sanity_structure_structure",
       "relation": "indirect_call",
@@ -10380,5 +10180,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "1995a0dd0534001143a0f358cb689226f0e02ec5"
+  "built_at_commit": "0252b6434c0cbf2ca25f611fda2a0ce85a3a968c"
 }

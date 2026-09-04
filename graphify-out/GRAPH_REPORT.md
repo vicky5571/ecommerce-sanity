@@ -1,16 +1,16 @@
-# Graph Report - ecommerce-sanity-master  (2026-09-02)
+# Graph Report - ecommerce-sanity-master  (2026-09-05)
 
 ## Corpus Check
-- 84 files · ~19,736 words
+- 85 files · ~19,767 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 359 nodes · 543 edges · 26 communities (21 shown, 5 thin omitted)
+- 359 nodes · 544 edges · 26 communities (21 shown, 5 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 1 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `1995a0dd`
+- Built from commit: `0252b643`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -141,7 +141,7 @@ _Questions this graph is uniquely positioned to answer:_
 - **Why does `dependencies` connect `dependencies` to `devDependencies`?**
   _High betweenness centrality (0.038) - this node is a cross-community bridge._
 - **Why does `useBasketStore` connect `useBasketStore` to `basket/page.tsx`?**
-  _High betweenness centrality (0.022) - this node is a cross-community bridge._
+  _High betweenness centrality (0.021) - this node is a cross-community bridge._
 - **What connects `GroupedBasketItem`, `dynamic`, `revalidate` to the rest of the system?**
   _141 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `dependencies` be split into smaller, more focused modules?**

@@ -4,7 +4,7 @@
   "2": "cn",
   "3": "devDependencies",
   "4": "compilerOptions",
-  "5": "useBasketStore",
+  "5": "(store)/layout.tsx",
   "6": "sanity.types.ts",
   "7": "(store)/page.tsx",
   "8": "components.json",
@@ -23,6 +23,5 @@
   "21": "next.config.ts",
   "22": "sanity.cli.ts",
   "23": "tailwind.config.ts",
-  "24": "global-error.tsx",
-  "25": "Loader.tsx"
+  "24": "global-error.tsx"
 }

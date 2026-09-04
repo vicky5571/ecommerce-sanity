@@ -110,7 +110,7 @@ function BasketPage() {
     (total, item) => total + item.quantity,
     0,
   );
-  const totalPrice = useBasketStore.getState().getTotalPrice();
+  const totalPrice = useBasketStore((state) => state.getTotalPrice());
 
   return (
     <div className="bg-background min-h-screen">
@@ -197,8 +197,23 @@ function BasketPage() {
                       </span>
                       <button
                         type="button"
+                        disabled={
+                          item.product.stock != null &&
+                          item.quantity >= item.product.stock
+                        }
                         onClick={() => addItem(item.product)}
-                        className="w-7 h-7 flex items-center justify-center text-slate-700 hover:bg-[#E0F2FE] hover:text-[#0284C7] font-bold transition-colors"
+                        className={`w-7 h-7 flex items-center justify-center font-bold transition-colors ${
+                          item.product.stock != null &&
+                          item.quantity >= item.product.stock
+                            ? "text-slate-300 cursor-not-allowed bg-slate-100"
+                            : "text-slate-700 hover:bg-[#E0F2FE] hover:text-[#0284C7]"
+                        }`}
+                        title={
+                          item.product.stock != null &&
+                          item.quantity >= item.product.stock
+                            ? "Maksimal stok tercapai"
+                            : "Tambah barang"
+                        }
                       >
                         +
                       </button>

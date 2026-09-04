@@ -60,7 +60,7 @@ hr { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
 <div class="container">
 
 <h1>ecommerce-sanity-master — Complete Call Flow &amp; Architecture Documentation</h1>
-<p class="subtitle">Generated from graphify knowledge graph: 359 nodes, 543 edges, 26 communities. Commit: 1995a0d</p>
+<p class="subtitle">Generated from graphify knowledge graph: 359 nodes, 544 edges, 26 communities. Commit: 0252b64</p>
 
 <div class="nav">
     <a href="#overview">Architecture Overview</a>
@@ -122,9 +122,9 @@ flowchart LR
     CLI_SKILLS_9964CBB8 -->|imports x6| SANITY_TYPES_TS_73F5B8DB
     STORE_PAGE_TSX_F1F82C5D -->|imports x6| SANITY_TYPES_TS_73F5B8DB
     SANITY_TYPES_TS_73F5B8DB -->|references x3| USEBASKETSTORE_FCD7DEA6
+    SERVE_API_35EC8E86 -->|imports x3| INDEX_TS_C625E268
     SERVE_API_35EC8E86 -->|imports x3| SANITY_TYPES_TS_73F5B8DB
     SERVE_API_35EC8E86 -->|imports x3| STORE_PAGE_TSX_F1F82C5D
-    SERVE_API_35EC8E86 -->|imports x2| INDEX_TS_C625E268
     USEBASKETSTORE_FCD7DEA6 -->|imports x2| CLI_SKILLS_9964CBB8
     USEBASKETSTORE_FCD7DEA6 -->|imports x2| SANITY_TYPES_TS_73F5B8DB
     SANITY_TYPES_TS_73F5B8DB -->|imports x2| SERVE_API_35EC8E86
@@ -158,7 +158,7 @@ flowchart LR
   <div class="card">
     <h4>Graph Report Highlights</h4>
     <ul>
-      <li>359 nodes · 543 edges · 26 communities (21 shown, 5 thin omitted)</li>
+      <li>359 nodes · 544 edges · 26 communities (21 shown, 5 thin omitted)</li>
       <li>Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 1 edges (avg confidence: 0.85)</li>
       <li>Token cost: 0 input · 0 output</li>
       <li>1. `cn()` - 24 edges</li>
@@ -1058,7 +1058,7 @@ flowchart LR
   <td>13</td>
   <td><code>formatIDR()</code><br><small style="color:var(--muted)">lib/formatIDR.ts</small></td>
   <td><span class="tag tag-func">Function</span></td>
-  <td><code>BasketPage()</code><br><small style="color:var(--muted)">(store)/basket/page.tsx</small><br><code>Orders()</code><br><small style="color:var(--muted)">(store)/orders/page.tsx</small><br><code>page.tsx</code><br><small style="color:var(--muted)">product/[slug]/page.tsx</small><br>+7 more</td>
+  <td><code>BasketPage()</code><br><small style="color:var(--muted)">(store)/basket/page.tsx</small><br><code>Orders()</code><br><small style="color:var(--muted)">(store)/orders/page.tsx</small><br><code>page.tsx</code><br><small style="color:var(--muted)">(store)/orders/page.tsx</small><br>+7 more</td>
   <td>No direct outbound edge</td>
   <td>formatIDR() node in lib/formatIDR.ts.</td>
 </tr>
@@ -1099,7 +1099,7 @@ flowchart LR
   <td><code>createCheckoutSession.ts</code><br><small style="color:var(--muted)">actions/createCheckoutSession.ts</small></td>
   <td><span class="tag tag-class">Module</span></td>
   <td><code>page.tsx</code><br><small style="color:var(--muted)">(store)/basket/page.tsx</small><br><code>route.ts</code><br><small style="color:var(--muted)">(store)/webhook/route.ts</small></td>
-  <td><code>BasketItem</code><br><small style="color:var(--muted)">store/store.ts</small><br><code>imageUrl()</code><br><small style="color:var(--muted)">lib/imageUrl.ts</small><br><code>imageUrl.ts</code><br><small style="color:var(--muted)">lib/imageUrl.ts</small><br>+2 more</td>
+  <td><code>backendClient.ts</code><br><small style="color:var(--muted)">sanity/lib/backendClient.ts</small><br><code>BasketItem</code><br><small style="color:var(--muted)">store/store.ts</small><br><code>imageUrl()</code><br><small style="color:var(--muted)">lib/imageUrl.ts</small><br>+3 more</td>
   <td>Module file in actions/createCheckoutSession.ts.</td>
 </tr>
 <tr>
@@ -1186,7 +1186,7 @@ flowchart LR
   <td>29</td>
   <td><code>formatIDR.ts</code><br><small style="color:var(--muted)">lib/formatIDR.ts</small></td>
   <td><span class="tag tag-class">Module</span></td>
-  <td><code>page.tsx</code><br><small style="color:var(--muted)">product/[slug]/page.tsx</small><br><code>page.tsx</code><br><small style="color:var(--muted)">(store)/basket/page.tsx</small><br><code>page.tsx</code><br><small style="color:var(--muted)">(store)/orders/page.tsx</small><br>+2 more</td>
+  <td><code>page.tsx</code><br><small style="color:var(--muted)">(store)/orders/page.tsx</small><br><code>page.tsx</code><br><small style="color:var(--muted)">product/[slug]/page.tsx</small><br><code>page.tsx</code><br><small style="color:var(--muted)">(store)/basket/page.tsx</small><br>+2 more</td>
   <td>No direct outbound edge</td>
   <td>Module file in lib/formatIDR.ts.</td>
 </tr>
@@ -1194,7 +1194,7 @@ flowchart LR
   <td>30</td>
   <td><code>imageUrl.ts</code><br><small style="color:var(--muted)">lib/imageUrl.ts</small></td>
   <td><span class="tag tag-class">Module</span></td>
-  <td><code>createCheckoutSession.ts</code><br><small style="color:var(--muted)">actions/createCheckoutSession.ts</small><br><code>page.tsx</code><br><small style="color:var(--muted)">product/[slug]/page.tsx</small><br><code>page.tsx</code><br><small style="color:var(--muted)">(store)/basket/page.tsx</small><br>+2 more</td>
+  <td><code>createCheckoutSession.ts</code><br><small style="color:var(--muted)">actions/createCheckoutSession.ts</small><br><code>page.tsx</code><br><small style="color:var(--muted)">(store)/orders/page.tsx</small><br><code>page.tsx</code><br><small style="color:var(--muted)">product/[slug]/page.tsx</small><br>+2 more</td>
   <td><code>client.ts</code><br><small style="color:var(--muted)">sanity/lib/client.ts</small></td>
   <td>Module file in lib/imageUrl.ts.</td>
 </tr>
@@ -1595,7 +1595,7 @@ flowchart LR
   <td>29</td>
   <td><code>ProductsView()</code><br><small style="color:var(--muted)">components/ProductsView.tsx</small></td>
   <td><span class="tag tag-hook">UI</span></td>
-  <td><code>page.tsx</code><br><small style="color:var(--muted)">app/(store)/page.tsx</small><br><code>page.tsx</code><br><small style="color:var(--muted)">categories/[slug]/page.tsx</small></td>
+  <td><code>page.tsx</code><br><small style="color:var(--muted)">categories/[slug]/page.tsx</small><br><code>page.tsx</code><br><small style="color:var(--muted)">app/(store)/page.tsx</small></td>
   <td>No direct outbound edge</td>
   <td>ProductsView() node in components/ProductsView.tsx.</td>
 </tr>
@@ -2190,7 +2190,7 @@ flowchart LR
   <td>13</td>
   <td><code>backendClient.ts</code><br><small style="color:var(--muted)">sanity/lib/backendClient.ts</small></td>
   <td><span class="tag tag-cmd">Entry</span></td>
-  <td><code>route.ts</code><br><small style="color:var(--muted)">(store)/webhook/route.ts</small></td>
+  <td><code>createCheckoutSession.ts</code><br><small style="color:var(--muted)">actions/createCheckoutSession.ts</small><br><code>route.ts</code><br><small style="color:var(--muted)">(store)/webhook/route.ts</small></td>
   <td><code>apiVersion</code><br><small style="color:var(--muted)">sanity/env.ts</small><br><code>dataset</code><br><small style="color:var(--muted)">sanity/env.ts</small><br><code>env.ts</code><br><small style="color:var(--muted)">sanity/env.ts</small><br>+1 more</td>
   <td>Module file in sanity/lib/backendClient.ts.</td>
 </tr>
@@ -2632,7 +2632,7 @@ flowchart LR
   <td>23</td>
   <td><code>getAllCategories.ts</code><br><small style="color:var(--muted)">lib/products/getAllCategories.ts</small></td>
   <td><span class="tag tag-class">Module</span></td>
-  <td><code>page.tsx</code><br><small style="color:var(--muted)">(store)/categories/page.tsx</small><br><code>page.tsx</code><br><small style="color:var(--muted)">app/(store)/page.tsx</small><br><code>page.tsx</code><br><small style="color:var(--muted)">categories/[slug]/page.tsx</small></td>
+  <td><code>page.tsx</code><br><small style="color:var(--muted)">categories/[slug]/page.tsx</small><br><code>page.tsx</code><br><small style="color:var(--muted)">app/(store)/page.tsx</small><br><code>page.tsx</code><br><small style="color:var(--muted)">(store)/categories/page.tsx</small></td>
   <td><code>live.ts</code><br><small style="color:var(--muted)">sanity/lib/live.ts</small></td>
   <td>Module file in lib/products/getAllCategories.ts.</td>
 </tr>
@@ -3440,7 +3440,7 @@ flowchart LR
     <h4>Graph</h4>
     <table style="width:100%;font-size:0.85rem;">
       <tr><td>Nodes</td><td>359</td></tr>
-      <tr><td>Edges</td><td>543</td></tr>
+      <tr><td>Edges</td><td>544</td></tr>
       <tr><td>Hyperedges</td><td>0</td></tr>
       <tr><td>Communities</td><td>26</td></tr>
       <tr><td>Documented Sections</td><td>15</td></tr>
@@ -3449,7 +3449,7 @@ flowchart LR
   <div class="card">
     <h4>Edge Confidence</h4>
     <table style="width:100%;font-size:0.85rem;">
-      <tr><td>EXTRACTED</td><td>542</td></tr>
+      <tr><td>EXTRACTED</td><td>543</td></tr>
       <tr><td>INFERRED</td><td>1</td></tr>
       <tr><td>AMBIGUOUS</td><td>0</td></tr>
     </table>
@@ -3458,7 +3458,7 @@ flowchart LR
 
 <div style="text-align:center; padding:40px 0; color: var(--muted); font-size:0.9rem;">
   <p>ecommerce-sanity-master — Architecture Documentation</p>
-  <p>Generated: 2026-09-02 13:49 UTC · graphify callflow-html</p>
+  <p>Generated: 2026-09-04 19:54 UTC · graphify callflow-html</p>
 </div>
 
 </div><!-- .container -->

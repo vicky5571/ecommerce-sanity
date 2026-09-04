@@ -3,6 +3,7 @@
 import { imageUrl } from "@/lib/imageUrl";
 import stripe from "@/lib/stripe";
 import { BasketItem } from "@/store/store";
+import { backendClient } from "@/sanity/lib/backendClient";
 
 export type Metadata = {
   orderNumber: string;
@@ -21,7 +22,33 @@ export async function createCheckoutSession(items: GroupedBasketItem[], metadata
     // check if any grouped items don't have a price
     const itemsWithoutPrice = items.filter((item) => !item.product.price);
     if (itemsWithoutPrice.length > 0) {
-      throw new Error("Some items do not have a price");
+      throw new Error("Beberapa produk belum memiliki harga");
+    }
+
+    // Verify stock availability live against Sanity CMS
+    const productIds = items.map((item) => item.product._id).filter(Boolean);
+    if (productIds.length > 0) {
+      const liveProducts: Array<{ _id: string; name?: string; stock?: number }> =
+        await backendClient.fetch(
+          `*[_type == "product" && _id in $productIds]{ _id, name, stock }`,
+          { productIds }
+        );
+
+      for (const item of items) {
+        const liveProduct = liveProducts.find((p) => p._id === item.product._id);
+        if (liveProduct && liveProduct.stock != null) {
+          if (liveProduct.stock <= 0) {
+            throw new Error(
+              `Produk "${liveProduct.name || item.product.name}" sudah habis (stok 0).`
+            );
+          }
+          if (item.quantity > liveProduct.stock) {
+            throw new Error(
+              `Stok untuk "${liveProduct.name || item.product.name}" tidak mencukupi (tersisa ${liveProduct.stock}, dipesan ${item.quantity}).`
+            );
+          }
+        }
+      }
     }
 
     // Search for existing customer by email
@@ -35,7 +62,9 @@ export async function createCheckoutSession(items: GroupedBasketItem[], metadata
       customerId = customers.data[0].id;
     }
 
-    const baseUrl = process.env.NODE_ENV === "production" ? `https://${process.env.VERCEL_URL}` : `${process.env.NEXT_PUBLIC_BASE_URL}`;
+    const baseUrl =
+      process.env.NEXT_PUBLIC_BASE_URL ||
+      (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000");
     const successUrl = `${baseUrl}/success?session_id={CHECKOUT_SESSION_ID}&orderNumber=${metadata.orderNumber}`;
 
     const cancelUrl = `${baseUrl}/basket`;

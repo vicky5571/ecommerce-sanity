@@ -11,7 +11,6 @@ export default function ProductBuyBox({ product }: { product: Product }) {
   const isOutOfStock = product.stock != null && product.stock <= 0;
   const isLowStock =
     product.stock != null && product.stock > 0 && product.stock <= 5;
-  const isStockAvailable = product.stock == null || product.stock > 0;
 
   const [quantity, setQuantity] = useState(1);
   const [justAdded, setJustAdded] = useState(false);
@@ -20,18 +19,14 @@ export default function ProductBuyBox({ product }: { product: Product }) {
 
   const handleAddToCart = () => {
     if (isOutOfStock) return;
-    for (let i = 0; i < quantity; i++) {
-      addItem(product);
-    }
+    addItem(product, quantity);
     setJustAdded(true);
     setTimeout(() => setJustAdded(false), 1500);
   };
 
   const handleBuyNow = () => {
     if (isOutOfStock) return;
-    for (let i = 0; i < quantity; i++) {
-      addItem(product);
-    }
+    addItem(product, quantity);
     router.push("/basket");
   };
 

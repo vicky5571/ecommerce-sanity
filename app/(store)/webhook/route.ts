@@ -63,7 +63,7 @@ async function createOrderInSanity(session: Stripe.Checkout.Session) {
     quantity: item.quantity || 0,
   }));
 
-  // Handle zero-decimal currencies (like IDR) where Stripe amount is already in major units
+  // Zero-decimal currencies where Stripe amount is already in major units (IDR is 2-decimal in Stripe)
   const zeroDecimalCurrencies = new Set([
     "BIF",
     "CLP",
@@ -81,7 +81,6 @@ async function createOrderInSanity(session: Stripe.Checkout.Session) {
     "XAF",
     "XOF",
     "XPF",
-    "IDR",
   ]);
 
   const divisor = zeroDecimalCurrencies.has((currency ?? "").toUpperCase()) ? 1 : 100;
@@ -102,6 +101,26 @@ async function createOrderInSanity(session: Stripe.Checkout.Session) {
     status: "paid",
     orderDate: new Date().toISOString(),
   });
+
+  // Decrement stock for purchased products in Sanity
+  await Promise.all(
+    sanityProducts.map(async (item: any) => {
+      const productId = item.product?._ref;
+      const qty = item.quantity;
+      if (!productId || qty <= 0) return;
+
+      try {
+        await backendClient
+          .patch(productId)
+          .setIfMissing({ stock: 0 })
+          .dec({ stock: qty })
+          .commit();
+        console.log(`Decremented stock for product ${productId} by ${qty}`);
+      } catch (stockError) {
+        console.error(`Failed to decrement stock for product ${productId}:`, stockError);
+      }
+    })
+  );
 
   return order;
 }
