@@ -91,13 +91,32 @@ export async function createCheckoutSession(
 
     // console.log(successUrl);
 
+    const safeShipping = shipping
+      ? {
+          ...shipping,
+          recipientName: (shipping.recipientName || "").slice(0, 50),
+          phone: (shipping.phone || "").slice(0, 20),
+          street: (shipping.street || "").slice(0, 150),
+          city: (shipping.city || "").slice(0, 50),
+          province: (shipping.province || "").slice(0, 40),
+          postalCode: (shipping.postalCode || "").slice(0, 10),
+          courierCode: (shipping.courierCode || "").slice(0, 10),
+          courierName: (shipping.courierName || "").slice(0, 30),
+          service: (shipping.service || "").slice(0, 20),
+          etd: (shipping.etd || "").slice(0, 15),
+        }
+      : null;
+
+    const shippingSerialized = safeShipping ? JSON.stringify(safeShipping) : "";
+
     const sessionMetadata: Record<string, string> = {
       orderNumber: metadata.orderNumber,
-      customerName: metadata.customerName,
-      customerEmail: metadata.customerEmail,
+      customerName: (metadata.customerName || "Unknown").slice(0, 100),
+      customerEmail: (metadata.customerEmail || "Unknown").slice(0, 100),
       clerkUserId: metadata.clerkUserId,
-      shippingDetails: shipping ? JSON.stringify(shipping) : "",
+      shippingDetails: shippingSerialized.length <= 500 ? shippingSerialized : shippingSerialized.slice(0, 500),
     };
+
 
     const lineItems: any[] = items.map((item) => ({
       price_data: {
