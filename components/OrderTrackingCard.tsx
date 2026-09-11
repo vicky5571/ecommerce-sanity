@@ -57,12 +57,28 @@ export function OrderTrackingCard({
   else if (status === "shipped") currentStep = 2;
   else if (status === "delivered") currentStep = 3;
 
-  const handleCopy = (text: string) => {
+  const handleCopy = async (text: string) => {
     if (!text) return;
-    navigator.clipboard.writeText(text);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    try {
+      if (navigator?.clipboard?.writeText) {
+        await navigator.clipboard.writeText(text);
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
+      } else {
+        const textarea = document.createElement("textarea");
+        textarea.value = text;
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand("copy");
+        document.body.removeChild(textarea);
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
+      }
+    } catch (err) {
+      console.warn("Gagal menyalin nomor resi ke clipboard:", err);
+    }
   };
+
 
   const steps = [
     { title: "Pesanan Dibuat", icon: CreditCard },
