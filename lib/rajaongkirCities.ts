@@ -49,7 +49,7 @@ export const POPULAR_CITIES: RajaOngkirCity[] = [
 
   // Jawa Timur
   { city_id: "444", province_id: "11", province: "Jawa Timur", type: "Kota", city_name: "Surabaya", postal_code: "60111" },
-  { city_id: "419", province_id: "11", province: "Jawa Timur", type: "Kabupaten", city_name: "Sidoarjo", postal_code: "61211" },
+  { city_id: "409", province_id: "11", province: "Jawa Timur", type: "Kabupaten", city_name: "Sidoarjo", postal_code: "61211" },
   { city_id: "256", province_id: "11", province: "Jawa Timur", type: "Kota", city_name: "Malang", postal_code: "65111" },
   { city_id: "255", province_id: "11", province: "Jawa Timur", type: "Kabupaten", city_name: "Malang", postal_code: "65163" },
   { city_id: "163", province_id: "11", province: "Jawa Timur", type: "Kabupaten", city_name: "Gresik", postal_code: "61111" },
@@ -87,15 +87,16 @@ export const POPULAR_CITIES: RajaOngkirCity[] = [
   { city_id: "213", province_id: "23", province: "Nusa Tenggara Timur (NTT)", type: "Kota", city_name: "Kupang", postal_code: "85111" },
 
   // Kalimantan
-  { city_id: "19", province_id: "12", province: "Kalimantan Selatan", type: "Kota", city_name: "Banjarmasin", postal_code: "70111" },
-  { city_id: "17", province_id: "15", province: "Kalimantan Timur", type: "Kota", city_name: "Balikpapan", postal_code: "76111" },
+  { city_id: "75", province_id: "12", province: "Kalimantan Selatan", type: "Kota", city_name: "Banjarmasin", postal_code: "70111" },
+  { city_id: "19", province_id: "15", province: "Kalimantan Timur", type: "Kota", city_name: "Balikpapan", postal_code: "76111" },
   { city_id: "387", province_id: "15", province: "Kalimantan Timur", type: "Kota", city_name: "Samarinda", postal_code: "75111" },
   { city_id: "365", province_id: "13", province: "Kalimantan Barat", type: "Kota", city_name: "Pontianak", postal_code: "78111" },
   { city_id: "326", province_id: "14", province: "Kalimantan Tengah", type: "Kota", city_name: "Palangka Raya", postal_code: "73111" },
 
   // Sulawesi
   { city_id: "254", province_id: "28", province: "Sulawesi Selatan", type: "Kota", city_name: "Makassar", postal_code: "90111" },
-  { city_id: "255", province_id: "31", province: "Sulawesi Utara", type: "Kota", city_name: "Manado", postal_code: "95111" },
+  { city_id: "267", province_id: "31", province: "Sulawesi Utara", type: "Kota", city_name: "Manado", postal_code: "95111" },
+
   { city_id: "328", province_id: "29", province: "Sulawesi Tengah", type: "Kota", city_name: "Palu", postal_code: "94111" },
   { city_id: "194", province_id: "30", province: "Sulawesi Tenggara", type: "Kota", city_name: "Kendari", postal_code: "93111" },
 

@@ -403,11 +403,12 @@ function BasketPage() {
                     className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:border-[#0284C7] focus:ring-2 focus:ring-sky-100 transition-all text-slate-900 bg-slate-50/50 font-medium"
                   >
                     {POPULAR_CITIES.map((city) => (
-                      <option key={city.city_id} value={city.city_id}>
+                      <option key={`${city.city_id}-${city.province_id}`} value={city.city_id}>
                         {city.type} {city.city_name} — {city.province} ({city.postal_code})
                       </option>
                     ))}
                   </select>
+
                 </div>
 
                 {/* Street Address */}
