@@ -54,7 +54,6 @@ export async function POST(req: NextRequest) {
     const body = await req.json();
     const {
       destination,
-      origin = process.env.RAJAONGKIR_ORIGIN_CITY_ID || "153", // Jakarta Selatan default
       weight = 1000, // 1 kg default
       courier = "jne",
     } = body;
@@ -65,6 +64,22 @@ export async function POST(req: NextRequest) {
         { status: 400 }
       );
     }
+
+    // Strictly enforce origin on the server to prevent open proxy / SSRF / quota drain
+    const origin = process.env.RAJAONGKIR_ORIGIN_CITY_ID || "153"; // Jakarta Selatan default
+
+    // Validate courier against strict allowlist
+    const ALLOWED_COURIERS = new Set(["jne", "pos", "tiki", "all"]);
+    const sanitizedCourier =
+      typeof courier === "string" && ALLOWED_COURIERS.has(courier.toLowerCase())
+        ? courier.toLowerCase()
+        : "jne";
+
+    // Sanitize weight (bound between 100g and 30,000g)
+    const sanitizedWeight =
+      typeof weight === "number" && weight > 0 && weight <= 30000
+        ? Math.round(weight)
+        : 1000;
 
     const apiKey = process.env.RAJAONGKIR_API_KEY;
 
@@ -79,15 +94,15 @@ export async function POST(req: NextRequest) {
     }
 
     // Call RajaOngkir Starter API concurrently
-    const couriersToQuery = courier === "all" ? ["jne", "pos", "tiki"] : [courier];
+    const couriersToQuery = sanitizedCourier === "all" ? ["jne", "pos", "tiki"] : [sanitizedCourier];
 
     const courierPromises = couriersToQuery.map(async (c) => {
       const courierResults: ShippingServiceOption[] = [];
       try {
         const formData = new URLSearchParams();
         formData.append("origin", String(origin));
-        formData.append("destination", String(destination));
-        formData.append("weight", String(weight));
+        formData.append("destination", String(destination).replace(/[^a-zA-Z0-9]/g, ""));
+        formData.append("weight", String(sanitizedWeight));
         formData.append("courier", c);
 
         const response = await fetch("https://api.rajaongkir.com/starter/cost", {
