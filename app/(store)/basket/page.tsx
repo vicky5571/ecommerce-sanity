@@ -29,12 +29,14 @@ import {
   AlertCircle,
   Loader2,
 } from "lucide-react";
-import { POPULAR_CITIES, RajaOngkirCity } from "@/lib/rajaongkirCities";
+import { POPULAR_CITIES } from "@/lib/rajaongkirCities";
 import { ShippingServiceOption } from "@/app/api/shipping/cost/route";
 
 function BasketPage() {
+  // All Hooks MUST be called at top-level unconditionally
   const groupedItems = useBasketStore((state) => state.getGroupedItems());
   const { addItem, removeItem, deleteItem, clearBasket } = useBasketStore();
+  const subtotalPrice = useBasketStore((state) => state.getTotalPrice());
   const { isSignedIn } = useAuth();
   const { user } = useUser();
   const router = useRouter();
@@ -63,7 +65,7 @@ function BasketPage() {
     }
   }, [user, recipientName]);
 
-  // Fetch shipping cost from RajaOngkir when selectedCityId changes or on load
+  // Fetch shipping cost from RajaOngkir when selectedCityId changes
   useEffect(() => {
     if (!selectedCityId) return;
 
@@ -90,7 +92,6 @@ function BasketPage() {
         if (isMounted) {
           const services: ShippingServiceOption[] = data.services || [];
           setShippingServices(services);
-          // Auto-select first service (e.g. JNE REG) if not already selected
           if (services.length > 0) {
             setSelectedService(services[0]);
           } else {
@@ -116,6 +117,7 @@ function BasketPage() {
     };
   }, [selectedCityId]);
 
+  // Early returns only AFTER all hooks have been declared
   if (!isClient) {
     return <Loader />;
   }
@@ -214,7 +216,6 @@ function BasketPage() {
     (total, item) => total + item.quantity,
     0
   );
-  const subtotalPrice = useBasketStore((state) => state.getTotalPrice());
   const shippingFee = selectedService?.cost || 0;
   const grandTotalPrice = subtotalPrice + shippingFee;
 
