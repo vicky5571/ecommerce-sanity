@@ -87,6 +87,19 @@ async function createOrderInSanity(session: Stripe.Checkout.Session) {
 
   const divisor = zeroDecimalCurrencies.has((currency ?? "").toUpperCase()) ? 1 : 100;
 
+  // Idempotency check: prevent duplicate orders and double stock decrement if Stripe retries webhook
+  const existingOrder = await backendClient.fetch(
+    `*[_type == "order" && (stripeCheckoutSessionId == $sessionId || orderNumber == $orderNumber)][0]`,
+    { sessionId: id, orderNumber }
+  );
+
+  if (existingOrder) {
+    console.log(
+      `Order for session ${id} / order #${orderNumber} already processed (${existingOrder._id}). Skipping duplicate webhook.`
+    );
+    return existingOrder;
+  }
+
   let shippingData: any = null;
   if ((metadata as any)?.shippingDetails) {
     try {
@@ -100,6 +113,7 @@ async function createOrderInSanity(session: Stripe.Checkout.Session) {
   const mockResi = `${courierCode}-${Date.now().toString().slice(-6)}${Math.floor(1000 + Math.random() * 9000)}`;
 
   const orderDoc: any = {
+    _id: `order-${id}`,
     _type: "order",
     orderNumber,
     stripeCheckoutSessionId: id,
@@ -132,7 +146,8 @@ async function createOrderInSanity(session: Stripe.Checkout.Session) {
     orderDoc.etd = shippingData.etd;
   }
 
-  const order = await backendClient.create(orderDoc);
+  const order = await backendClient.createIfNotExists(orderDoc);
+
 
 
   // Decrement stock for purchased products in Sanity
