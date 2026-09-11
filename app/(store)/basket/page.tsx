@@ -156,10 +156,26 @@ function BasketPage() {
   const handleCheckout = async () => {
     if (!isSignedIn) return;
 
+    if (!recipientName.trim()) {
+      alert("Silakan lengkapi nama penerima paket.");
+      return;
+    }
+
+    if (!phone.trim()) {
+      alert("Silakan lengkapi nomor telepon / WhatsApp penerima.");
+      return;
+    }
+
+    if (!streetAddress.trim()) {
+      alert("Silakan lengkapi alamat jalan tujuan pengiriman.");
+      return;
+    }
+
     if (!selectedService) {
       alert("Silakan pilih opsi layanan pengiriman terlebih dahulu.");
       return;
     }
+
 
     setIsLoading(true);
 
@@ -366,6 +382,7 @@ function BasketPage() {
                   <label className="font-semibold text-slate-700 flex items-center gap-1">
                     <UserIcon className="w-3.5 h-3.5 text-slate-400" />
                     <span>Nama Penerima</span>
+                    <span className="text-red-500">*</span>
                   </label>
                   <input
                     type="text"
@@ -381,6 +398,7 @@ function BasketPage() {
                   <label className="font-semibold text-slate-700 flex items-center gap-1">
                     <Phone className="w-3.5 h-3.5 text-slate-400" />
                     <span>No. WhatsApp / Handphone</span>
+                    <span className="text-red-500">*</span>
                   </label>
                   <input
                     type="tel"
@@ -396,6 +414,7 @@ function BasketPage() {
                   <label className="font-semibold text-slate-700 flex items-center gap-1">
                     <MapPin className="w-3.5 h-3.5 text-slate-400" />
                     <span>Kota / Kabupaten Tujuan (RajaOngkir)</span>
+                    <span className="text-red-500">*</span>
                   </label>
                   <select
                     value={selectedCityId}
@@ -413,10 +432,12 @@ function BasketPage() {
 
                 {/* Street Address */}
                 <div className="sm:col-span-2 space-y-1">
-                  <label className="font-semibold text-slate-700">
-                    Alamat Lengkap (Jalan, No. Rumah, RT/RW, Patokan)
+                  <label className="font-semibold text-slate-700 flex items-center gap-1">
+                    <span>Alamat Lengkap (Jalan, No. Rumah, RT/RW, Patokan)</span>
+                    <span className="text-red-500">*</span>
                   </label>
                   <textarea
+
                     rows={2}
                     value={streetAddress}
                     onChange={(e) => setStreetAddress(e.target.value)}
