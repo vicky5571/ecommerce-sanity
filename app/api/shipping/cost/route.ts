@@ -78,11 +78,11 @@ export async function POST(req: NextRequest) {
       });
     }
 
-    // Call RajaOngkir Starter API
+    // Call RajaOngkir Starter API concurrently
     const couriersToQuery = courier === "all" ? ["jne", "pos", "tiki"] : [courier];
-    const results: ShippingServiceOption[] = [];
 
-    for (const c of couriersToQuery) {
+    const courierPromises = couriersToQuery.map(async (c) => {
+      const courierResults: ShippingServiceOption[] = [];
       try {
         const formData = new URLSearchParams();
         formData.append("origin", String(origin));
@@ -109,7 +109,7 @@ export async function POST(req: NextRequest) {
             const costVal = item.cost?.[0]?.value ?? 0;
             const etdVal = item.cost?.[0]?.etd ?? "-";
 
-            results.push({
+            courierResults.push({
               courierCode: c,
               courierName: courierData?.name || c.toUpperCase(),
               service: item.service,
@@ -124,7 +124,12 @@ export async function POST(req: NextRequest) {
       } catch (subErr) {
         console.warn(`Error querying RajaOngkir for ${c}:`, subErr);
       }
-    }
+      return courierResults;
+    });
+
+    const nestedResults = await Promise.all(courierPromises);
+    const results: ShippingServiceOption[] = nestedResults.flat();
+
 
     // If real API returned services, use them; otherwise fallback
     if (results.length > 0) {
