@@ -14,6 +14,8 @@ import {
   Tag,
   Calendar,
 } from "lucide-react";
+import { OrderTrackingCard } from "@/components/OrderTrackingCard";
+
 
 async function Orders() {
   const { userId } = await auth();
@@ -177,20 +179,41 @@ async function Orders() {
                     </div>
                   ) : null}
 
+                  {/* Delivery & Tracking Information Card */}
+                  <OrderTrackingCard
+                    status={order.status}
+                    orderDate={order.orderDate}
+                    shippingCourier={order.shippingCourier}
+                    shippingService={order.shippingService}
+                    shippingCost={order.shippingCost}
+                    trackingNumber={order.trackingNumber}
+                    etd={order.etd}
+                    shippingAddress={order.shippingAddress}
+                  />
+
                   {/* Total Tagihan Footer */}
-                  <div className="pt-3 border-t border-stone-100 flex items-center justify-between">
-                    <span className="text-xs text-stone-500 font-medium">
-                      Total Belanja
-                    </span>
-                    <div className="text-right">
-                      <span className="text-base font-mono font-extrabold text-stone-950">
-                        {formatIDR(order.totalPrice ?? 0)}
+                  <div className="pt-3 border-t border-stone-100 space-y-1.5">
+                    {order.shippingCost ? (
+                      <div className="flex items-center justify-between text-xs text-stone-500">
+                        <span>Ongkos Kirim ({order.shippingCourier || "Kurir"} {order.shippingService || ""})</span>
+                        <span className="font-mono text-stone-700">{formatIDR(order.shippingCost)}</span>
+                      </div>
+                    ) : null}
+                    <div className="flex items-center justify-between">
+                      <span className="text-xs text-stone-500 font-medium">
+                        Total Pembayaran
                       </span>
+                      <div className="text-right">
+                        <span className="text-base font-mono font-extrabold text-stone-950">
+                          {formatIDR(order.totalPrice ?? 0)}
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>
               );
             })}
+
           </div>
         )}
       </div>

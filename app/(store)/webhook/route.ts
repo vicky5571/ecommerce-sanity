@@ -54,14 +54,16 @@ async function createOrderInSanity(session: Stripe.Checkout.Session) {
     expand: ["data.price.product"],
   });
 
-  const sanityProducts = lineItemsWithProduct.data.map((item: any) => ({
-    _key: crypto.randomUUID(),
-    product: {
-      _type: "reference",
-      _ref: (item.price?.product as Stripe.Product)?.metadata?.id,
-    },
-    quantity: item.quantity || 0,
-  }));
+  const sanityProducts = lineItemsWithProduct.data
+    .filter((item: any) => (item.price?.product as Stripe.Product)?.metadata?.id)
+    .map((item: any) => ({
+      _key: crypto.randomUUID(),
+      product: {
+        _type: "reference",
+        _ref: (item.price?.product as Stripe.Product)?.metadata?.id,
+      },
+      quantity: item.quantity || 0,
+    }));
 
   // Zero-decimal currencies where Stripe amount is already in major units (IDR is 2-decimal in Stripe)
   const zeroDecimalCurrencies = new Set([
@@ -85,7 +87,19 @@ async function createOrderInSanity(session: Stripe.Checkout.Session) {
 
   const divisor = zeroDecimalCurrencies.has((currency ?? "").toUpperCase()) ? 1 : 100;
 
-  const order = await backendClient.create({
+  let shippingData: any = null;
+  if ((metadata as any)?.shippingDetails) {
+    try {
+      shippingData = JSON.parse((metadata as any).shippingDetails);
+    } catch (e) {
+      console.warn("Failed to parse shippingDetails from metadata:", e);
+    }
+  }
+
+  const courierCode = (shippingData?.courierCode || "JNE").toUpperCase();
+  const mockResi = `${courierCode}-${Date.now().toString().slice(-6)}${Math.floor(1000 + Math.random() * 9000)}`;
+
+  const orderDoc: any = {
     _type: "order",
     orderNumber,
     stripeCheckoutSessionId: id,
@@ -100,7 +114,26 @@ async function createOrderInSanity(session: Stripe.Checkout.Session) {
     totalPrice: amount_total ? amount_total / divisor : 0,
     status: "paid",
     orderDate: new Date().toISOString(),
-  });
+  };
+
+  if (shippingData) {
+    orderDoc.shippingAddress = {
+      recipientName: shippingData.recipientName || customerName,
+      phone: shippingData.phone || "",
+      street: shippingData.street || "",
+      city: shippingData.city || "",
+      province: shippingData.province || "",
+      postalCode: shippingData.postalCode || "",
+    };
+    orderDoc.shippingCourier = shippingData.courierName || "JNE";
+    orderDoc.shippingService = shippingData.service;
+    orderDoc.shippingCost = shippingData.cost;
+    orderDoc.trackingNumber = mockResi;
+    orderDoc.etd = shippingData.etd;
+  }
+
+  const order = await backendClient.create(orderDoc);
+
 
   // Decrement stock for purchased products in Sanity
   await Promise.all(

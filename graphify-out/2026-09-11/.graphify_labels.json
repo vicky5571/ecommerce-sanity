@@ -1,14 +1,14 @@
 {
   "0": "dependencies",
-  "1": "formatIDR",
+  "1": "useBasketStore",
   "2": "cn",
   "3": "devDependencies",
   "4": "compilerOptions",
-  "5": "useBasketStore",
+  "5": "(store)/layout.tsx",
   "6": "sanity.types.ts",
   "7": "(store)/page.tsx",
   "8": "components.json",
-  "9": "index.ts",
+  "9": "sanity.config.ts",
   "10": "formatCurrency.ts",
   "11": "rules/graphify.md",
   "12": "workflows/graphify.md",
@@ -24,6 +24,7 @@
   "22": "sanity.cli.ts",
   "23": "tailwind.config.ts",
   "24": "global-error.tsx",
-  "25": "basket/page.tsx",
+  "25": "Loader.tsx",
+  "26": "index.ts",
   "27": "BlackFridayBanner.tsx"
 }

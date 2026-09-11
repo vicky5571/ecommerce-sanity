@@ -125,7 +125,54 @@ export const orderType = defineType({
       type: "datetime",
       validation: (Rule) => Rule.required(),
     }),
+    defineField({
+      name: "shippingAddress",
+      title: "Shipping Address",
+      type: "object",
+      fields: [
+        defineField({ name: "recipientName", title: "Recipient Name", type: "string" }),
+        defineField({ name: "phone", title: "Phone / WhatsApp", type: "string" }),
+        defineField({ name: "street", title: "Street Address", type: "string" }),
+        defineField({ name: "city", title: "City / Kabupaten", type: "string" }),
+        defineField({ name: "province", title: "Province", type: "string" }),
+        defineField({ name: "postalCode", title: "Postal Code", type: "string" }),
+      ],
+    }),
+    defineField({
+      name: "shippingCourier",
+      title: "Shipping Courier",
+      type: "string",
+      options: {
+        list: [
+          { title: "JNE", value: "JNE" },
+          { title: "POS Indonesia", value: "POS" },
+          { title: "TIKI", value: "TIKI" },
+        ],
+      },
+    }),
+    defineField({
+      name: "shippingService",
+      title: "Shipping Service",
+      type: "string",
+    }),
+    defineField({
+      name: "shippingCost",
+      title: "Shipping Cost",
+      type: "number",
+      validation: (Rule) => Rule.min(0),
+    }),
+    defineField({
+      name: "trackingNumber",
+      title: "Tracking Number (Nomor Resi)",
+      type: "string",
+    }),
+    defineField({
+      name: "etd",
+      title: "Estimated Delivery (ETD)",
+      type: "string",
+    }),
   ],
+
   preview: {
     select: {
       name: "customerName",

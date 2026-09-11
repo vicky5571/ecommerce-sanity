@@ -5,11 +5,26 @@ import stripe from "@/lib/stripe";
 import { BasketItem } from "@/store/store";
 import { backendClient } from "@/sanity/lib/backendClient";
 
+export type ShippingDetails = {
+  recipientName: string;
+  phone: string;
+  street: string;
+  city: string;
+  province: string;
+  postalCode?: string;
+  courierCode: string;
+  courierName: string;
+  service: string;
+  cost: number;
+  etd: string;
+};
+
 export type Metadata = {
   orderNumber: string;
   customerName: string;
   customerEmail: string;
   clerkUserId: string;
+  shippingDetails?: string;
 };
 
 export type GroupedBasketItem = {
@@ -17,7 +32,12 @@ export type GroupedBasketItem = {
   quantity: number;
 };
 
-export async function createCheckoutSession(items: GroupedBasketItem[], metadata: Metadata) {
+export async function createCheckoutSession(
+  items: GroupedBasketItem[],
+  metadata: Metadata,
+  shipping?: ShippingDetails
+) {
+
   try {
     // check if any grouped items don't have a price
     const itemsWithoutPrice = items.filter((item) => !item.product.price);
@@ -71,31 +91,56 @@ export async function createCheckoutSession(items: GroupedBasketItem[], metadata
 
     // console.log(successUrl);
 
+    const sessionMetadata: Record<string, string> = {
+      orderNumber: metadata.orderNumber,
+      customerName: metadata.customerName,
+      customerEmail: metadata.customerEmail,
+      clerkUserId: metadata.clerkUserId,
+      shippingDetails: shipping ? JSON.stringify(shipping) : "",
+    };
+
+    const lineItems: any[] = items.map((item) => ({
+      price_data: {
+        currency: "idr",
+        unit_amount: Math.round(item.product.price! * 100),
+        product_data: {
+          name: item.product.name || "Unnamed Product",
+          description: `Product ID: ${item.product._id}`,
+          metadata: {
+            id: item.product._id,
+          },
+          images: item.product.image ? [imageUrl(item.product.image).url()] : undefined,
+        },
+      },
+      quantity: item.quantity,
+    }));
+
+    if (shipping && shipping.cost > 0) {
+      lineItems.push({
+        price_data: {
+          currency: "idr",
+          unit_amount: Math.round(shipping.cost * 100),
+          product_data: {
+            name: `Ongkos Kirim (${shipping.courierName} - ${shipping.service})`,
+            description: `Tujuan: ${shipping.city}, ${shipping.province} (Estimasi ${shipping.etd} hari)`,
+          },
+        },
+        quantity: 1,
+      });
+    }
+
     const session = await stripe.checkout.sessions.create({
       customer: customerId,
       customer_creation: customerId ? undefined : "always",
       customer_email: !customerId ? metadata.customerEmail : undefined,
-      metadata,
+      metadata: sessionMetadata,
       mode: "payment",
       allow_promotion_codes: true,
       success_url: successUrl,
       cancel_url: cancelUrl,
-      line_items: items.map((item) => ({
-        price_data: {
-          currency: "idr",
-          unit_amount: Math.round(item.product.price! * 100),
-          product_data: {
-            name: item.product.name || "Unnamed Product",
-            description: `Product ID: ${item.product._id}`,
-            metadata: {
-              id: item.product._id,
-            },
-            images: item.product.image ? [imageUrl(item.product.image).url()] : undefined,
-          },
-        },
-        quantity: item.quantity,
-      })),
+      line_items: lineItems,
     });
+
 
     return session.url;
   } catch (error) {
