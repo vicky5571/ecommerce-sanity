@@ -1,22 +1,22 @@
 # Graph Report - ecommerce-sanity-master  (2026-09-11)
 
 ## Corpus Check
-- 90 files · ~24,395 words
+- 90 files · ~24,817 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 378 nodes · 587 edges · 27 communities (23 shown, 4 thin omitted)
+- 378 nodes · 586 edges · 27 communities (22 shown, 5 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 1 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `19b5c322`
+- Built from commit: `66227d46`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - dependencies
-- formatIDR
+- basket/page.tsx
 - cn
 - devDependencies
 - compilerOptions
@@ -35,8 +35,8 @@
 - build
 - postcss.config.mjs
 - next.config.ts
-- basket/page.tsx
-- BlackFridayBanner.tsx
+- Loader.tsx
+- search/page.tsx
 
 ## God Nodes (most connected - your core abstractions)
 1. `cn()` - 24 edges
@@ -51,29 +51,29 @@
 10. `BasketPage()` - 6 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `createCheckoutSession()` --calls--> `imageUrl()`  [EXTRACTED]
-  actions/createCheckoutSession.ts → lib/imageUrl.ts
-- `BasketPage()` --calls--> `formatIDR()`  [EXTRACTED]
-  app/(store)/basket/page.tsx → lib/formatIDR.ts
-- `BasketPage()` --calls--> `imageUrl()`  [EXTRACTED]
-  app/(store)/basket/page.tsx → lib/imageUrl.ts
+- `SearchBar()` --calls--> `searchProductsAction()`  [EXTRACTED]
+  components/SearchBar.tsx → actions/searchProducts.ts
 - `BasketPage()` --calls--> `useBasketStore`  [EXTRACTED]
   app/(store)/basket/page.tsx → store/store.ts
 - `CategoriesPage()` --calls--> `getAllCategories()`  [EXTRACTED]
   app/(store)/categories/page.tsx → sanity/lib/products/getAllCategories.ts
+- `SearchPage()` --calls--> `searchProductsByName()`  [EXTRACTED]
+  app/(store)/search/page.tsx → sanity/lib/products/searchProductsByName.ts
+- `SuccessPage()` --calls--> `useBasketStore`  [EXTRACTED]
+  app/(store)/success/page.tsx → store/store.ts
 
 ## Import Cycles
 - None detected.
 
-## Communities (27 total, 4 thin omitted)
+## Communities (27 total, 5 thin omitted)
 
 ### Community 0 - "dependencies"
 Cohesion: 0.04
 Nodes (47): class-variance-authority, @clerk/nextjs, clsx, cmdk, framer-motion, lucide-react, next, next-sanity (+39 more)
 
-### Community 1 - "formatIDR"
-Cohesion: 0.15
-Nodes (17): searchProductsAction(), Orders(), dynamic, generateMetadata(), ProductPage(), revalidate, SearchPage(), OrderTrackingCard() (+9 more)
+### Community 1 - "basket/page.tsx"
+Cohesion: 0.10
+Nodes (26): createCheckoutSession(), GroupedBasketItem, Metadata, ShippingDetails, FALLBACK_RATES, ShippingServiceOption, BasketPage(), Orders() (+18 more)
 
 ### Community 2 - "cn"
 Cohesion: 0.19
@@ -96,8 +96,8 @@ Cohesion: 0.07
 Nodes (30): CategoryPills(), ProductGrid(), ProductsViewProps, CategorySelectorProps, CategorySelectorProps, ACTIVE_SALE_BY_COUPON_QUERYResult, ALL_CATEGORIES_QUERYResult, ALL_PRODUCTS_QUERYResult (+22 more)
 
 ### Community 7 - "(store)/page.tsx"
-Cohesion: 0.15
-Nodes (14): CategoriesPage(), dynamic, revalidate, CategoryPage(), dynamic, revalidate, dynamic, Home() (+6 more)
+Cohesion: 0.11
+Nodes (20): CategoriesPage(), dynamic, revalidate, CategoryPage(), dynamic, revalidate, dynamic, Home() (+12 more)
 
 ### Community 8 - "components.json"
 Cohesion: 0.11
@@ -131,32 +131,28 @@ Nodes (3): @clerk/nextjs, @clerk/nextjs/server, MiddlewareHandler
 Cohesion: 0.50
 Nodes (3): build, env, NPM_FLAGS
 
-### Community 25 - "basket/page.tsx"
-Cohesion: 0.12
-Nodes (13): createCheckoutSession(), GroupedBasketItem, Metadata, ShippingDetails, FALLBACK_RATES, ShippingServiceOption, BasketPage(), createOrderInSanity() (+5 more)
-
-### Community 27 - "BlackFridayBanner.tsx"
-Cohesion: 0.33
-Nodes (6): BlackFridayBanner(), CopyCouponButton(), CopyCouponButtonProps, COUPON_CODES, CouponCode, getActiveSaleByCouponCode()
+### Community 26 - "search/page.tsx"
+Cohesion: 0.60
+Nodes (3): searchProductsAction(), SearchPage(), searchProductsByName()
 
 ## Knowledge Gaps
-- **145 isolated node(s):** `GroupedBasketItem`, `dynamic`, `revalidate`, `dynamic`, `revalidate` (+140 more)
+- **146 isolated node(s):** `GroupedBasketItem`, `dynamic`, `revalidate`, `dynamic`, `revalidate` (+141 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **4 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **5 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `dependencies` connect `dependencies` to `devDependencies`?**
   _High betweenness centrality (0.034) - this node is a cross-community bridge._
-- **Why does `useBasketStore` connect `useBasketStore` to `basket/page.tsx`, `formatIDR`?**
+- **Why does `useBasketStore` connect `useBasketStore` to `basket/page.tsx`?**
   _High betweenness centrality (0.022) - this node is a cross-community bridge._
 - **What connects `GroupedBasketItem`, `dynamic`, `revalidate` to the rest of the system?**
-  _145 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _146 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `dependencies` be split into smaller, more focused modules?**
   _Cohesion score 0.0425531914893617 - nodes in this community are weakly interconnected._
-- **Should `formatIDR` be split into smaller, more focused modules?**
-  _Cohesion score 0.14942528735632185 - nodes in this community are weakly interconnected._
+- **Should `basket/page.tsx` be split into smaller, more focused modules?**
+  _Cohesion score 0.09634551495016612 - nodes in this community are weakly interconnected._
 - **Should `devDependencies` be split into smaller, more focused modules?**
   _Cohesion score 0.06451612903225806 - nodes in this community are weakly interconnected._
 - **Should `compilerOptions` be split into smaller, more focused modules?**

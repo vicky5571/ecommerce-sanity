@@ -4,6 +4,7 @@ import { imageUrl } from "@/lib/imageUrl";
 import stripe from "@/lib/stripe";
 import { BasketItem } from "@/store/store";
 import { backendClient } from "@/sanity/lib/backendClient";
+import { auth, currentUser } from "@clerk/nextjs/server";
 
 export type ShippingDetails = {
   recipientName: string;
@@ -39,34 +40,57 @@ export async function createCheckoutSession(
 ) {
 
   try {
+    // 1. Authenticate user server-side and prevent user spoofing
+    const { userId } = await auth();
+    if (!userId) {
+      throw new Error("Unauthorized: Anda harus login untuk melakukan checkout.");
+    }
+
+    const user = await currentUser();
+    // Cryptographically enforce verified Clerk user ID and verified email
+    metadata.clerkUserId = userId;
+    if (user?.emailAddresses?.[0]?.emailAddress) {
+      metadata.customerEmail = user.emailAddresses[0].emailAddress;
+    }
+    const verifiedFullName = user ? `${user.firstName || ""} ${user.lastName || ""}`.trim() : "";
+    if (verifiedFullName) {
+      metadata.customerName = verifiedFullName;
+    }
     // check if any grouped items don't have a price
     const itemsWithoutPrice = items.filter((item) => !item.product.price);
     if (itemsWithoutPrice.length > 0) {
       throw new Error("Beberapa produk belum memiliki harga");
     }
 
-    // Verify stock availability live against Sanity CMS
+    // Verify stock availability and price live against Sanity CMS
     const productIds = items.map((item) => item.product._id).filter(Boolean);
-    if (productIds.length > 0) {
-      const liveProducts: Array<{ _id: string; name?: string; stock?: number }> =
-        await backendClient.fetch(
-          `*[_type == "product" && _id in $productIds]{ _id, name, stock }`,
-          { productIds }
-        );
+    if (productIds.length === 0) {
+      throw new Error("Keranjang belanja kosong atau produk tidak valid.");
+    }
 
-      for (const item of items) {
-        const liveProduct = liveProducts.find((p) => p._id === item.product._id);
-        if (liveProduct && liveProduct.stock != null) {
-          if (liveProduct.stock <= 0) {
-            throw new Error(
-              `Produk "${liveProduct.name || item.product.name}" sudah habis (stok 0).`
-            );
-          }
-          if (item.quantity > liveProduct.stock) {
-            throw new Error(
-              `Stok untuk "${liveProduct.name || item.product.name}" tidak mencukupi (tersisa ${liveProduct.stock}, dipesan ${item.quantity}).`
-            );
-          }
+    const liveProducts: Array<{ _id: string; name?: string; stock?: number; price?: number }> =
+      await backendClient.fetch(
+        `*[_type == "product" && _id in $productIds]{ _id, name, stock, price }`,
+        { productIds }
+      );
+
+    for (const item of items) {
+      const liveProduct = liveProducts.find((p) => p._id === item.product._id);
+      if (!liveProduct) {
+        throw new Error(
+          `Produk "${item.product.name || "Product"}" tidak ditemukan di sistem.`
+        );
+      }
+      if (liveProduct.stock != null) {
+        if (liveProduct.stock <= 0) {
+          throw new Error(
+            `Produk "${liveProduct.name || item.product.name}" sudah habis (stok 0).`
+          );
+        }
+        if (item.quantity > liveProduct.stock) {
+          throw new Error(
+            `Stok untuk "${liveProduct.name || item.product.name}" tidak mencukupi (tersisa ${liveProduct.stock}, dipesan ${item.quantity}).`
+          );
         }
       }
     }
@@ -118,21 +142,31 @@ export async function createCheckoutSession(
     };
 
 
-    const lineItems: any[] = items.map((item) => ({
-      price_data: {
-        currency: "idr",
-        unit_amount: Math.round(item.product.price! * 100),
-        product_data: {
-          name: item.product.name || "Unnamed Product",
-          description: `Product ID: ${item.product._id}`,
-          metadata: {
-            id: item.product._id,
+    const lineItems: any[] = items.map((item) => {
+      const liveProduct = liveProducts.find((p) => p._id === item.product._id);
+      const verifiedPrice = liveProduct?.price ?? 0;
+      if (!verifiedPrice || verifiedPrice <= 0) {
+        throw new Error(
+          `Harga produk "${liveProduct?.name || item.product.name || "Product"}" tidak valid atau belum diatur.`
+        );
+      }
+
+      return {
+        price_data: {
+          currency: "idr",
+          unit_amount: Math.round(verifiedPrice * 100),
+          product_data: {
+            name: liveProduct?.name || item.product.name || "Product",
+            description: `Product ID: ${item.product._id}`,
+            metadata: {
+              id: item.product._id,
+            },
+            images: item.product.image ? [imageUrl(item.product.image).url()] : undefined,
           },
-          images: item.product.image ? [imageUrl(item.product.image).url()] : undefined,
         },
-      },
-      quantity: item.quantity,
-    }));
+        quantity: item.quantity,
+      };
+    });
 
     if (shipping && shipping.cost > 0) {
       lineItems.push({

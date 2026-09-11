@@ -1,6 +1,6 @@
 {
   "0": "dependencies",
-  "1": "formatIDR",
+  "1": "basket/page.tsx",
   "2": "cn",
   "3": "devDependencies",
   "4": "compilerOptions",
@@ -24,6 +24,6 @@
   "22": "sanity.cli.ts",
   "23": "tailwind.config.ts",
   "24": "global-error.tsx",
-  "25": "basket/page.tsx",
-  "27": "BlackFridayBanner.tsx"
+  "25": "Loader.tsx",
+  "26": "search/page.tsx"
 }

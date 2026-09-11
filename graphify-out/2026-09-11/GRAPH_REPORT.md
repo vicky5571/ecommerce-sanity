@@ -1,30 +1,30 @@
-# Graph Report - ecommerce-sanity-master  (2026-09-05)
+# Graph Report - ecommerce-sanity-master  (2026-09-11)
 
 ## Corpus Check
-- 87 files · ~20,729 words
+- 90 files · ~24,702 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 365 nodes · 567 edges · 28 communities (23 shown, 5 thin omitted)
+- 378 nodes · 586 edges · 27 communities (22 shown, 5 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 1 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `6f543261`
+- Built from commit: `66227d46`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - dependencies
-- useBasketStore
+- basket/page.tsx
 - cn
 - devDependencies
 - compilerOptions
-- (store)/layout.tsx
+- useBasketStore
 - sanity.types.ts
 - (store)/page.tsx
 - components.json
-- sanity.config.ts
+- index.ts
 - rules/graphify.md
 - workflows/graphify.md
 - README.md
@@ -36,49 +36,48 @@
 - postcss.config.mjs
 - next.config.ts
 - Loader.tsx
-- index.ts
-- BlackFridayBanner.tsx
+- search/page.tsx
 
 ## God Nodes (most connected - your core abstractions)
 1. `cn()` - 24 edges
 2. `useBasketStore` - 19 edges
 3. `compilerOptions` - 16 edges
-4. `formatIDR()` - 14 edges
+4. `formatIDR()` - 15 edges
 5. `imageUrl()` - 14 edges
 6. `Product` - 12 edges
 7. `Category` - 9 edges
 8. `getAllCategories()` - 7 edges
 9. `include` - 7 edges
-10. `tailwind` - 6 edges
+10. `BasketPage()` - 6 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `SuccessPage()` --calls--> `useBasketStore`  [EXTRACTED]
-  app/(store)/success/page.tsx → store/store.ts
+- `SearchBar()` --calls--> `searchProductsAction()`  [EXTRACTED]
+  components/SearchBar.tsx → actions/searchProducts.ts
+- `BasketPage()` --calls--> `useBasketStore`  [EXTRACTED]
+  app/(store)/basket/page.tsx → store/store.ts
 - `CategoriesPage()` --calls--> `getAllCategories()`  [EXTRACTED]
   app/(store)/categories/page.tsx → sanity/lib/products/getAllCategories.ts
 - `SearchPage()` --calls--> `searchProductsByName()`  [EXTRACTED]
   app/(store)/search/page.tsx → sanity/lib/products/searchProductsByName.ts
-- `AddToBasketButtonProps` --references--> `Product`  [EXTRACTED]
-  components/AddToBasket.tsx → sanity.types.ts
-- `AddToBasketButton()` --calls--> `useBasketStore`  [EXTRACTED]
-  components/AddToBasket.tsx → store/store.ts
+- `SuccessPage()` --calls--> `useBasketStore`  [EXTRACTED]
+  app/(store)/success/page.tsx → store/store.ts
 
 ## Import Cycles
 - None detected.
 
-## Communities (28 total, 5 thin omitted)
+## Communities (27 total, 5 thin omitted)
 
 ### Community 0 - "dependencies"
 Cohesion: 0.04
 Nodes (47): class-variance-authority, @clerk/nextjs, clsx, cmdk, framer-motion, lucide-react, next, next-sanity (+39 more)
 
-### Community 1 - "useBasketStore"
-Cohesion: 0.11
-Nodes (29): createCheckoutSession(), GroupedBasketItem, Metadata, searchProductsAction(), BasketPage(), Orders(), dynamic, generateMetadata() (+21 more)
+### Community 1 - "basket/page.tsx"
+Cohesion: 0.10
+Nodes (26): createCheckoutSession(), GroupedBasketItem, Metadata, ShippingDetails, FALLBACK_RATES, ShippingServiceOption, BasketPage(), Orders() (+18 more)
 
 ### Community 2 - "cn"
-Cohesion: 0.17
-Nodes (22): SuccessPage(), Button, ButtonProps, buttonVariants, CategorySelectorComponent(), CategorySelectorComponent(), Command, CommandEmpty (+14 more)
+Cohesion: 0.19
+Nodes (21): Button, ButtonProps, buttonVariants, CategorySelectorComponent(), CategorySelectorComponent(), Command, CommandEmpty, CommandGroup (+13 more)
 
 ### Community 3 - "devDependencies"
 Cohesion: 0.06
@@ -88,25 +87,25 @@ Nodes (30): eslint, eslint-config-next, @eslint/eslintrc, devDependencies, eslin
 Cohesion: 0.07
 Nodes (28): **/*.d.ts, dom, dom.iterable, esnext, .next/dev/types/**/*.ts, next-env.d.ts, .next/types/**/*.ts, node_modules (+20 more)
 
-### Community 5 - "(store)/layout.tsx"
-Cohesion: 0.17
-Nodes (9): geistMono, geistSans, metadata, poppins, BottomBar(), tabs, DisableDraftMode(), Footer() (+1 more)
+### Community 5 - "useBasketStore"
+Cohesion: 0.12
+Nodes (19): geistMono, geistSans, metadata, poppins, SuccessPage(), AddToBasketButton(), AddToBasketButtonProps, BottomBar() (+11 more)
 
 ### Community 6 - "sanity.types.ts"
-Cohesion: 0.08
-Nodes (24): ACTIVE_SALE_BY_COUPON_QUERYResult, ALL_CATEGORIES_QUERYResult, ALL_PRODUCTS_QUERYResult, AllSanitySchemaTypes, BlockContent, Geopoint, MY_ORDERS_QUERYResult, Order (+16 more)
+Cohesion: 0.07
+Nodes (30): CategoryPills(), ProductGrid(), ProductsViewProps, CategorySelectorProps, CategorySelectorProps, ACTIVE_SALE_BY_COUPON_QUERYResult, ALL_CATEGORIES_QUERYResult, ALL_PRODUCTS_QUERYResult (+22 more)
 
 ### Community 7 - "(store)/page.tsx"
-Cohesion: 0.12
-Nodes (19): CategoriesPage(), dynamic, revalidate, CategoryPage(), dynamic, revalidate, dynamic, Home() (+11 more)
+Cohesion: 0.11
+Nodes (20): CategoriesPage(), dynamic, revalidate, CategoryPage(), dynamic, revalidate, dynamic, Home() (+12 more)
 
 ### Community 8 - "components.json"
 Cohesion: 0.11
 Nodes (17): aliases, components, hooks, lib, ui, utils, iconLibrary, rsc (+9 more)
 
-### Community 9 - "sanity.config.ts"
-Cohesion: 0.16
-Nodes (8): createOrderInSanity(), POST(), dynamic, apiVersion, dataset, projectId, builder, structure()
+### Community 9 - "index.ts"
+Cohesion: 0.11
+Nodes (12): dynamic, apiVersion, dataset, projectId, builder, blockContentType, categoryType, schema (+4 more)
 
 ### Community 13 - "README.md"
 Cohesion: 0.50
@@ -132,16 +131,12 @@ Nodes (3): @clerk/nextjs, @clerk/nextjs/server, MiddlewareHandler
 Cohesion: 0.50
 Nodes (3): build, env, NPM_FLAGS
 
-### Community 26 - "index.ts"
-Cohesion: 0.24
-Nodes (6): blockContentType, categoryType, schema, orderType, productType, salesType
-
-### Community 27 - "BlackFridayBanner.tsx"
-Cohesion: 0.33
-Nodes (6): BlackFridayBanner(), CopyCouponButton(), CopyCouponButtonProps, COUPON_CODES, CouponCode, getActiveSaleByCouponCode()
+### Community 26 - "search/page.tsx"
+Cohesion: 0.60
+Nodes (3): searchProductsAction(), SearchPage(), searchProductsByName()
 
 ## Knowledge Gaps
-- **142 isolated node(s):** `GroupedBasketItem`, `dynamic`, `revalidate`, `dynamic`, `revalidate` (+137 more)
+- **146 isolated node(s):** `GroupedBasketItem`, `dynamic`, `revalidate`, `dynamic`, `revalidate` (+141 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **5 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -149,16 +144,16 @@ Nodes (6): BlackFridayBanner(), CopyCouponButton(), CopyCouponButtonProps, COUPO
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `dependencies` connect `dependencies` to `devDependencies`?**
-  _High betweenness centrality (0.037) - this node is a cross-community bridge._
+  _High betweenness centrality (0.034) - this node is a cross-community bridge._
+- **Why does `useBasketStore` connect `useBasketStore` to `basket/page.tsx`?**
+  _High betweenness centrality (0.022) - this node is a cross-community bridge._
 - **What connects `GroupedBasketItem`, `dynamic`, `revalidate` to the rest of the system?**
-  _142 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _146 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `dependencies` be split into smaller, more focused modules?**
   _Cohesion score 0.0425531914893617 - nodes in this community are weakly interconnected._
-- **Should `useBasketStore` be split into smaller, more focused modules?**
-  _Cohesion score 0.10714285714285714 - nodes in this community are weakly interconnected._
+- **Should `basket/page.tsx` be split into smaller, more focused modules?**
+  _Cohesion score 0.09634551495016612 - nodes in this community are weakly interconnected._
 - **Should `devDependencies` be split into smaller, more focused modules?**
   _Cohesion score 0.06451612903225806 - nodes in this community are weakly interconnected._
 - **Should `compilerOptions` be split into smaller, more focused modules?**
   _Cohesion score 0.06896551724137931 - nodes in this community are weakly interconnected._
-- **Should `sanity.types.ts` be split into smaller, more focused modules?**
-  _Cohesion score 0.08 - nodes in this community are weakly interconnected._

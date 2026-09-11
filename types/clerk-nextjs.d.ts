@@ -11,7 +11,14 @@ declare module "@clerk/nextjs/server" {
   export function clerkMiddleware(): MiddlewareHandler;
 
   // Other server helpers (used in app routes)
-  export function auth(): { userId?: string };
+  export function auth(): Promise<{ userId?: string | null }> | { userId?: string | null };
+  export function currentUser(): Promise<{
+    id: string;
+    firstName?: string | null;
+    lastName?: string | null;
+    emailAddresses?: Array<{ emailAddress: string }>;
+    [key: string]: any;
+  } | null>;
 
   export default clerkMiddleware;
 }
